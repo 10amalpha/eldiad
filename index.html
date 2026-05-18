@@ -7,10 +7,11 @@
 <meta name="description" content="El Día D — La invasión del conocimiento llega a Medellín. 7 de octubre, 2026." />
 <meta property="og:title" content="El Día D · 10ampro" />
 <meta property="og:description" content="La invasión del conocimiento llega a Medellín — 7 de octubre, 2026" />
-<meta property="og:image" content="https://eldiad.vercel.app/og.jpg" />
+<meta property="og:image" content="https://eldiad.10am.pro/og.jpg" />
 <meta property="og:image:width" content="1500" />
 <meta property="og:image:height" content="1000" />
-<meta name="twitter:image" content="https://eldiad.vercel.app/og.jpg" />
+<meta name="twitter:image" content="https://eldiad.10am.pro/og.jpg" />
+<link rel="preload" as="image" href="/dday-roster.png" />
 <meta property="og:type" content="article" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -53,6 +54,57 @@ body::after{
   content:'';position:fixed;inset:0;pointer-events:none;z-index:2;opacity:0.05;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")
 }
+
+/* ===== FULL-BLEED CINEMATIC HERO ===== */
+.cinema{
+  position:relative;width:100%;height:100vh;min-height:640px;max-height:1100px;
+  overflow:hidden;background:#040303;z-index:3;
+  display:flex;align-items:flex-end;justify-content:center
+}
+.cinema .img{
+  position:absolute;inset:0;width:100%;height:100%;
+  background-image:url("/dday-roster.png");
+  background-size:cover;background-position:center 35%;background-repeat:no-repeat;
+  filter:contrast(1.02) saturate(0.96)
+}
+.cinema .vignette{
+  position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse at 50% 45%,transparent 35%,rgba(0,0,0,0.4) 75%,rgba(0,0,0,0.85) 100%),
+    linear-gradient(180deg,rgba(8,7,10,0.35) 0%,transparent 22%,transparent 65%,rgba(8,7,10,0.92) 95%,var(--bg) 100%)
+}
+.cinema .topstrip{
+  position:absolute;top:0;left:0;right:0;padding:24px 32px;
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--mono);font-size:10px;letter-spacing:0.32em;text-transform:uppercase;
+  color:rgba(232,220,196,0.7);z-index:5;
+  background:linear-gradient(180deg,rgba(0,0,0,0.55) 0%,transparent 100%)
+}
+.cinema .topstrip .anno{color:var(--gold)}
+.cinema .meta{
+  position:relative;z-index:4;text-align:center;padding:0 24px 56px;width:100%;
+}
+.cinema .meta .seal{
+  font-family:var(--mono);font-size:11px;letter-spacing:0.5em;color:var(--gold);
+  text-transform:uppercase;margin-bottom:18px;opacity:0.9
+}
+.cinema .meta .line{
+  width:80px;height:1px;background:var(--gold);margin:0 auto 22px;opacity:0.7
+}
+.cinema .meta .date{
+  font-family:var(--display);font-size:clamp(18px,3vw,26px);letter-spacing:0.32em;
+  color:var(--cream);text-transform:uppercase;font-weight:500;margin-bottom:12px
+}
+.cinema .meta .where{
+  font-family:var(--serif);font-style:italic;font-size:clamp(14px,2vw,17px);
+  color:var(--cream-dim);letter-spacing:0.04em
+}
+.cinema .scrollhint{
+  position:absolute;bottom:18px;left:50%;transform:translateX(-50%);z-index:5;
+  font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold-dim);
+  text-transform:uppercase;opacity:0.6;animation:fadeBlink 3s ease-in-out infinite
+}
+@keyframes fadeBlink{0%,100%{opacity:0.3}50%{opacity:0.75}}
 main{position:relative;z-index:3;max-width:760px;margin:0 auto;padding:48px 28px 100px}
 .topbar{display:flex;justify-content:space-between;align-items:center;padding-bottom:60px;font-family:var(--mono);font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-dim)}
 .topbar .mark{color:var(--cream-dim)}
@@ -133,6 +185,14 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
   .lists-pair{grid-template-columns:1fr 1fr;gap:56px}
   .callout{padding:64px 56px}
   .callout .grid{grid-template-columns:repeat(3,1fr);gap:32px;text-align:center}
+  .cinema .img{background-position:center center}
+}
+
+@media (max-width:719px){
+  .cinema{height:88vh;min-height:560px}
+  .cinema .img{background-position:50% 30%}
+  .cinema .meta{padding:0 20px 40px}
+  .cinema .topstrip{padding:18px 20px;font-size:9px;letter-spacing:0.22em}
 }
 
 @media (max-width:480px){
@@ -149,31 +209,43 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
   .callout{padding:36px 22px}
   .callout .cta a{padding:16px 32px;font-size:11px;letter-spacing:0.3em}
   .section ul li{font-size:16px}
+  .cinema{height:82vh;min-height:520px}
+  .cinema .img{background-position:50% 25%}
+  .cinema .meta{padding:0 16px 32px}
+  .cinema .meta .seal{font-size:10px;letter-spacing:0.4em;margin-bottom:14px}
+  .cinema .meta .date{letter-spacing:0.24em}
+  .cinema .scrollhint{display:none}
 }
 </style>
 </head>
 <body>
-<main>
 
-<div class="topbar">
-  <span>10ampro</span>
-  <span class="mark">Anno · MMXXVI</span>
-</div>
-
-<section class="hero">
-  <div class="anno">Operación · Medellín</div>
-  <h1>D<span class="dot">·</span>DAY</h1>
-  <div class="rule"></div>
-  <div class="date">7 · OCTUBRE · 2026</div>
-  <div class="lede">La invasión del conocimiento</div>
-  <div class="meta">
-    <span>10:00 → 17:00</span><span>·</span><span>Medellín</span><span>·</span><span>Cierre en El Zarzo</span>
+<!-- ===== FULL-BLEED CINEMATIC HERO ===== -->
+<section class="cinema" aria-label="El Día D">
+  <div class="img" role="img" aria-label="El Día D — La invasión del conocimiento"></div>
+  <div class="vignette"></div>
+  <div class="topstrip">
+    <span>10ampro</span>
+    <span class="anno">Anno · MMXXVI</span>
   </div>
+  <div class="meta">
+    <div class="seal">Operación · Medellín</div>
+    <div class="line"></div>
+    <div class="date">7 Octubre 2026 · 10:00 → 17:00</div>
+    <div class="where">Cierre en el rooftop de El Zarzo</div>
+  </div>
+  <div class="scrollhint">▼ Descender</div>
 </section>
 
-<div class="divider heavy">
-  <span>✦</span><span>❖</span><span>✦</span>
-</div>
+<main>
+
+<section class="section" style="margin-top:60px;text-align:center;padding-top:20px">
+  <div class="sigil" style="margin-bottom:18px">EL DÍA D</div>
+  <h2 style="margin-bottom:14px">La invasión del conocimiento</h2>
+  <p style="font-family:var(--serif);font-style:italic;color:var(--cream-dim);max-width:520px;margin:0 auto">Un manifiesto. Una operación. Un desembarco.</p>
+</section>
+
+<div class="divider heavy"><span>✦</span><span>❖</span><span>✦</span></div>
 
 <section class="section">
   <p>Hay eventos que se hacen para llenar una agenda. Y hay eventos que se hacen para mover el eje mental de una ciudad.</p>
