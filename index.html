@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>El Día D · 10ampro</title>
+<meta name="description" content="El Día D — La invasión del conocimiento llega a Medellín. 7 de octubre, 2026." />
+<meta property="og:title" content="El Día D · 10ampro" />
+<meta property="og:description" content="La invasión del conocimiento llega a Medellín — 7 de octubre, 2026" />
+<meta property="og:image" content="https://eldiad-10ampro.vercel.app/og.jpg" />
+<meta property="og:image:width" content="1500" />
+<meta property="og:image:height" content="1000" />
+<meta name="twitter:image" content="https://eldiad-10ampro.vercel.app/og.jpg" />
+<meta property="og:type" content="article" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#08070a;
+  --bg-warm:#14100a;
+  --bg-deep:#040303;
+  --gold:#c4a464;
+  --gold-bright:#d9b97a;
+  --gold-dim:#8a7549;
+  --cream:#e8dcc4;
+  --cream-dim:#b8a987;
+  --muted:#6a5c46;
+  --smoke:#403a30;
+  --line:rgba(196,164,100,0.18);
+  --line-strong:rgba(196,164,100,0.42);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --display:'Cinzel','Trajan Pro',Georgia,serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--cream);font-family:var(--serif);font-size:19px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(196,164,100,0.06) 0%,transparent 55%),
+    radial-gradient(ellipse at 50% 100%,rgba(196,164,100,0.04) 0%,transparent 60%),
+    var(--bg);
+  min-height:100vh;position:relative
+}
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:1;
+  background-image:
+    radial-gradient(circle at 15% 25%,rgba(0,0,0,0.5) 0%,transparent 45%),
+    radial-gradient(circle at 85% 75%,rgba(0,0,0,0.4) 0%,transparent 45%)
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:2;opacity:0.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")
+}
+main{position:relative;z-index:3;max-width:760px;margin:0 auto;padding:48px 28px 100px}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding-bottom:60px;font-family:var(--mono);font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-dim)}
+.topbar .mark{color:var(--cream-dim)}
+
+.hero{padding:40px 0 60px;text-align:center;position:relative}
+.hero .anno{font-family:var(--mono);font-size:11px;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;margin-bottom:34px}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(72px,17vw,164px);letter-spacing:0.04em;color:var(--gold-bright);line-height:0.95;margin:0;text-shadow:0 0 60px rgba(196,164,100,0.25);font-feature-settings:"liga","dlig"}
+.hero h1 .dot{display:inline-block;transform:translateY(-0.15em);font-size:0.7em;color:var(--gold);margin:0 0.05em}
+.hero .rule{width:140px;height:1px;background:var(--gold);margin:36px auto;opacity:0.6}
+.hero .date{font-family:var(--display);font-size:clamp(22px,4.5vw,32px);letter-spacing:0.22em;color:var(--cream);margin-bottom:18px;font-weight:500}
+.hero .lede{font-family:var(--display);font-size:clamp(15px,2.6vw,20px);letter-spacing:0.18em;color:var(--cream-dim);text-transform:uppercase;font-weight:400}
+.hero .meta{margin-top:42px;font-family:var(--mono);font-size:11px;letter-spacing:0.3em;color:var(--gold-dim);text-transform:uppercase}
+.hero .meta span{margin:0 14px}
+
+.divider{display:flex;justify-content:center;align-items:center;gap:18px;margin:64px 0;color:var(--gold);font-size:14px;letter-spacing:0.4em;opacity:0.7}
+.divider.heavy{margin:84px 0}
+.divider span{font-family:var(--serif)}
+
+.section{margin:60px 0}
+.section .sigil{text-align:center;font-family:var(--display);color:var(--gold);font-size:13px;letter-spacing:0.5em;margin-bottom:36px;font-weight:500}
+.section h2{font-family:var(--display);font-weight:600;font-size:clamp(28px,5.2vw,42px);letter-spacing:0.06em;color:var(--cream);text-align:center;margin-bottom:42px;line-height:1.15;text-transform:uppercase}
+.section h3{font-family:var(--display);font-weight:500;font-size:clamp(22px,3.8vw,30px);letter-spacing:0.08em;color:var(--gold-bright);margin-bottom:14px;line-height:1.2;text-transform:uppercase}
+.section .subtitle{font-family:var(--serif);font-style:italic;font-size:clamp(16px,2.4vw,19px);color:var(--cream-dim);margin-bottom:28px;line-height:1.5}
+.section p{margin-bottom:22px;color:var(--cream);font-weight:400}
+.section p em{color:var(--gold-bright);font-style:italic}
+.section p strong{color:var(--cream);font-weight:600;font-family:var(--display);letter-spacing:0.02em}
+.section .pull{font-family:var(--display);font-size:clamp(20px,3.4vw,26px);text-align:center;color:var(--gold-bright);margin:36px 0;letter-spacing:0.04em;line-height:1.4;font-weight:500;text-transform:uppercase}
+.section ul{list-style:none;padding:0;margin:24px 0}
+.section ul li{padding:6px 0 6px 28px;position:relative;color:var(--cream);font-size:18px}
+.section ul li::before{content:'—';position:absolute;left:0;color:var(--gold);font-weight:500}
+
+.speaker{margin:72px 0;padding:0}
+.speaker .roman{font-family:var(--display);font-size:14px;letter-spacing:0.6em;color:var(--gold);text-align:center;margin-bottom:22px;font-weight:500}
+.speaker .roman::before,.speaker .roman::after{content:'❦';margin:0 12px;opacity:0.7}
+.speaker .name{font-family:var(--display);font-weight:700;font-size:clamp(32px,6vw,48px);letter-spacing:0.04em;color:var(--gold-bright);text-align:center;margin-bottom:14px;line-height:1.05;text-transform:uppercase}
+.speaker .role{font-family:var(--serif);font-style:italic;font-size:clamp(17px,2.6vw,21px);color:var(--cream-dim);text-align:center;margin-bottom:36px;line-height:1.4;max-width:560px;margin-left:auto;margin-right:auto}
+.speaker .role::before,.speaker .role::after{content:'·';color:var(--gold);margin:0 10px}
+.speaker p{color:var(--cream);font-size:18px;line-height:1.75}
+
+.principles{display:grid;grid-template-columns:1fr;gap:48px;margin:48px 0}
+.principle{text-align:center;padding:0 12px}
+.principle .num{font-family:var(--display);font-size:12px;letter-spacing:0.5em;color:var(--gold);margin-bottom:14px;font-weight:500}
+.principle .title{font-family:var(--display);font-size:22px;letter-spacing:0.08em;color:var(--gold-bright);margin-bottom:14px;text-transform:uppercase;font-weight:600}
+.principle .body{font-size:17px;color:var(--cream-dim);line-height:1.6;font-style:italic}
+
+.callout{border:1px solid var(--line);padding:48px 32px;margin:72px 0;background:linear-gradient(180deg,rgba(196,164,100,0.025) 0%,rgba(196,164,100,0.008) 100%);position:relative}
+.callout::before,.callout::after{content:'';position:absolute;width:18px;height:18px;border:1px solid var(--gold);opacity:0.6}
+.callout::before{top:-1px;left:-1px;border-right:none;border-bottom:none}
+.callout::after{bottom:-1px;right:-1px;border-left:none;border-top:none}
+.callout h2{font-family:var(--display);font-size:clamp(22px,3.6vw,28px);letter-spacing:0.18em;color:var(--gold-bright);text-align:center;margin-bottom:14px;text-transform:uppercase;font-weight:600}
+.callout .sub{text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:0.4em;color:var(--gold-dim);text-transform:uppercase;margin-bottom:32px}
+.callout .grid{display:grid;grid-template-columns:1fr;gap:18px;font-family:var(--mono);font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--cream)}
+.callout .grid .k{color:var(--gold-dim);font-size:10px;letter-spacing:0.3em;margin-bottom:4px;display:block}
+.callout .grid .v{color:var(--cream);font-size:14px;letter-spacing:0.12em}
+.callout .cta{text-align:center;margin-top:36px}
+.callout .cta a{display:inline-block;font-family:var(--display);font-size:13px;letter-spacing:0.4em;color:var(--bg);background:var(--gold);padding:18px 48px;text-decoration:none;text-transform:uppercase;font-weight:600;transition:all 0.2s ease;border:1px solid var(--gold)}
+.callout .cta a:hover{background:var(--gold-bright);color:var(--bg-deep);box-shadow:0 0 40px rgba(196,164,100,0.3)}
+
+.lists-pair{display:grid;grid-template-columns:1fr;gap:48px;margin:48px 0}
+.lists-pair .col{padding:0}
+.lists-pair .col h3{text-align:center;margin-bottom:24px}
+.lists-pair .col h3.warn{color:var(--smoke);color:#b89060}
+
+footer{margin-top:120px;padding-top:60px;border-top:1px solid var(--line);text-align:center}
+footer img{width:64px;height:64px;border-radius:50%;border:2px solid rgba(196,164,100,0.25);margin-bottom:24px;opacity:0.95}
+footer .anno{font-family:var(--display);font-size:14px;letter-spacing:0.5em;color:var(--gold);margin-bottom:14px;font-weight:500}
+footer .link{font-family:var(--mono);font-size:11px;letter-spacing:0.3em;text-transform:uppercase}
+footer .link a{color:var(--gold-dim);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;transition:color 0.2s}
+footer .link a:hover{color:var(--gold-bright)}
+footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:var(--muted);text-transform:uppercase;margin-top:30px}
+
+.opening-quote{font-family:var(--display);font-size:clamp(20px,3.4vw,28px);text-align:center;color:var(--gold-bright);margin:60px 0;line-height:1.45;letter-spacing:0.04em;font-weight:500}
+.opening-quote em{font-family:var(--serif);font-style:italic;color:var(--cream);text-transform:none;letter-spacing:0;font-weight:400}
+
+@media (min-width:720px){
+  main{padding:64px 48px 120px}
+  .principles{grid-template-columns:repeat(3,1fr);gap:24px}
+  .lists-pair{grid-template-columns:1fr 1fr;gap:56px}
+  .callout{padding:64px 56px}
+  .callout .grid{grid-template-columns:repeat(3,1fr);gap:32px;text-align:center}
+}
+
+@media (max-width:480px){
+  html,body{font-size:17px}
+  main{padding:32px 22px 80px}
+  .topbar{padding-bottom:40px;font-size:9px;letter-spacing:0.22em}
+  .hero{padding:24px 0 40px}
+  .hero .anno{margin-bottom:24px;font-size:10px}
+  .hero .meta span{display:block;margin:6px 0}
+  .divider{margin:48px 0}
+  .divider.heavy{margin:64px 0}
+  .speaker{margin:56px 0}
+  .speaker .role::before,.speaker .role::after{display:block;margin:6px 0}
+  .callout{padding:36px 22px}
+  .callout .cta a{padding:16px 32px;font-size:11px;letter-spacing:0.3em}
+  .section ul li{font-size:16px}
+}
+</style>
+</head>
+<body>
+<main>
+
+<div class="topbar">
+  <span>10ampro</span>
+  <span class="mark">Anno · MMXXVI</span>
+</div>
+
+<section class="hero">
+  <div class="anno">Operación · Medellín</div>
+  <h1>D<span class="dot">·</span>DAY</h1>
+  <div class="rule"></div>
+  <div class="date">7 · OCTUBRE · 2026</div>
+  <div class="lede">La invasión del conocimiento</div>
+  <div class="meta">
+    <span>10:00 → 17:00</span><span>·</span><span>Medellín</span><span>·</span><span>Cierre en El Zarzo</span>
+  </div>
+</section>
+
+<div class="divider heavy">
+  <span>✦</span><span>❖</span><span>✦</span>
+</div>
+
+<section class="section">
+  <p>Hay eventos que se hacen para llenar una agenda. Y hay eventos que se hacen para mover el eje mental de una ciudad.</p>
+  <p>Este es el segundo caso.</p>
+  <p>Durante años, Medellín ha celebrado emprendimiento, innovación, tecnología, inversión, salud, energía y cultura empresarial como si fueran temas separados. Como si la ciudad pudiera escoger entre software o industria, entre capital o salud, entre energía o inteligencia artificial, entre puerto o espacio.</p>
+  <p><strong>Pero el mundo real ya no funciona así.</strong></p>
+  <p>El mundo se está reorganizando alrededor de una nueva ecuación:</p>
+  <div class="pull">mejor información + mejores modelos mentales + mejor red = mejor destino</div>
+  <p>Eso es 10ampro. Y este evento es probablemente la expresión más concentrada de esa tesis.</p>
+  <p>De 10:00 a. m. a 5:00 p. m., Medellín va a reunir una densidad de talento, capital, operadores, médicos, inversionistas, fundadores y constructores que rara vez comparten el mismo cuarto. Después, el cierre será en el rooftop de El Zarzo, porque hasta la revolución cognitiva necesita un buen cocktail.</p>
+</section>
+
+<div class="divider"><span>✦</span><span>✦</span><span>✦</span></div>
+
+<section class="section">
+  <h2>Esto no es una conferencia</h2>
+  <p class="opening-quote">Es una <em>actualización de sistema operativo.</em></p>
+  <p>En 10ampro creemos que la ventaja más importante del siglo XXI no es tener más información. Eso ya lo tiene todo el mundo.</p>
+  <p>La ventaja real es saber qué información consumir, cómo procesarla y con quién contrastarla.</p>
+  <p>Una mala dieta de información te vuelve pobre mentalmente antes de volverte pobre financieramente. Un mal modelo mental te hace vender Tesla temprano, ignorar Bitcoin, burlarte de Solana, subestimar Palantir, no entender energía, no ver el puerto, no entender salud preventiva y seguir discutiendo el mundo con categorías de 1974.</p>
+  <p>Este evento existe para lo contrario. Para subir el estándar. Para juntar a gente que piensa desde primeros principios. Para dejar de repetir titulares y empezar a ver estructuras.</p>
+  <p><strong>Para invadir Medellín con conocimiento de verdad.</strong></p>
+</section>
+
+<div class="divider"><span>✦</span><span>✦</span><span>✦</span></div>
+
+<section class="section">
+  <div class="sigil">LA TESIS</div>
+  <h2>Medellín no necesita otro evento</h2>
+  <p>De networking donde todos intercambian tarjetas y nadie cambia de opinión.</p>
+  <p>Medellín necesita un cuarto donde se crucen capital asimétrico, tecnología exponencial, energía, salud de frontera, criptoinfraestructura, puertos, espacio, ciudad, industria, y gente que realmente está construyendo.</p>
+  <div class="pull">El futuro no llega por comunicado de prensa.<br/>Llega cuando la gente correcta empieza a compartir mapas.</div>
+</section>
+
+<div class="divider heavy"><span>✦</span><span>❖</span><span>✦</span></div>
+
+<section class="speaker">
+  <div class="roman">I</div>
+  <div class="name">Antonio Linares</div>
+  <div class="role">Cómo piensa alguien que ha visto múltiples 100x antes que el mercado</div>
+  <p>Antonio Linares no viene a hablar de "invertir en innovación" como frase de brochure. Viene a explicar cómo piensa alguien que encontró oportunidades como Spotify, Palantir, AMD y Hims antes de que fueran obvias para el consenso.</p>
+  <p>La pregunta no es qué compró. La pregunta importante es: <em>¿qué vio él que otros no estaban viendo?</em> ¿Qué framework le permitió identificar empresas que parecían caras, raras o incomprendidas antes de que el mercado entendiera el cambio estructural?</p>
+  <p>Porque el verdadero alpha no está en tener más datos. Está en tener mejores lentes.</p>
+</section>
+
+<div class="divider"><span>✦</span></div>
+
+<section class="speaker">
+  <div class="roman">II</div>
+  <div class="name">Santiago Santos</div>
+  <div class="role">De Ethereum temprano a Solana — la pregunta que importa: ¿cómo traer el GDP onchain?</div>
+  <p>Santiago Santos fue de los primeros inversionistas en Ethereum. Pero su tesis no se quedó congelada en la nostalgia. Hoy es uno de los creyentes más fuertes en el poder técnico de Solana y en una idea mucho más grande que "cripto sube o baja": <em>traer el GDP onchain.</em></p>
+  <p>No se trata de memes. No se trata de casinos. No se trata de otro token con comunidad ruidosa. Se trata de entender si las redes cripto pueden convertirse en infraestructura real para mercados, pagos, activos, coordinación económica y formación de capital.</p>
+  <p>La pregunta no es si Solana compite con Ethereum. La pregunta es si una blockchain de alta performance puede convertirse en una nueva capa económica para el mundo real.</p>
+</section>
+
+<div class="divider"><span>✦</span></div>
+
+<section class="speaker">
+  <div class="roman">III</div>
+  <div class="name">André Joffroy</div>
+  <div class="role">Si Medellín quiere más Teslas, necesita dónde cargarlos</div>
+  <p>Todo el mundo quiere hablar de transición energética. Pocos quieren hablar de enchufes. Pero la adopción real no ocurre en PowerPoint. Ocurre cuando alguien puede cargar su carro, usar la infraestructura y dejar de depender de promesas.</p>
+  <p>André Joffroy, CEO de Zaps, viene a hablar de electrolineras, movilidad eléctrica e infraestructura urbana real. Porque si Medellín quiere ser una ciudad moderna, no basta con tener Teslas parqueados en El Poblado. Tiene que existir la red que los soporte.</p>
+  <p><strong>La energía del futuro no se decreta. Se instala.</strong></p>
+</section>
+
+<div class="divider"><span>✦</span></div>
+
+<section class="speaker">
+  <div class="roman">IV</div>
+  <div class="name">Blake Mason</div>
+  <div class="role">Psicodélicos, salud mental y una puerta que el mundo ya empezó a abrir</div>
+  <p>Cuando hasta Robert F. Kennedy Jr., hoy Secretario de Salud y Servicios Humanos de EE. UU., habla de revisar con seriedad nuevas fronteras de salud, algo está cambiando en la conversación global.</p>
+  <p>Blake Mason, CEO de Mosaic, viene a hablar de una frontera incómoda, poderosa y todavía mal entendida: la ciencia psicodélica y su posible rol en salud mental.</p>
+  <p>No desde el cliché. No desde la fiesta. No desde la irresponsabilidad. Desde la ciencia, la regulación, la medicina, la evidencia y la pregunta que Medellín también debe hacerse: <em>¿estamos listos para abrir esta puerta de manera seria?</em></p>
+</section>
+
+<div class="divider"><span>✦</span></div>
+
+<section class="speaker">
+  <div class="roman">V</div>
+  <div class="name">Ricardo Sierra</div>
+  <div class="role">Ahora sí — ¿Energy Valley?</div>
+  <p>Ricardo Sierra, CEO de Celsia, viene a poner sobre la mesa una de las preguntas más importantes para Antioquia: <em>¿podemos convertirnos en un verdadero Energy Valley?</em></p>
+  <p>No como slogan. Como infraestructura. Como ventaja competitiva. Como plataforma industrial.</p>
+  <p>Porque sin energía barata, confiable y abundante, no hay AI, no hay fábricas, no hay data centers, no hay movilidad eléctrica, no hay industria avanzada y no hay país serio.</p>
+  <p><strong>La energía no es un sector. Es el piso físico de todo lo demás.</strong></p>
+</section>
+
+<div class="divider"><span>✦</span></div>
+
+<section class="speaker">
+  <div class="roman">VI</div>
+  <div class="name">Camilo Ospina<br/>& Andrés Palacio</div>
+  <div class="role">Péptidos, longevidad y la posibilidad de fabricar salud desde Medellín</div>
+  <p>La salud también está entrando en su era industrial. Los doctores Camilo Ospina y Andrés Palacio vienen a hablar de péptidos, longevidad, medicina preventiva y una pregunta que suena pequeña, pero es enorme: <em>¿qué necesitaría Medellín para tener una fábrica de péptidos?</em></p>
+  <p>Porque la próxima frontera de salud no será solo tratar enfermedad. Será diseñar mejores protocolos, mejores moléculas, mejores datos y mejores cadenas de producción.</p>
+  <p>Medellín no puede limitarse a importar el futuro. Tiene que aprender a fabricarlo.</p>
+</section>
+
+<div class="divider"><span>✦</span></div>
+
+<section class="speaker">
+  <div class="roman">VII</div>
+  <div class="name">Andrés Julián Rendón</div>
+  <div class="role">El Golfo de Urabá y la posibilidad de pensar en grande otra vez</div>
+  <p>El Gobernador Andrés Julián Rendón trae una conversación que debería estar en el centro de la agenda estratégica de Antioquia: <em>el Golfo de Urabá como próximo gran puerto logístico, industrial y quizá espacial.</em></p>
+  <p>Suena grande. Ese es precisamente el punto.</p>
+  <p>Antioquia no puede seguir pensando solo en trancones, licencias y discusiones de baja resolución. El mundo está compitiendo por puertos, energía, chips, órbita, talento y cadenas de suministro.</p>
+  <p>El Golfo de Urabá no es solo una obra. Es una opción geopolítica. Y las regiones que no entienden su geografía terminan alquilando su destino.</p>
+</section>
+
+<div class="divider"><span>✦</span></div>
+
+<section class="speaker">
+  <div class="roman">VIII</div>
+  <div class="name">Los cohosts</div>
+  <div class="role">Hernán Jaramillo · Darío Palacio · Nicolás Fernández · Andrés Arias · Camilo Botero · El Gordo</div>
+  <p>Este evento también reúne al lineup completo de 10ampro. La idea no es hacer paneles decorativos. La idea es conectar tesis. Cruzar mapas. Discutir sin anestesia.</p>
+  <p>Y poner a Medellín frente a las preguntas que realmente importan:</p>
+  <ul>
+    <li>¿Qué estamos construyendo?</li>
+    <li>¿Qué estamos financiando?</li>
+    <li>¿Qué estamos ignorando?</li>
+    <li>¿Qué industrias deberíamos traer?</li>
+    <li>¿Qué redes deberíamos activar?</li>
+    <li>¿Qué futuro estamos dejando pasar por falta de ambición?</li>
+  </ul>
+</section>
+
+<div class="divider heavy"><span>✦</span><span>❖</span><span>✦</span></div>
+
+<section class="section">
+  <div class="sigil">POR QUÉ "EL DÍA D"</div>
+  <h2>Porque hay días en los que una comunidad decide desembarcar en otra realidad</h2>
+  <p>El Día D fue una operación de coordinación, logística, riesgo, inteligencia y convicción.</p>
+  <p>Este también. Solo que acá no estamos invadiendo una playa.</p>
+  <ul>
+    <li>Estamos invadiendo la mediocridad mental</li>
+    <li>Estamos atacando la dieta de información basura</li>
+    <li>Estamos rompiendo la costumbre de pensar pequeño</li>
+  </ul>
+  <p>Estamos diciendo que Medellín no tiene que pedir permiso para sentarse en la mesa donde se discuten energía, AI, cripto, salud, capital, infraestructura y espacio.</p>
+</section>
+
+<div class="divider"><span>✦</span><span>✦</span><span>✦</span></div>
+
+<section class="section">
+  <div class="sigil">EL ESTÁNDAR 10AMPRO</div>
+  <h2>Tres principios</h2>
+  <p style="text-align:center;font-style:italic;color:var(--cream-dim);margin-bottom:8px">No como slogan. Como código operativo.</p>
+  <div class="principles">
+    <div class="principle">
+      <div class="num">I</div>
+      <div class="title">Open Source Capital</div>
+      <div class="body">Compartir tesis, trades, aprendizajes, errores y mapas mentales. El alpha no se vuelve más débil cuando se comparte con gente seria. Se vuelve más fuerte.</div>
+    </div>
+    <div class="principle">
+      <div class="num">II</div>
+      <div class="title">Collective Intelligence</div>
+      <div class="body">El IQ individual importa. Pero el verdadero edge aparece cuando muchas personas inteligentes empiezan a sincronizarse alrededor de mejores preguntas.</div>
+    </div>
+    <div class="principle">
+      <div class="num">III</div>
+      <div class="title">Network Sharing</div>
+      <div class="body">Una red no sirve si se usa solo para acumular favores. Sirve cuando se activa para cuidar la espalda, abrir puertas y acelerar a la gente correcta.</div>
+    </div>
+  </div>
+  <p style="text-align:center;margin-top:32px"><strong>Este evento es esos tres principios puestos en escena.</strong></p>
+</section>
+
+<div class="divider heavy"><span>✦</span><span>❖</span><span>✦</span></div>
+
+<section class="section">
+  <div class="lists-pair">
+    <div class="col">
+      <h3>Para quién es</h3>
+      <ul>
+        <li>Fundadores</li>
+        <li>Inversionistas</li>
+        <li>Operadores</li>
+        <li>Médicos</li>
+        <li>Builders</li>
+        <li>Gente que sabe que el mundo cambia más rápido que su feed</li>
+        <li>Personas que no quieren ser turistas del futuro</li>
+        <li>Quienes entienden que estar cerca de las mejores conversaciones es una forma de capital</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3 class="warn">No vengas si…</h3>
+      <ul>
+        <li>Vienes a buscar frases lindas</li>
+        <li>Vienes a repartir tarjetas sin escuchar</li>
+        <li>Vienes a hacer networking transaccional de baja vibración</li>
+        <li>Vienes a pedir sin aportar</li>
+        <li>Vienes a confirmar lo que ya crees</li>
+        <li>Vienes a hablar de innovación como decoración de oficina</li>
+      </ul>
+    </div>
+  </div>
+  <p class="pull">Este no es un evento para espectadores.<br/>Es para gente que quiere actualizar su mapa.</p>
+</section>
+
+<div class="divider heavy"><span>✦</span><span>❖</span><span>✦</span></div>
+
+<section class="callout">
+  <h2>El Día D</h2>
+  <div class="sub">Orden de Operaciones</div>
+  <div class="grid">
+    <div>
+      <span class="k">Fecha</span>
+      <span class="v">7 Oct 2026</span>
+    </div>
+    <div>
+      <span class="k">Horario</span>
+      <span class="v">10:00 → 17:00</span>
+    </div>
+    <div>
+      <span class="k">Ciudad</span>
+      <span class="v">Medellín</span>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:32px;font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:16px;line-height:1.5">
+    Cierre en el rooftop de El Zarzo.<br/>Porque la inteligencia también necesita ritual.
+  </div>
+  <div class="cta">
+    <a href="https://luma.com/10ampro" target="_blank" rel="noopener">Reservar Plaza</a>
+  </div>
+</section>
+
+<div class="divider heavy"><span>✦</span><span>❖</span><span>✦</span></div>
+
+<section class="section">
+  <p class="pull" style="margin-top:0">Medellín no necesita otro evento.<br/>Necesita un desembarco.</p>
+  <p style="text-align:center;font-family:var(--display);font-size:clamp(18px,3vw,22px);letter-spacing:0.1em;color:var(--cream);text-transform:uppercase;margin-top:48px;line-height:1.5">
+    Y esta vez, la invasión<br/>no viene con tanques.
+  </p>
+  <p style="text-align:center;font-family:var(--display);font-size:clamp(20px,3.4vw,26px);letter-spacing:0.1em;color:var(--gold-bright);margin-top:24px;text-transform:uppercase;font-weight:600">
+    Viene con mejores<br/>modelos mentales.
+  </p>
+</section>
+
+<footer>
+  <img src="https://manifiesto.10am.pro/logo.jpg" alt="10ampro" />
+  <div class="anno">MMXXVI</div>
+  <div class="creed">Open Source Capital · Network Sharing · Collective Intelligence</div>
+  <div class="link" style="margin-top:24px"><a href="https://10am.pro">10am.pro</a></div>
+</footer>
+
+</main>
+</body>
+</html>
