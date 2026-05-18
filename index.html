@@ -55,64 +55,57 @@ body::after{
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")
 }
 
-/* ===== FULL-BLEED CINEMATIC HERO (POSTER MODE) ===== */
+/* ===== FULL-BLEED CINEMATIC HERO (COVER MODE) ===== */
 .cinema{
-  position:relative;width:100%;min-height:100vh;overflow:hidden;
-  background:#040303;z-index:3;display:flex;flex-direction:column
+  position:relative;width:100%;height:100vh;min-height:680px;max-height:1100px;
+  overflow:hidden;background:#040303;z-index:3;
+  display:flex;align-items:flex-end;justify-content:center
 }
-.cinema .bg{
-  position:absolute;inset:-8%;z-index:0;
+.cinema .img{
+  position:absolute;inset:0;width:100%;height:100%;
   background-image:url("/dday-roster.png");
-  background-size:cover;background-position:center;
-  filter:blur(60px) brightness(0.32) saturate(1.15);
-  transform:scale(1.05)
+  background-size:cover;
+  background-position:center bottom;
+  background-repeat:no-repeat;
+  filter:contrast(1.03) saturate(1.02)
 }
-.cinema .overlay{
-  position:absolute;inset:0;z-index:1;pointer-events:none;
+.cinema .vignette{
+  position:absolute;inset:0;pointer-events:none;
   background:
-    radial-gradient(ellipse at 50% 50%,transparent 35%,rgba(0,0,0,0.45) 100%),
-    linear-gradient(180deg,rgba(0,0,0,0.55) 0%,transparent 18%,transparent 72%,rgba(8,7,10,0.92) 96%,var(--bg) 100%)
+    radial-gradient(ellipse at 50% 65%,transparent 30%,rgba(0,0,0,0.35) 75%,rgba(0,0,0,0.8) 100%),
+    linear-gradient(180deg,rgba(8,7,10,0.55) 0%,rgba(8,7,10,0.15) 14%,transparent 30%,transparent 55%,rgba(8,7,10,0.7) 88%,rgba(8,7,10,0.96) 97%,var(--bg) 100%)
 }
 .cinema .topstrip{
   position:absolute;top:0;left:0;right:0;padding:24px 32px;z-index:5;
   display:flex;justify-content:space-between;align-items:center;
   font-family:var(--mono);font-size:10px;letter-spacing:0.32em;text-transform:uppercase;
-  color:rgba(232,220,196,0.7);
-  background:linear-gradient(180deg,rgba(0,0,0,0.5) 0%,transparent 100%)
+  color:rgba(232,220,196,0.78);
+  background:linear-gradient(180deg,rgba(0,0,0,0.6) 0%,transparent 100%)
 }
 .cinema .topstrip .anno{color:var(--gold)}
-.cinema .stage{
-  position:relative;z-index:2;flex:1;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  padding:96px 28px 120px;gap:44px
+.cinema .meta{
+  position:relative;z-index:4;text-align:center;padding:0 24px 48px;width:100%;
 }
-.cinema .poster{
-  display:block;width:100%;max-width:1300px;height:auto;max-height:72vh;
-  object-fit:contain;
-  filter:drop-shadow(0 28px 60px rgba(0,0,0,0.75)) drop-shadow(0 0 90px rgba(196,164,100,0.06))
-}
-.cinema .credits{
-  display:flex;justify-content:center;align-items:center;gap:18px;
-  font-family:var(--mono);font-size:10px;letter-spacing:0.42em;text-transform:uppercase;
-  color:var(--gold-dim);margin-top:-12px;flex-wrap:wrap
-}
-.cinema .credits .dot{opacity:0.5}
-.cinema .meta{text-align:center;max-width:640px}
 .cinema .meta .seal{
   font-family:var(--mono);font-size:11px;letter-spacing:0.5em;color:var(--gold);
-  text-transform:uppercase;margin-bottom:18px;opacity:0.9
+  text-transform:uppercase;margin-bottom:16px;opacity:0.92;
+  text-shadow:0 2px 16px rgba(0,0,0,0.9)
 }
-.cinema .meta .line{width:80px;height:1px;background:var(--gold);margin:0 auto 22px;opacity:0.7}
+.cinema .meta .line{
+  width:80px;height:1px;background:var(--gold);margin:0 auto 20px;opacity:0.75
+}
 .cinema .meta .date{
   font-family:var(--display);font-size:clamp(18px,3vw,26px);letter-spacing:0.32em;
-  color:var(--cream);text-transform:uppercase;font-weight:500;margin-bottom:12px
+  color:var(--cream);text-transform:uppercase;font-weight:500;margin-bottom:10px;
+  text-shadow:0 2px 20px rgba(0,0,0,0.95)
 }
 .cinema .meta .where{
   font-family:var(--serif);font-style:italic;font-size:clamp(14px,2vw,17px);
-  color:var(--cream-dim);letter-spacing:0.04em
+  color:var(--cream-dim);letter-spacing:0.04em;
+  text-shadow:0 2px 16px rgba(0,0,0,0.95)
 }
 .cinema .scrollhint{
-  position:absolute;bottom:20px;left:50%;transform:translateX(-50%);z-index:5;
+  position:absolute;bottom:14px;left:50%;transform:translateX(-50%);z-index:5;
   font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold-dim);
   text-transform:uppercase;opacity:0.6;animation:fadeBlink 3s ease-in-out infinite
 }
@@ -200,10 +193,10 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 }
 
 @media (max-width:719px){
-  .cinema .stage{padding:72px 18px 92px;gap:32px}
-  .cinema .poster{max-height:62vh}
+  .cinema{height:92vh;min-height:600px}
+  .cinema .img{background-position:center bottom}
+  .cinema .meta{padding:0 20px 36px}
   .cinema .topstrip{padding:18px 20px;font-size:9px;letter-spacing:0.22em}
-  .cinema .credits{font-size:9px;letter-spacing:0.32em;gap:12px}
 }
 
 @media (max-width:480px){
@@ -220,10 +213,9 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
   .callout{padding:36px 22px}
   .callout .cta a{padding:16px 32px;font-size:11px;letter-spacing:0.3em}
   .section ul li{font-size:16px}
-  .cinema .stage{padding:64px 14px 78px;gap:24px}
-  .cinema .poster{max-height:55vh}
-  .cinema .credits{font-size:8px;letter-spacing:0.28em;gap:8px}
-  .cinema .meta .seal{font-size:10px;letter-spacing:0.4em;margin-bottom:14px}
+  .cinema{height:88vh;min-height:560px}
+  .cinema .meta{padding:0 16px 28px}
+  .cinema .meta .seal{font-size:10px;letter-spacing:0.4em;margin-bottom:12px}
   .cinema .meta .date{letter-spacing:0.22em}
   .cinema .scrollhint{display:none}
 }
@@ -231,27 +223,19 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 </head>
 <body>
 
-<!-- ===== CINEMATIC POSTER HERO ===== -->
-<section class="cinema" aria-label="El Día D">
-  <div class="bg" aria-hidden="true"></div>
-  <div class="overlay" aria-hidden="true"></div>
+<!-- ===== FULL-BLEED CINEMATIC HERO ===== -->
+<section class="cinema" aria-label="El Día D — La invasión del conocimiento">
+  <div class="img" role="img" aria-label="El Día D · Santiago Santos · Antonio Linares · Andre Joffroy y el roster completo de 10ampro"></div>
+  <div class="vignette"></div>
   <div class="topstrip">
     <span>10ampro</span>
     <span class="anno">Anno · MMXXVI</span>
   </div>
-  <div class="stage">
-    <img class="poster" src="/dday-roster.png" alt="El Día D — Santiago Santos, Antonio Linares, Andre Joffroy y el roster completo de 10ampro" />
-    <div class="credits" aria-label="Frontline">
-      <span>Santiago Santos</span><span class="dot">✦</span>
-      <span>Antonio Linares</span><span class="dot">✦</span>
-      <span>Andre Joffroy</span>
-    </div>
-    <div class="meta">
-      <div class="seal">Operación · Medellín</div>
-      <div class="line"></div>
-      <div class="date">7 Octubre 2026 · 10:00 → 17:00</div>
-      <div class="where">Cierre en el rooftop de El Zarzo</div>
-    </div>
+  <div class="meta">
+    <div class="seal">Operación · Medellín</div>
+    <div class="line"></div>
+    <div class="date">7 Octubre 2026 · 10:00 → 17:00</div>
+    <div class="where">Cierre en el rooftop de El Zarzo</div>
   </div>
   <div class="scrollhint">▼ Descender</div>
 </section>
