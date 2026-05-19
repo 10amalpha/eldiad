@@ -45,7 +45,7 @@
   --mono:'JetBrains Mono',ui-monospace,monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{background:var(--bg);color:var(--cream);font-family:var(--serif);font-size:19px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html,body{background:var(--bg);color:var(--cream);font-family:var(--serif);font-size:clamp(19px,1.4vw,21px);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body{
   background:
     radial-gradient(ellipse at 50% 0%,rgba(196,164,100,0.06) 0%,transparent 55%),
@@ -113,7 +113,7 @@ body::after{
   color:rgba(232,220,196,0.75);text-align:right;
   text-shadow:0 1px 3px rgba(0,0,0,0.95),0 0 14px rgba(0,0,0,0.85)
 }
-main{position:relative;z-index:3;max-width:760px;margin:0 auto;padding:48px 28px 100px}
+main{position:relative;z-index:3;max-width:820px;margin:0 auto;padding:48px 28px 100px}
 .topbar{display:flex;justify-content:space-between;align-items:center;padding-bottom:60px;font-family:var(--mono);font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-dim)}
 .topbar .mark{color:var(--cream-dim)}
 
@@ -150,7 +150,7 @@ main{position:relative;z-index:3;max-width:760px;margin:0 auto;padding:48px 28px
 .speaker .name{font-family:var(--display);font-weight:700;font-size:clamp(32px,6vw,48px);letter-spacing:0.04em;color:var(--gold-bright);text-align:center;margin-bottom:14px;line-height:1.05;text-transform:uppercase}
 .speaker .role{font-family:var(--serif);font-style:italic;font-size:clamp(17px,2.6vw,21px);color:var(--cream-dim);text-align:center;margin-bottom:36px;line-height:1.4;max-width:560px;margin-left:auto;margin-right:auto}
 .speaker .role::before,.speaker .role::after{content:'·';color:var(--gold);margin:0 10px}
-.speaker p{color:var(--cream);font-size:18px;line-height:1.75}
+.speaker p{color:var(--cream);font-size:clamp(19px,1.55vw,22px);line-height:1.7}
 
 .principles{display:grid;grid-template-columns:1fr;gap:48px;margin:48px 0}
 .principle{text-align:center;padding:0 12px}
@@ -327,12 +327,13 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 <section class="speaker">
   <div class="roman">IV</div>
   <div class="name">Michael Temkin</div>
-  <div class="role">La vieja guardia de Silicon Valley — cómo se construyó la era anterior y qué viene después</div>
+  <div class="role">La vieja guardia de Silicon Valley — del operador al cheque, del cheque a la próxima jugada</div>
   <p>Hay generaciones de Silicon Valley que se cuentan con los dedos de una mano. Michael Temkin pertenece a la que estuvo adentro cuando se escribieron las reglas.</p>
-  <p>Ex Yahoo. Ex Apple. Ex Amazon. Founder. Y hoy VC. La rara combinación de haber operado en las tres compañías que definieron tres eras distintas de internet, y después haber cambiado de silla para escribir cheques desde el otro lado de la mesa.</p>
+  <p>Ex Yahoo. Ex Apple. Ex Amazon. Founder. Después VC. La rara combinación de haber operado en las tres compañías que definieron tres eras distintas de internet, y después haber cambiado de silla para escribir cheques desde el otro lado de la mesa.</p>
+  <p>Y ahora otro giro: dejó el VC para volver a construir. Hoy está armando una startup en <em>stealth mode</em> — esa zona donde los veteranos que ya vieron demasiado deciden volver a apostar.</p>
   <p>Curiosamente, también es uno de los inversionistas tempranos de 10ampro. <em>Esta historia se cuenta acá primero.</em></p>
-  <p>La pregunta no es qué hizo. La pregunta es qué ve ahora. ¿Qué patrones reconoce desde la trinchera de quien construyó la era anterior? ¿Qué le suena familiar de lo que está pasando con AI? ¿Dónde se separa el hype del cambio estructural real?</p>
-  <p><strong>El edge de los veteranos no es nostalgia. Es pattern recognition.</strong></p>
+  <p>La pregunta no es qué hizo. La pregunta es qué ve ahora. ¿Qué hace que alguien que ya operó, fundó e invirtió decida volver a empezar? ¿Qué patrones reconoce desde la trinchera de quien construyó la era anterior? ¿Qué le suena familiar de lo que está pasando con AI? ¿Dónde se separa el hype del cambio estructural real?</p>
+  <p><strong>El edge de los veteranos no es nostalgia. Es pattern recognition — y a veces, ganas de volver al juego.</strong></p>
 </section>
 
 <div class="divider"><span>✦</span></div>
