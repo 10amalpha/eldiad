@@ -152,6 +152,57 @@ main{position:relative;z-index:3;max-width:820px;margin:0 auto;padding:48px 28px
 .speaker .role::before,.speaker .role::after{content:'·';color:var(--gold);margin:0 10px}
 .speaker p{color:var(--cream);font-size:clamp(19px,1.55vw,22px);line-height:1.7}
 
+/* Podcast embed — facade pattern, click to load iframe */
+.pod{margin:44px auto 0;max-width:680px}
+.pod .label{
+  display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:18px;
+  font-family:var(--mono);font-size:10px;letter-spacing:0.42em;text-transform:uppercase;
+  color:var(--gold-dim)
+}
+.pod .label::before,.pod .label::after{
+  content:'';flex:0 0 60px;height:1px;background:var(--line-strong)
+}
+.pod .frame{
+  position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;
+  background:#000;cursor:pointer;
+  border:1px solid var(--line-strong);
+  transition:border-color 0.25s ease,transform 0.3s ease
+}
+.pod .frame:hover{border-color:var(--gold)}
+.pod .frame:hover .play{background:var(--gold);box-shadow:0 0 50px rgba(196,164,100,0.45)}
+.pod .frame:hover .play svg{fill:var(--bg-deep)}
+.pod .frame::before{
+  content:'';position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(180deg,rgba(0,0,0,0.15) 0%,transparent 30%,transparent 60%,rgba(0,0,0,0.65) 100%)
+}
+.pod .frame img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:saturate(0.85) contrast(1.05) brightness(0.78)
+}
+.pod .frame .play{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:3;
+  width:72px;height:72px;border-radius:50%;
+  background:rgba(196,164,100,0.92);
+  border:1.5px solid var(--gold-bright);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 35px rgba(196,164,100,0.25),0 4px 20px rgba(0,0,0,0.5);
+  transition:all 0.3s ease
+}
+.pod .frame .play svg{width:26px;height:26px;fill:var(--bg-deep);margin-left:4px}
+.pod .frame .meta{
+  position:absolute;left:18px;right:18px;bottom:14px;z-index:3;
+  font-family:var(--display);font-size:clamp(15px,1.7vw,19px);
+  letter-spacing:0.04em;color:var(--cream);
+  text-shadow:0 2px 14px rgba(0,0,0,0.95)
+}
+.pod .frame .meta .src{
+  display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:0.32em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:6px;opacity:0.92
+}
+.pod .frame iframe{
+  position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5
+}
+
 .principles{display:grid;grid-template-columns:1fr;gap:48px;margin:48px 0}
 .principle{text-align:center;padding:0 12px}
 .principle .num{font-family:var(--display);font-size:12px;letter-spacing:0.5em;color:var(--gold);margin-bottom:14px;font-weight:500}
@@ -298,6 +349,14 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
   <p>Antonio Linares no viene a hablar de "invertir en innovación" como frase de brochure. Viene a explicar cómo piensa alguien que encontró oportunidades como Spotify, Palantir, AMD y Hims antes de que fueran obvias para el consenso.</p>
   <p>La pregunta no es qué compró. La pregunta importante es: <em>¿qué vio él que otros no estaban viendo?</em> ¿Qué framework le permitió identificar empresas que parecían caras, raras o incomprendidas antes de que el mercado entendiera el cambio estructural?</p>
   <p>Porque el verdadero alpha no está en tener más datos. Está en tener mejores lentes.</p>
+  <div class="pod">
+    <div class="label">Conversación previa</div>
+    <div class="frame" data-id="6j1_HGpUX2s" data-t="802" role="button" tabindex="0" aria-label="Reproducir podcast con Antonio Linares">
+      <img src="https://i.ytimg.com/vi/6j1_HGpUX2s/maxresdefault.jpg" alt="Podcast Antonio Linares · 10ampro" loading="lazy" />
+      <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="meta"><span class="src">10ampro · Episodio anterior</span>Antonio Linares · Cómo encontrar 100x antes que el consenso</div>
+    </div>
+  </div>
 </section>
 
 <div class="divider"><span>✦</span></div>
@@ -309,6 +368,14 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
   <p>Santiago Santos fue de los primeros inversionistas en Ethereum. Pero su tesis no se quedó congelada en la nostalgia. Hoy es uno de los creyentes más fuertes en el poder técnico de Solana y en una idea mucho más grande que "cripto sube o baja": <em>traer el GDP onchain.</em></p>
   <p>No se trata de memes. No se trata de casinos. No se trata de otro token con comunidad ruidosa. Se trata de entender si las redes cripto pueden convertirse en infraestructura real para mercados, pagos, activos, coordinación económica y formación de capital.</p>
   <p>La pregunta no es si Solana compite con Ethereum. La pregunta es si una blockchain de alta performance puede convertirse en una nueva capa económica para el mundo real.</p>
+  <div class="pod">
+    <div class="label">Conversación previa</div>
+    <div class="frame" data-id="cCNGqlJkjAs" data-t="320" role="button" tabindex="0" aria-label="Reproducir podcast con Santiago Santos">
+      <img src="https://i.ytimg.com/vi/cCNGqlJkjAs/maxresdefault.jpg" alt="Podcast Santiago Santos · 10ampro" loading="lazy" />
+      <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="meta"><span class="src">10ampro · Episodio anterior</span>Santiago Santos · De Ethereum temprano a traer el GDP onchain</div>
+    </div>
+  </div>
 </section>
 
 <div class="divider"><span>✦</span></div>
@@ -334,6 +401,14 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
   <p>Lo que hace única a su lente no es el currículum. Es que <em>todo lo piensa en grande, como es Brasil.</em> Las decisiones, los mercados, las apuestas, los plazos. Mientras gran parte de Latam todavía discute si los problemas son pequeños o muy pequeños, Brasil produce gente que piensa estructuras de US$10B y cadenas globales de suministro como si fuera lo natural.</p>
   <p>La pregunta para él no es qué está pasando en Brasil. Es <em>qué tipo de ambición le falta a Medellín para empezar a pensar en otra escala.</em></p>
   <p><strong>El tamaño del país que construyes empieza por el tamaño del pensamiento que toleras.</strong></p>
+  <div class="pod">
+    <div class="label">Conversación previa</div>
+    <div class="frame" data-id="JWgIL5Cl47o" role="button" tabindex="0" aria-label="Reproducir podcast con Pedro Faria">
+      <img src="https://i.ytimg.com/vi/JWgIL5Cl47o/maxresdefault.jpg" alt="Podcast Pedro Faria · 10ampro" loading="lazy" />
+      <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="meta"><span class="src">10ampro · Episodio anterior</span>Pedro Faria · Pensar a escala de Brasil</div>
+    </div>
+  </div>
 </section>
 
 <div class="divider"><span>✦</span></div>
@@ -360,6 +435,14 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
   <p>No como slogan. Como infraestructura. Como ventaja competitiva. Como plataforma industrial.</p>
   <p>Porque sin energía barata, confiable y abundante, no hay AI, no hay fábricas, no hay data centers, no hay movilidad eléctrica, no hay industria avanzada y no hay país serio.</p>
   <p><strong>La energía no es un sector. Es el piso físico de todo lo demás.</strong></p>
+  <div class="pod">
+    <div class="label">Conversación previa</div>
+    <div class="frame" data-id="w-JmwyOLuU8" data-t="711" role="button" tabindex="0" aria-label="Reproducir podcast con Ricardo Sierra">
+      <img src="https://i.ytimg.com/vi/w-JmwyOLuU8/maxresdefault.jpg" alt="Podcast Ricardo Sierra · 10ampro" loading="lazy" />
+      <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="meta"><span class="src">10ampro · Episodio anterior</span>Ricardo Sierra · Energy Valley y el piso físico del futuro</div>
+    </div>
+  </div>
 </section>
 
 <div class="divider"><span>✦</span></div>
@@ -371,6 +454,14 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
   <p>La salud también está entrando en su era industrial. Los doctores Camilo Ospina y Andrés Palacio vienen a hablar de péptidos, longevidad, medicina preventiva y una pregunta que suena pequeña, pero es enorme: <em>¿qué necesitaría Medellín para tener una fábrica de péptidos?</em></p>
   <p>Porque la próxima frontera de salud no será solo tratar enfermedad. Será diseñar mejores protocolos, mejores moléculas, mejores datos y mejores cadenas de producción.</p>
   <p>Medellín no puede limitarse a importar el futuro. Tiene que aprender a fabricarlo.</p>
+  <div class="pod">
+    <div class="label">Conversación previa</div>
+    <div class="frame" data-id="VU8otWdoAqI" role="button" tabindex="0" aria-label="Reproducir podcast con Andrés Palacio">
+      <img src="https://i.ytimg.com/vi/VU8otWdoAqI/maxresdefault.jpg" alt="Podcast Andrés Palacio · 10ampro" loading="lazy" />
+      <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="meta"><span class="src">10ampro · Episodio anterior</span>Andrés Palacio · Péptidos, longevidad y medicina preventiva</div>
+    </div>
+  </div>
 </section>
 
 <div class="divider"><span>✦</span></div>
@@ -523,5 +614,23 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 </footer>
 
 </main>
+<script>
+document.querySelectorAll('.pod .frame').forEach(function(f){
+  f.addEventListener('click', function(){
+    if (f.dataset.loaded) return;
+    var id = f.dataset.id;
+    var t = f.dataset.t || '';
+    var src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&modestbranding=1&rel=0&playsinline=1' + (t ? '&start=' + t : '');
+    var iframe = document.createElement('iframe');
+    iframe.setAttribute('src', src);
+    iframe.setAttribute('allow', 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('title', f.getAttribute('aria-label') || 'YouTube video');
+    f.appendChild(iframe);
+    f.dataset.loaded = '1';
+    f.style.cursor = 'default';
+  });
+});
+</script>
 </body>
 </html>
