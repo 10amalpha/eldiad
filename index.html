@@ -186,20 +186,27 @@ main{position:relative;z-index:3;max-width:820px;margin:0 auto;padding:48px 28px
 .partner{text-align:center;margin:20px 0}
 .partner .eyebrow{
   font-family:var(--mono);font-size:10px;letter-spacing:0.5em;text-transform:uppercase;
-  color:var(--gold);margin-bottom:36px;opacity:0.9
+  color:var(--gold);margin-bottom:42px;opacity:0.9
 }
-.partner a{
-  display:inline-block;text-decoration:none;
+.partner .logos{
+  display:flex;justify-content:center;align-items:center;
+  gap:56px;flex-wrap:wrap
+}
+.partner .logos a{
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;
   transition:transform 0.3s ease,filter 0.3s ease;
   filter:brightness(0.92)
 }
-.partner a:hover{transform:translateY(-2px);filter:brightness(1.1)}
-.partner a img{
-  width:100%;max-width:340px;height:auto;display:block;margin:0 auto
+.partner .logos a:hover{transform:translateY(-2px);filter:brightness(1.12)}
+.partner .logos a img{
+  height:54px;width:auto;display:block
 }
+.partner .logos a.veronorte img{height:46px}
+.partner .logos a.eafit img{height:62px}
 .partner .tagline{
   font-family:var(--serif);font-style:italic;font-size:clamp(16px,2.2vw,20px);
-  color:var(--cream-dim);margin-top:26px;line-height:1.5;max-width:480px;
+  color:var(--cream-dim);margin-top:32px;line-height:1.5;max-width:480px;
   margin-left:auto;margin-right:auto
 }
 
@@ -367,11 +374,16 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 <main>
 
 <section class="section partner" style="margin-top:54px;padding-top:8px">
-  <div class="eyebrow">Aliado del Día D</div>
-  <a href="https://veronorte.com/" target="_blank" rel="noopener" aria-label="Veronorte">
-    <img src="/veronorte-logo.png" alt="Veronorte" loading="lazy" />
-  </a>
-  <p class="tagline">Bridging Latin America with the world's leading venture capital funds.</p>
+  <div class="eyebrow">Aliados del Día D</div>
+  <div class="logos">
+    <a class="veronorte" href="https://veronorte.com/" target="_blank" rel="noopener" aria-label="Veronorte">
+      <img src="/veronorte-logo.png" alt="Veronorte" loading="lazy" />
+    </a>
+    <a class="eafit" href="https://www.eafit.edu.co/" target="_blank" rel="noopener" aria-label="Universidad EAFIT">
+      <img src="/eafit-logo.png" alt="Universidad EAFIT" loading="lazy" />
+    </a>
+  </div>
+  <p class="tagline">Veronorte conecta a Latinoamérica con los principales fondos de venture capital del mundo. La Universidad EAFIT abre las puertas del Auditorio Fundadores.</p>
 </section>
 
 <div class="divider heavy"><span>✦</span><span>❖</span><span>✦</span></div>
