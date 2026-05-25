@@ -193,6 +193,42 @@ main{position:relative;z-index:3;max-width:820px;margin:0 auto;padding:48px 28px
 .speaker .role::before,.speaker .role::after{content:'·';color:var(--gold);margin:0 10px}
 .speaker p{color:var(--cream);font-size:clamp(20px,1.6vw,23px);line-height:1.7}
 
+/* Countdown */
+.countdown{text-align:center;margin:54px auto 0;max-width:760px}
+.countdown .eyebrow{
+  font-family:var(--mono);font-size:10px;letter-spacing:0.5em;text-transform:uppercase;
+  color:var(--gold);opacity:0.9;margin-bottom:10px
+}
+.countdown .target{
+  font-family:var(--serif);font-style:italic;font-size:clamp(15px,2.2vw,18px);
+  color:var(--cream-dim);margin-bottom:34px
+}
+.countdown .clock{
+  display:flex;justify-content:center;align-items:stretch;gap:0;flex-wrap:nowrap
+}
+.countdown .unit{
+  display:flex;flex-direction:column;align-items:center;
+  padding:0 clamp(14px,3.4vw,38px);position:relative
+}
+.countdown .unit:not(:last-child)::after{
+  content:'';position:absolute;right:0;top:14%;height:72%;width:1px;
+  background:var(--line-strong)
+}
+.countdown .num{
+  font-family:var(--display);font-weight:700;
+  font-size:clamp(40px,8vw,76px);line-height:1;
+  color:var(--gold-bright);font-variant-numeric:tabular-nums;
+  text-shadow:0 0 36px rgba(196,164,100,0.18)
+}
+.countdown .lbl{
+  font-family:var(--mono);font-size:9px;letter-spacing:0.34em;text-transform:uppercase;
+  color:var(--gold-dim);margin-top:14px
+}
+@media (max-width:520px){
+  .countdown .unit{padding:0 clamp(8px,4vw,18px)}
+  .countdown .lbl{font-size:7.5px;letter-spacing:0.2em}
+}
+
 /* Sponsor / Partner block */
 .partner{text-align:center;margin:20px 0}
 .partner .eyebrow{
@@ -388,6 +424,17 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 </section>
 
 <main>
+
+<section class="section countdown">
+  <div class="eyebrow">Cuenta Regresiva</div>
+  <div class="target">Miércoles 14 de Octubre, 2026 · Medellín</div>
+  <div class="clock">
+    <div class="unit"><span class="num" id="cd-d">000</span><span class="lbl">Días</span></div>
+    <div class="unit"><span class="num" id="cd-h">00</span><span class="lbl">Horas</span></div>
+    <div class="unit"><span class="num" id="cd-m">00</span><span class="lbl">Minutos</span></div>
+    <div class="unit"><span class="num" id="cd-s">00</span><span class="lbl">Segundos</span></div>
+  </div>
+</section>
 
 <section class="section partner" style="margin-top:54px;padding-top:8px">
   <div class="eyebrow">Aliados del Día D</div>
@@ -789,6 +836,24 @@ document.querySelectorAll('.pod .frame').forEach(function(f){
     f.style.cursor = 'default';
   });
 });
+
+(function(){
+  var dEl = document.getElementById('cd-d');
+  var hEl = document.getElementById('cd-h');
+  var mEl = document.getElementById('cd-m');
+  var sEl = document.getElementById('cd-s');
+  if (!dEl) return;
+  var target = new Date('2026-10-14T09:00:00-05:00').getTime();
+  function tick(){
+    var diff = Math.max(0, target - Date.now());
+    dEl.textContent = String(Math.floor(diff / 86400000)).padStart(3,'0');
+    hEl.textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2,'0');
+    mEl.textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2,'0');
+    sEl.textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2,'0');
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
 </script>
 </body>
 </html>
