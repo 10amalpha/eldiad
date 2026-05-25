@@ -290,6 +290,8 @@ main{position:relative;z-index:3;max-width:820px;margin:0 auto;padding:48px 28px
 .tier.early:hover{border-color:var(--gold-bright) !important}
 .tier.final:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(0,0,0,0.4)}
 .tier.final:hover{border-color:var(--gold) !important}
+.tier.last{cursor:default}
+.tier.last::after{display:none}
 
 /* Podcast embed — facade pattern, click to load iframe */
 .pod{margin:44px auto 0;max-width:680px}
@@ -767,18 +769,18 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
   <div style="width:60px;height:1px;background:var(--line-strong);margin:40px auto 0"></div>
 
   <div style="margin:40px auto 0;max-width:760px">
-    <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.42em;color:var(--gold);text-transform:uppercase;text-align:center;margin-bottom:24px;opacity:0.88">II · Dos Maneras de Reservar</div>
+    <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.42em;color:var(--gold);text-transform:uppercase;text-align:center;margin-bottom:24px;opacity:0.88">II · Tres Tramos · El Precio Sube</div>
 
     <div style="display:grid;grid-template-columns:1fr;gap:24px">
 
-      <a class="tier early" href="https://luma.com/eldiad?coupon=MANIFIESTO10AM" target="_blank" rel="noopener" style="border:1px solid var(--gold);padding:28px 24px;background:linear-gradient(180deg,rgba(196,164,100,0.045) 0%,transparent 100%);position:relative">
-        <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--bg-deep);padding:0 14px;font-family:var(--mono);font-size:9px;letter-spacing:0.5em;color:var(--gold);text-transform:uppercase">Early Bird · Asume el riesgo</div>
+      <a class="tier early" href="https://luma.com/eldiad?coupon=MANIFIESTO10AM" target="_blank" rel="noopener" style="border:1px solid var(--gold);padding:28px 24px;background:linear-gradient(180deg,rgba(196,164,100,0.06) 0%,transparent 100%);position:relative">
+        <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--bg-deep);padding:0 14px;font-family:var(--mono);font-size:9px;letter-spacing:0.5em;color:var(--gold);text-transform:uppercase">Tramo I · Early Bird</div>
         <div style="text-align:center;margin-top:6px">
+          <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;margin-bottom:8px">● Tramo activo</div>
           <div style="font-family:var(--display);font-size:clamp(34px,5vw,46px);letter-spacing:0.04em;color:var(--gold-bright);font-weight:700;line-height:1">USD 100</div>
-          <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.32em;color:var(--gold-dim);text-transform:uppercase;margin-top:10px">50% bajo el precio final</div>
+          <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.32em;color:var(--gold-dim);text-transform:uppercase;margin-top:10px">El mejor precio · Para los que entran primero</div>
         </div>
-        <p style="text-align:center;font-family:var(--serif);color:var(--cream);font-size:16px;line-height:1.55;margin-top:18px">Pagas hoy, con la fecha y el lugar ya confirmados. Confías en el roster aunque algún nombre cambie.</p>
-        <p style="text-align:center;font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:14px;line-height:1.55;margin-top:8px">El descuento no es por generosidad — es por entrar antes de que el line-up esté cerrado del todo. Los que entran ahora se ganan la asimetría.</p>
+        <p style="text-align:center;font-family:var(--serif);color:var(--cream);font-size:16px;line-height:1.55;margin-top:18px">Pagas hoy, con la fecha y el lugar ya confirmados. Asumes el riesgo del line-up — y te ganas la asimetría.</p>
         <div style="text-align:center;margin-top:18px;padding-top:14px;border-top:1px solid var(--line)">
           <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.42em;color:var(--gold-dim);text-transform:uppercase;margin-bottom:6px">Código</div>
           <div style="font-family:var(--mono);font-size:13px;letter-spacing:0.28em;color:var(--gold);font-weight:500">MANIFIESTO10AM</div>
@@ -786,17 +788,26 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
       </a>
 
       <a class="tier final" href="https://luma.com/eldiad" target="_blank" rel="noopener" style="border:1px solid var(--line-strong);padding:28px 24px;position:relative">
-        <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--bg-deep);padding:0 14px;font-family:var(--mono);font-size:9px;letter-spacing:0.5em;color:var(--cream-dim);text-transform:uppercase">Precio Final · Confirmado</div>
+        <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--bg-deep);padding:0 14px;font-family:var(--mono);font-size:9px;letter-spacing:0.5em;color:var(--cream-dim);text-transform:uppercase">Tramo II · Precio Corriente</div>
         <div style="text-align:center;margin-top:6px">
           <div style="font-family:var(--display);font-size:clamp(34px,5vw,46px);letter-spacing:0.04em;color:var(--cream);font-weight:700;line-height:1">USD 200</div>
-          <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.32em;color:var(--gold-dim);text-transform:uppercase;margin-top:10px">Cuando el line-up esté cerrado</div>
+          <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.32em;color:var(--gold-dim);text-transform:uppercase;margin-top:10px">El precio base · Con más nombres confirmados</div>
         </div>
-        <p style="text-align:center;font-family:var(--serif);color:var(--cream);font-size:16px;line-height:1.55;margin-top:18px">Pagas cuando todo está confirmado. Sin riesgo, sin ambigüedad. Pero también sin la asimetría del Early Bird.</p>
+        <p style="text-align:center;font-family:var(--serif);color:var(--cream);font-size:16px;line-height:1.55;margin-top:18px">El precio sin descuento. Disponible mientras queden cupos del tramo.</p>
       </a>
+
+      <div class="tier last" style="border:1px solid var(--line);padding:28px 24px;position:relative;opacity:0.62">
+        <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--bg-deep);padding:0 14px;font-family:var(--mono);font-size:9px;letter-spacing:0.5em;color:var(--cream-dim);text-transform:uppercase">Tramo III · Última Llamada</div>
+        <div style="text-align:center;margin-top:6px">
+          <div style="font-family:var(--display);font-size:clamp(34px,5vw,46px);letter-spacing:0.04em;color:var(--cream);font-weight:700;line-height:1">USD 300</div>
+          <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.32em;color:var(--gold-dim);text-transform:uppercase;margin-top:10px">Los últimos cupos</div>
+        </div>
+        <p style="text-align:center;font-family:var(--serif);color:var(--cream);font-size:16px;line-height:1.55;margin-top:18px">El año pasado nos sobrevendimos. Esta vez el aforo manda — y los últimos cupos cuestan más.</p>
+      </div>
 
     </div>
 
-    <p style="text-align:center;font-family:var(--serif);font-style:italic;color:var(--gold-dim);font-size:14px;line-height:1.55;margin-top:24px">Cupo total: 100 personas. No es un número de marketing — es el aforo real del cuarto.</p>
+    <p style="text-align:center;font-family:var(--serif);font-style:italic;color:var(--gold-dim);font-size:14px;line-height:1.55;margin-top:24px">El precio nunca baja. Cada tramo que se llena, se cierra. Esperar siempre cuesta.</p>
   </div>
 
   <div style="width:60px;height:1px;background:var(--line-strong);margin:40px auto 0"></div>
