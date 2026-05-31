@@ -193,6 +193,21 @@ main{position:relative;z-index:3;max-width:820px;margin:0 auto;padding:48px 28px
 .speaker .role::before,.speaker .role::after{content:'·';color:var(--gold);margin:0 10px}
 .speaker p{color:var(--cream);font-size:clamp(20px,1.6vw,23px);line-height:1.7}
 
+/* Cohost grid */
+.cohosts{display:grid;grid-template-columns:repeat(4,1fr);gap:36px 28px;max-width:780px;margin:0 auto;padding-top:8px}
+.cohost{display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;color:inherit;transition:transform 0.3s ease}
+.cohost:hover{transform:translateY(-3px)}
+.cohost .avatar{width:108px;height:108px;border-radius:50%;background:var(--bg-deep);border:1.5px solid rgba(196,164,100,0.4);box-shadow:0 0 0 1px rgba(0,0,0,0.5) inset,0 8px 24px rgba(0,0,0,0.5),0 0 32px rgba(196,164,100,0.08);overflow:hidden;display:flex;align-items:center;justify-content:center;transition:border-color 0.3s ease,box-shadow 0.3s ease;margin-bottom:18px}
+.cohost:hover .avatar{border-color:var(--gold-bright);box-shadow:0 0 0 1px rgba(0,0,0,0.5) inset,0 12px 32px rgba(0,0,0,0.5),0 0 48px rgba(196,164,100,0.22)}
+.cohost .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.cohost .avatar .initials{font-family:var(--display);font-size:32px;font-weight:700;color:var(--gold-dim);letter-spacing:0.02em}
+.cohost .cname{font-family:var(--display);font-weight:500;font-size:14px;letter-spacing:0.08em;color:var(--cream);text-transform:uppercase;line-height:1.3;margin-bottom:6px;min-height:36px;display:flex;align-items:center}
+.cohost .ctag{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--cream-dim);margin-bottom:10px;line-height:1.3;min-height:36px;display:flex;align-items:center;text-align:center}
+.cohost .chandle{font-family:var(--mono);font-size:10px;letter-spacing:0.14em;color:var(--gold-dim);text-transform:lowercase;transition:color 0.3s ease}
+.cohost:hover .chandle{color:var(--gold-bright)}
+.cohost-intro{text-align:center;margin:0 auto 48px;max-width:560px;color:var(--cream-dim);font-style:italic;font-size:17px;line-height:1.5}
+@media (max-width:680px){.cohosts{grid-template-columns:repeat(2,1fr);gap:32px 24px;max-width:420px}.cohost .avatar{width:96px;height:96px}}
+
 /* Countdown */
 .countdown{text-align:center;margin:54px auto 0;max-width:760px}
 .countdown .eyebrow{
@@ -733,8 +748,56 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 <section class="speaker">
   <div class="roman">IX</div>
   <div class="name">Los cohosts</div>
-  <div class="role">Hernán Jaramillo · Darío Palacio · Nicolás Fernández · Andrés Arias · Camilo Botero · Guillermo Valencia · El Gordo</div>
-  <p>Este evento también reúne al lineup completo de 10ampro. La idea no es hacer paneles decorativos. La idea es conectar tesis. Cruzar mapas. Discutir sin anestesia.</p>
+  <div class="role">El equipo de 10ampro en persona</div>
+
+  <p class="cohost-intro">Los siete cohosts de 10ampro estarán en el auditorio, moderando las conversaciones del día.</p>
+
+  <div class="cohosts">
+    <a class="cohost" href="https://x.com/holdmybirra" target="_blank" rel="noopener">
+      <div class="avatar"><img src="/cohost-hernan.png" alt="Hernán Jaramillo" loading="lazy" /></div>
+      <div class="cname">Hernán Jaramillo</div>
+      <div class="ctag">10ampro</div>
+      <div class="chandle">@holdmybirra</div>
+    </a>
+    <a class="cohost" href="https://x.com/dariopalacio" target="_blank" rel="noopener">
+      <div class="avatar"><img src="/cohost-dario.png" alt="Darío Palacio" loading="lazy" /></div>
+      <div class="cname">Darío Palacio</div>
+      <div class="ctag">10ampro</div>
+      <div class="chandle">@dariopalacio</div>
+    </a>
+    <a class="cohost" href="https://x.com/nicoferdo73" target="_blank" rel="noopener">
+      <div class="avatar"><img src="/cohost-nicolas.png" alt="Nicolás Fernández" loading="lazy" /></div>
+      <div class="cname">Nicolás Fernández</div>
+      <div class="ctag">Nopidopermiso</div>
+      <div class="chandle">@nicoferdo73</div>
+    </a>
+    <a class="cohost" href="https://x.com/GMacrowise" target="_blank" rel="noopener">
+      <div class="avatar"><img src="/cohost-guillermo.png" alt="Guillermo Valencia" loading="lazy" /></div>
+      <div class="cname">Guillermo Valencia</div>
+      <div class="ctag">Macrowise</div>
+      <div class="chandle">@GMacrowise</div>
+    </a>
+    <div class="cohost">
+      <div class="avatar"><span class="initials">AA</span></div>
+      <div class="cname">Andrés Arias</div>
+      <div class="ctag">Financial Academy</div>
+      <div class="chandle">handle pendiente</div>
+    </div>
+    <div class="cohost">
+      <div class="avatar"><img src="/cohost-camilo.png" alt="Camilo Botero" loading="lazy" /></div>
+      <div class="cname">Camilo Botero</div>
+      <div class="ctag">Managing Partner Veronorte</div>
+      <div class="chandle">handle pendiente</div>
+    </div>
+    <a class="cohost" href="https://x.com/gordoneaprod" target="_blank" rel="noopener">
+      <div class="avatar"><img src="/cohost-elgordo.png" alt="El Gordo" loading="lazy" /></div>
+      <div class="cname">El Gordo</div>
+      <div class="ctag">10ampro</div>
+      <div class="chandle">@gordoneaprod</div>
+    </a>
+  </div>
+
+  <p style="margin-top:48px">Este evento también reúne al lineup completo de 10ampro. La idea no es hacer paneles decorativos. La idea es conectar tesis. Cruzar mapas. Discutir sin anestesia.</p>
   <p>Y poner a Medellín frente a las preguntas que realmente importan:</p>
   <ul>
     <li>¿Qué estamos construyendo?</li>
