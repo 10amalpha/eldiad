@@ -471,9 +471,23 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
   .cinema .hud{font-size:8px;letter-spacing:0.18em}
   .cinema .hud .center .sep{margin:0 4px}
 }
+
+.langswitch{position:fixed;top:14px;right:14px;z-index:2000;display:flex;gap:2px;
+  background:rgba(8,7,10,0.74);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,0.12);border-radius:999px;padding:3px}
+.langswitch button{font-family:var(--mono);font-size:11px;letter-spacing:0.12em;
+  color:var(--cream-dim);background:transparent;border:0;padding:6px 12px;border-radius:999px;
+  cursor:pointer;transition:background .2s ease,color .2s ease;line-height:1}
+.langswitch button.active{background:var(--gold);color:#08070a}
+.langswitch button:not(.active):hover{color:var(--cream)}
+@media (max-width:600px){.langswitch{top:10px;right:10px}.langswitch button{padding:5px 10px;font-size:10px}}
 </style>
 </head>
 <body>
+<div class="langswitch" role="group" aria-label="Idioma / Language">
+  <button type="button" data-lang="es" class="active" aria-label="Español">ES</button>
+  <button type="button" data-lang="en" aria-label="English">EN</button>
+</div>
 
 <!-- ===== CINEMATIC HERO ===== -->
 <section class="cinema" aria-label="El Día D — La invasión del conocimiento">
@@ -495,58 +509,58 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 <main>
 
 <section class="section countdown">
-  <div class="eyebrow">Cuenta Regresiva</div>
-  <div class="target">Miércoles 14 de Octubre, 2026 · Medellín</div>
+  <div class="eyebrow" data-en="Countdown">Cuenta Regresiva</div>
+  <div class="target" data-en="Wednesday, October 14, 2026 · Medellín">Miércoles 14 de Octubre, 2026 · Medellín</div>
   <div class="clock">
-    <div class="unit"><span class="num" id="cd-d">000</span><span class="lbl">Días</span></div>
-    <div class="unit"><span class="num" id="cd-h">00</span><span class="lbl">Horas</span></div>
-    <div class="unit"><span class="num" id="cd-m">00</span><span class="lbl">Minutos</span></div>
-    <div class="unit"><span class="num" id="cd-s">00</span><span class="lbl">Segundos</span></div>
+    <div class="unit"><span class="num" id="cd-d">000</span><span class="lbl" data-en="Days">Días</span></div>
+    <div class="unit"><span class="num" id="cd-h">00</span><span class="lbl" data-en="Hours">Horas</span></div>
+    <div class="unit"><span class="num" id="cd-m">00</span><span class="lbl" data-en="Minutes">Minutos</span></div>
+    <div class="unit"><span class="num" id="cd-s">00</span><span class="lbl" data-en="Seconds">Segundos</span></div>
   </div>
-  <a class="cd-cta" href="https://luma.com/eldiad" target="_blank" rel="noopener">Reservar Plaza</a>
+  <a class="cd-cta" href="https://luma.com/eldiad" target="_blank" rel="noopener" data-en="Reserve Your Spot">Reservar Plaza</a>
 </section>
 
 <section class="section proof">
-  <div class="eyebrow">No es la primera vez</div>
+  <div class="eyebrow" data-en="Not the first time">No es la primera vez</div>
   <div class="stats">
     <div class="stat">
       <span class="fig">210</span>
-      <span class="cap">Episodios al aire</span>
+      <span class="cap" data-en="Episodes aired">Episodios al aire</span>
     </div>
     <div class="stat">
       <span class="fig">200+</span>
-      <span class="cap">Asistentes en la primera edición</span>
+      <span class="cap" data-en="Attendees at the first edition">Asistentes en la primera edición</span>
     </div>
     <div class="stat">
       <span class="fig">II</span>
-      <span class="cap">Segunda edición</span>
+      <span class="cap" data-en="Second edition">Segunda edición</span>
     </div>
   </div>
-  <p class="line">El que viene al Día D no llega por curiosidad. Llega porque nos viene escuchando hace muchos episodios.</p>
+  <p class="line" data-en="Whoever comes to El Día D doesn't show up out of curiosity. They come because they've been listening to us for many episodes.">El que viene al Día D no llega por curiosidad. Llega porque nos viene escuchando hace muchos episodios.</p>
 </section>
 
 <section class="section partner" style="margin-top:54px;padding-top:8px">
-  <div class="eyebrow">Aliados del Día D</div>
+  <div class="eyebrow" data-en="El Día D Allies">Aliados del Día D</div>
   <div class="logos">
     <a class="veronorte" href="https://veronorte.com/" target="_blank" rel="noopener" aria-label="Veronorte">
       <span class="logobox"><img src="/veronorte-logo.png" alt="Veronorte" loading="lazy" /></span>
-      <span class="note">Capital · Puente con el venture capital global</span>
+      <span class="note" data-en="Capital · A bridge to global venture capital">Capital · Puente con el venture capital global</span>
     </a>
     <a class="eafit" href="https://www.eafit.edu.co/" target="_blank" rel="noopener" aria-label="Universidad EAFIT">
       <span class="logobox"><img src="/eafit-logo.png" alt="Universidad EAFIT" loading="lazy" /></span>
-      <span class="note">Sede · Donde se piensa por primeros principios</span>
+      <span class="note" data-en="Venue · Where thinking starts from first principles">Sede · Donde se piensa por primeros principios</span>
     </a>
     <a class="makeno" href="https://www.makeno.co/" target="_blank" rel="noopener" aria-label="Makeno">
       <span class="logobox"><img src="/makeno-logo.png" alt="Makeno" loading="lazy" /></span>
-      <span class="note">Logística</span>
+      <span class="note" data-en="Logistics">Logística</span>
     </a>
     <div class="mbs" aria-label="MBS & Associates">
       <span class="logobox"><img src="/mbs-logo.png" alt="MBS & Associates" loading="lazy" /></span>
-      <span class="note">Trust y sociedades en el exterior · Menos fricción</span>
+      <span class="note" data-en="Trusts and offshore entities · Less friction">Trust y sociedades en el exterior · Menos fricción</span>
     </div>
     <a class="sites" href="https://www.sitesmedellin.com/es/bookcore/availability/sitehotel/2026-10-13/2026-10-16/2/0/?cp=10ampro&amp;rrc=1&amp;adults=2&amp;occupancies=%255B%257B%2522adults%2522%253A%25202%252C%2520%2522children%2522%253A%25200%252C%2520%2522ages%2522%253A%2520%2522%2522%257D%255D&amp;occp=1" target="_blank" rel="noopener" aria-label="Sites Suites de Autor">
       <span class="logobox"><img src="/sites-logo.png" alt="Sites Suites de Autor" loading="lazy" /></span>
-      <span class="note">Alojamiento · 15% con el código 10AMPRO</span>
+      <span class="note" data-en="Lodging · 15% off with code 10AMPRO">Alojamiento · 15% con el código 10AMPRO</span>
     </a>
   </div>
 </section>
@@ -555,50 +569,50 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 
 <section class="section" style="margin-top:60px;text-align:center;padding-top:20px">
   <div class="sigil" style="margin-bottom:18px">EL DÍA D</div>
-  <h2 style="margin-bottom:14px">La invasión del conocimiento</h2>
-  <p style="font-family:var(--serif);font-style:italic;color:var(--cream-dim);max-width:520px;margin:0 auto 36px">Un manifiesto. Una operación. Un desembarco.</p>
+  <h2 style="margin-bottom:14px" data-en="The invasion of knowledge">La invasión del conocimiento</h2>
+  <p style="font-family:var(--serif);font-style:italic;color:var(--cream-dim);max-width:520px;margin:0 auto 36px" data-en="A manifesto. An operation. A landing.">Un manifiesto. Una operación. Un desembarco.</p>
 
   <div style="display:inline-block;padding:28px 44px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-    <div style="font-family:var(--mono);font-size:11px;letter-spacing:0.5em;color:var(--gold);text-transform:uppercase;margin-bottom:12px;opacity:0.92">Operación · Medellín</div>
+    <div style="font-family:var(--mono);font-size:11px;letter-spacing:0.5em;color:var(--gold);text-transform:uppercase;margin-bottom:12px;opacity:0.92" data-en="Operation · Medellín">Operación · Medellín</div>
     <div style="width:60px;height:1px;background:var(--gold);margin:0 auto 16px;opacity:0.6"></div>
-    <div style="font-family:var(--display);font-size:clamp(20px,3.4vw,28px);letter-spacing:0.22em;color:var(--cream);text-transform:uppercase;font-weight:500;margin-bottom:10px">Miércoles 14 de Octubre, 2026</div>
-    <div style="font-family:var(--serif);font-style:italic;font-size:clamp(14px,2.1vw,17px);color:var(--cream-dim);letter-spacing:0.04em">Auditorio Fundadores · Universidad EAFIT · Medellín</div>
+    <div style="font-family:var(--display);font-size:clamp(20px,3.4vw,28px);letter-spacing:0.22em;color:var(--cream);text-transform:uppercase;font-weight:500;margin-bottom:10px" data-en="Wednesday, October 14, 2026">Miércoles 14 de Octubre, 2026</div>
+    <div style="font-family:var(--serif);font-style:italic;font-size:clamp(14px,2.1vw,17px);color:var(--cream-dim);letter-spacing:0.04em" data-en="Fundadores Auditorium · EAFIT University · Medellín">Auditorio Fundadores · Universidad EAFIT · Medellín</div>
   </div>
 </section>
 
 <div class="divider heavy"><span>✦</span><span>❖</span><span>✦</span></div>
 
 <section class="section">
-  <p>Hay eventos que se hacen para llenar una agenda. Y hay eventos que se hacen para mover el eje mental de una ciudad.</p>
-  <p>Este es el segundo caso.</p>
-  <p>Durante años, Medellín ha celebrado emprendimiento, innovación, tecnología, inversión, salud, energía y cultura empresarial como si fueran temas separados. Como si la ciudad pudiera escoger entre software o industria, entre capital o salud, entre energía o inteligencia artificial, entre puerto o espacio.</p>
-  <p><strong>Pero el mundo real ya no funciona así.</strong></p>
-  <p>El mundo se está reorganizando alrededor de una nueva ecuación:</p>
-  <div class="pull">mejor información + mejores modelos mentales + mejor red = mejor destino</div>
-  <p>Eso es 10ampro. Y este evento es probablemente la expresión más concentrada de esa tesis.</p>
-  <p>De 10:00 a. m. a 5:00 p. m., Medellín va a reunir una densidad de talento, capital, operadores, médicos, inversionistas, fundadores y constructores que rara vez comparten el mismo cuarto. Después, el cierre será en el rooftop de El Zarzo, porque hasta la revolución cognitiva necesita un buen cocktail.</p>
+  <p data-en="Some events exist to fill a schedule. Others exist to shift the mental axis of a city.">Hay eventos que se hacen para llenar una agenda. Y hay eventos que se hacen para mover el eje mental de una ciudad.</p>
+  <p data-en="This is the second kind.">Este es el segundo caso.</p>
+  <p data-en="For years, Medellín has celebrated entrepreneurship, innovation, technology, investment, health, energy and business culture as if they were separate topics. As if the city had to choose between software or industry, between capital or health, between energy or artificial intelligence, between a port or space.">Durante años, Medellín ha celebrado emprendimiento, innovación, tecnología, inversión, salud, energía y cultura empresarial como si fueran temas separados. Como si la ciudad pudiera escoger entre software o industria, entre capital o salud, entre energía o inteligencia artificial, entre puerto o espacio.</p>
+  <p><strong data-en="But the real world no longer works that way.">Pero el mundo real ya no funciona así.</strong></p>
+  <p data-en="The world is reorganizing around a new equation:">El mundo se está reorganizando alrededor de una nueva ecuación:</p>
+  <div class="pull" data-en="better information + better mental models + a better network = a better destiny">mejor información + mejores modelos mentales + mejor red = mejor destino</div>
+  <p data-en="That is 10ampro. And this event is probably the most concentrated expression of that thesis.">Eso es 10ampro. Y este evento es probablemente la expresión más concentrada de esa tesis.</p>
+  <p data-en="From 10:00 a.m. to 5:00 p.m., Medellín will gather a density of talent, capital, operators, doctors, investors, founders and builders that rarely share the same room. Afterward, the closing will be on the rooftop of El Zarzo, because even a cognitive revolution needs a good cocktail.">De 10:00 a. m. a 5:00 p. m., Medellín va a reunir una densidad de talento, capital, operadores, médicos, inversionistas, fundadores y constructores que rara vez comparten el mismo cuarto. Después, el cierre será en el rooftop de El Zarzo, porque hasta la revolución cognitiva necesita un buen cocktail.</p>
 </section>
 
 <div class="divider"><span>✦</span><span>✦</span><span>✦</span></div>
 
 <section class="section">
-  <h2>Esto no es una conferencia</h2>
-  <p class="opening-quote">Es una <em>actualización de sistema operativo.</em></p>
-  <p>En 10ampro creemos que la ventaja más importante del siglo XXI no es tener más información. Eso ya lo tiene todo el mundo.</p>
-  <p>La ventaja real es saber qué información consumir, cómo procesarla y con quién contrastarla.</p>
-  <p>Una mala dieta de información te vuelve pobre mentalmente antes de volverte pobre financieramente. Un mal modelo mental te hace vender Tesla temprano, ignorar Bitcoin, burlarte de Solana, subestimar Palantir, no entender energía, no ver el puerto, no entender salud preventiva y seguir discutiendo el mundo con categorías de 1974.</p>
-  <p>Este evento existe para lo contrario. Para subir el estándar. Para juntar a gente que piensa desde primeros principios. Para dejar de repetir titulares y empezar a ver estructuras.</p>
-  <p><strong>Para invadir Medellín con conocimiento de verdad.</strong></p>
+  <h2 data-en="This is not a conference">Esto no es una conferencia</h2>
+  <p class="opening-quote" data-en="It's an <em>operating-system update.</em>">Es una <em>actualización de sistema operativo.</em></p>
+  <p data-en="At 10ampro we believe the most important advantage of the 21st century isn't having more information. Everyone already has that.">En 10ampro creemos que la ventaja más importante del siglo XXI no es tener más información. Eso ya lo tiene todo el mundo.</p>
+  <p data-en="The real advantage is knowing what information to consume, how to process it, and who to test it against.">La ventaja real es saber qué información consumir, cómo procesarla y con quién contrastarla.</p>
+  <p data-en="A bad information diet makes you mentally poor before it makes you financially poor. A bad mental model makes you sell Tesla early, ignore Bitcoin, mock Solana, underestimate Palantir, fail to understand energy, miss the port, miss preventive health, and keep arguing about the world with 1974 categories.">Una mala dieta de información te vuelve pobre mentalmente antes de volverte pobre financieramente. Un mal modelo mental te hace vender Tesla temprano, ignorar Bitcoin, burlarte de Solana, subestimar Palantir, no entender energía, no ver el puerto, no entender salud preventiva y seguir discutiendo el mundo con categorías de 1974.</p>
+  <p data-en="This event exists for the opposite. To raise the standard. To bring together people who think from first principles. To stop repeating headlines and start seeing structures.">Este evento existe para lo contrario. Para subir el estándar. Para juntar a gente que piensa desde primeros principios. Para dejar de repetir titulares y empezar a ver estructuras.</p>
+  <p><strong data-en="To invade Medellín with real knowledge.">Para invadir Medellín con conocimiento de verdad.</strong></p>
 </section>
 
 <div class="divider"><span>✦</span><span>✦</span><span>✦</span></div>
 
 <section class="section">
-  <div class="sigil">LA TESIS</div>
-  <h2>Medellín no necesita otro evento</h2>
-  <p>De networking donde todos intercambian tarjetas y nadie cambia de opinión.</p>
-  <p>Medellín necesita un cuarto donde se crucen capital asimétrico, tecnología exponencial, energía, salud de frontera, criptoinfraestructura, puertos, espacio, ciudad, industria, y gente que realmente está construyendo.</p>
-  <div class="pull">El futuro no llega por comunicado de prensa.<br/>Llega cuando la gente correcta empieza a compartir mapas.</div>
+  <div class="sigil" data-en="THE THESIS">LA TESIS</div>
+  <h2 data-en="Medellín doesn't need another event">Medellín no necesita otro evento</h2>
+  <p data-en="Of networking where everyone swaps cards and no one changes their mind.">De networking donde todos intercambian tarjetas y nadie cambia de opinión.</p>
+  <p data-en="Medellín needs a room where asymmetric capital, exponential technology, energy, frontier health, crypto infrastructure, ports, space, the city, industry, and people who are actually building all cross paths.">Medellín necesita un cuarto donde se crucen capital asimétrico, tecnología exponencial, energía, salud de frontera, criptoinfraestructura, puertos, espacio, ciudad, industria, y gente que realmente está construyendo.</p>
+  <div class="pull" data-en="The future doesn't arrive by press release.<br/>It arrives when the right people start sharing maps.">El futuro no llega por comunicado de prensa.<br/>Llega cuando la gente correcta empieza a compartir mapas.</div>
 </section>
 
 <div class="divider heavy"><span>✦</span><span>❖</span><span>✦</span></div>
@@ -606,17 +620,17 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 <section class="speaker">
   <div class="roman">I</div>
   <div class="name">Antonio Linares</div>
-  <div class="confirmed">Presencia confirmada</div>
-  <div class="role">Cómo piensa alguien que ha visto múltiples 100x antes que el mercado</div>
-  <p>Antonio Linares no viene a hablar de "invertir en innovación" como frase de brochure. Viene a explicar cómo piensa alguien que encontró oportunidades como Spotify, Palantir, AMD y Hims antes de que fueran obvias para el consenso.</p>
-  <p>La pregunta no es qué compró. La pregunta importante es: <em>¿qué vio él que otros no estaban viendo?</em> ¿Qué framework le permitió identificar empresas que parecían caras, raras o incomprendidas antes de que el mercado entendiera el cambio estructural?</p>
-  <p>Porque el verdadero alpha no está en tener más datos. Está en tener mejores lentes.</p>
+  <div class="confirmed" data-en="Attendance confirmed">Presencia confirmada</div>
+  <div class="role" data-en="How someone who has seen multiple 100x before the market thinks">Cómo piensa alguien que ha visto múltiples 100x antes que el mercado</div>
+  <p data-en="Antonio Linares isn't here to talk about &quot;investing in innovation&quot; as a brochure phrase. He's here to explain how someone thinks who found opportunities like Spotify, Palantir, AMD and Hims before they were obvious to the consensus.">Antonio Linares no viene a hablar de "invertir en innovación" como frase de brochure. Viene a explicar cómo piensa alguien que encontró oportunidades como Spotify, Palantir, AMD y Hims antes de que fueran obvias para el consenso.</p>
+  <p data-en="The question isn't what he bought. The important question is: <em>what did he see that others weren't seeing?</em> What framework let him identify companies that looked expensive, strange or misunderstood before the market grasped the structural shift?">La pregunta no es qué compró. La pregunta importante es: <em>¿qué vio él que otros no estaban viendo?</em> ¿Qué framework le permitió identificar empresas que parecían caras, raras o incomprendidas antes de que el mercado entendiera el cambio estructural?</p>
+  <p data-en="Because real alpha isn't in having more data. It's in having better lenses.">Porque el verdadero alpha no está en tener más datos. Está en tener mejores lentes.</p>
   <div class="pod">
-    <div class="label">Conversación previa</div>
+    <div class="label" data-en="Earlier conversation">Conversación previa</div>
     <div class="frame" data-id="6j1_HGpUX2s" data-t="802" role="button" tabindex="0" aria-label="Reproducir podcast con Antonio Linares">
       <img src="https://i.ytimg.com/vi/6j1_HGpUX2s/maxresdefault.jpg" alt="Podcast Antonio Linares · 10ampro" loading="lazy" />
       <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      <div class="meta"><span class="src">10ampro · Episodio anterior</span>Antonio Linares · Cómo encontrar 100x antes que el consenso</div>
+      <div class="meta" data-en="<span class=&quot;src&quot;>10ampro · Previous episode</span>Antonio Linares · How to find 100x before the consensus"><span class="src">10ampro · Episodio anterior</span>Antonio Linares · Cómo encontrar 100x antes que el consenso</div>
     </div>
   </div>
 </section>
@@ -626,17 +640,17 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 <section class="speaker">
   <div class="roman">II</div>
   <div class="name">Santiago Santos</div>
-  <div class="confirmed">Presencia confirmada</div>
-  <div class="role">De Ethereum temprano a Solana — la pregunta que importa: ¿cómo traer el GDP onchain?</div>
-  <p>Santiago Santos fue de los primeros inversionistas en Ethereum. Pero su tesis no se quedó congelada en la nostalgia. Hoy es uno de los creyentes más fuertes en el poder técnico de Solana y en una idea mucho más grande que "cripto sube o baja": <em>traer el GDP onchain.</em></p>
-  <p>No se trata de memes. No se trata de casinos. No se trata de otro token con comunidad ruidosa. Se trata de entender si las redes cripto pueden convertirse en infraestructura real para mercados, pagos, activos, coordinación económica y formación de capital.</p>
-  <p>La pregunta no es si Solana compite con Ethereum. La pregunta es si una blockchain de alta performance puede convertirse en una nueva capa económica para el mundo real.</p>
+  <div class="confirmed" data-en="Attendance confirmed">Presencia confirmada</div>
+  <div class="role" data-en="From early Ethereum to Solana — the question that matters: how do you bring GDP onchain?">De Ethereum temprano a Solana — la pregunta que importa: ¿cómo traer el GDP onchain?</div>
+  <p data-en="Santiago Santos was one of the earliest Ethereum investors. But his thesis didn't freeze in nostalgia. Today he's one of the strongest believers in Solana's technical power and in an idea far bigger than &quot;crypto goes up or down&quot;: <em>bringing GDP onchain.</em>">Santiago Santos fue de los primeros inversionistas en Ethereum. Pero su tesis no se quedó congelada en la nostalgia. Hoy es uno de los creyentes más fuertes en el poder técnico de Solana y en una idea mucho más grande que "cripto sube o baja": <em>traer el GDP onchain.</em></p>
+  <p data-en="It's not about memes. It's not about casinos. It's not about another token with a noisy crowd. It's about understanding whether crypto networks can become real infrastructure for markets, payments, assets, economic coordination and capital formation.">No se trata de memes. No se trata de casinos. No se trata de otro token con comunidad ruidosa. Se trata de entender si las redes cripto pueden convertirse en infraestructura real para mercados, pagos, activos, coordinación económica y formación de capital.</p>
+  <p data-en="The question isn't whether Solana competes with Ethereum. The question is whether a high-performance blockchain can become a new economic layer for the real world.">La pregunta no es si Solana compite con Ethereum. La pregunta es si una blockchain de alta performance puede convertirse en una nueva capa económica para el mundo real.</p>
   <div class="pod">
-    <div class="label">Conversación previa</div>
+    <div class="label" data-en="Earlier conversation">Conversación previa</div>
     <div class="frame" data-id="cCNGqlJkjAs" data-t="320" role="button" tabindex="0" aria-label="Reproducir podcast con Santiago Santos">
       <img src="https://i.ytimg.com/vi/cCNGqlJkjAs/maxresdefault.jpg" alt="Podcast Santiago Santos · 10ampro" loading="lazy" />
       <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      <div class="meta"><span class="src">10ampro · Episodio anterior</span>Santiago Santos · De Ethereum temprano a traer el GDP onchain</div>
+      <div class="meta" data-en="<span class=&quot;src&quot;>10ampro · Previous episode</span>Santiago Santos · From early Ethereum to bringing GDP onchain"><span class="src">10ampro · Episodio anterior</span>Santiago Santos · De Ethereum temprano a traer el GDP onchain</div>
     </div>
   </div>
 </section>
@@ -646,17 +660,17 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 <section class="speaker">
   <div class="roman">III</div>
   <div class="name">André Joffroy</div>
-  <div class="confirmed">Presencia confirmada</div>
-  <div class="role">Si Medellín quiere más Teslas, necesita dónde cargarlos</div>
-  <p>Todo el mundo quiere hablar de transición energética. Pocos quieren hablar de enchufes. Pero la adopción real no ocurre en PowerPoint. Ocurre cuando alguien puede cargar su carro, usar la infraestructura y dejar de depender de promesas.</p>
-  <p>André Joffroy, Founder y CIO de Zaps, viene a hablar de electrolineras, movilidad eléctrica e infraestructura urbana real. Porque si Medellín quiere ser una ciudad moderna, no basta con tener Teslas parqueados en El Poblado. Tiene que existir la red que los soporte.</p>
-  <p><strong>La energía del futuro no se decreta. Se instala.</strong></p>
+  <div class="confirmed" data-en="Attendance confirmed">Presencia confirmada</div>
+  <div class="role" data-en="If Medellín wants more Teslas, it needs somewhere to charge them">Si Medellín quiere más Teslas, necesita dónde cargarlos</div>
+  <p data-en="Everyone wants to talk about the energy transition. Few want to talk about plugs. But real adoption doesn't happen in PowerPoint. It happens when someone can charge their car, use the infrastructure and stop depending on promises.">Todo el mundo quiere hablar de transición energética. Pocos quieren hablar de enchufes. Pero la adopción real no ocurre en PowerPoint. Ocurre cuando alguien puede cargar su carro, usar la infraestructura y dejar de depender de promesas.</p>
+  <p data-en="André Joffroy, Founder and CIO of Zaps, is here to talk about charging stations, electric mobility and real urban infrastructure. Because if Medellín wants to be a modern city, it's not enough to have Teslas parked in El Poblado. The network that supports them has to exist.">André Joffroy, Founder y CIO de Zaps, viene a hablar de electrolineras, movilidad eléctrica e infraestructura urbana real. Porque si Medellín quiere ser una ciudad moderna, no basta con tener Teslas parqueados en El Poblado. Tiene que existir la red que los soporte.</p>
+  <p><strong data-en="The energy of the future isn't decreed. It's installed.">La energía del futuro no se decreta. Se instala.</strong></p>
   <div class="pod">
-    <div class="label">Conversación previa</div>
+    <div class="label" data-en="Earlier conversation">Conversación previa</div>
     <div class="frame" data-id="PgZE20FHhdo" role="button" tabindex="0" aria-label="Reproducir podcast con André Joffroy">
       <img src="https://i.ytimg.com/vi/PgZE20FHhdo/maxresdefault.jpg" alt="Podcast André Joffroy · 10ampro" loading="lazy" />
       <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      <div class="meta"><span class="src">10ampro · Episodio anterior</span>André Joffroy · Zaps y la infraestructura de carga en Medellín</div>
+      <div class="meta" data-en="<span class=&quot;src&quot;>10ampro · Previous episode</span>André Joffroy · Zaps and charging infrastructure in Medellín"><span class="src">10ampro · Episodio anterior</span>André Joffroy · Zaps y la infraestructura de carga en Medellín</div>
     </div>
   </div>
 </section>
@@ -666,20 +680,20 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 <section class="speaker">
   <div class="roman">IV</div>
   <div class="name">Pedro Faria</div>
-  <div class="confirmed">Presencia confirmada</div>
-  <div class="role">Pensar a escala de Brasil — operar, fundar y construir en serio</div>
-  <p>Hay un tamaño de pensamiento que se aprende cuando uno opera un país-continente. Pedro Faria pertenece a esa categoría.</p>
-  <p>Fue CEO Global de BRF — una de las compañías de alimentos más grandes del mundo, con 110.000 empleados y operaciones en decenas de países. Antes de eso, fundó la división de Private Equity de Tarpon. Después de BRF, se volvió Partner y Head of Private Equity Growth en Patria Investimentos, una de las gestoras de PE más sofisticadas de Latinoamérica. Hoy también es Founding Partner y CIO de Kamaroopin, su propio fondo de growth equity, donde preside Petlove&Co.</p>
-  <p>Operador. Founder. Private equity. Chairman. La cadena completa, hecha a escala brasileña.</p>
-  <p>Lo que hace única a su lente no es el currículum. Es que <em>todo lo piensa en grande, como es Brasil.</em> Las decisiones, los mercados, las apuestas, los plazos. Mientras gran parte de Latam todavía discute si los problemas son pequeños o muy pequeños, Brasil produce gente que piensa estructuras de US$10B y cadenas globales de suministro como si fuera lo natural.</p>
-  <p>La pregunta para él no es qué está pasando en Brasil. Es <em>qué tipo de ambición le falta a Medellín para empezar a pensar en otra escala.</em></p>
-  <p><strong>El tamaño del país que construyes empieza por el tamaño del pensamiento que toleras.</strong></p>
+  <div class="confirmed" data-en="Attendance confirmed">Presencia confirmada</div>
+  <div class="role" data-en="Thinking at Brazil's scale — operating, founding and building for real">Pensar a escala de Brasil — operar, fundar y construir en serio</div>
+  <p data-en="There's a size of thinking you learn when you operate a continent-sized country. Pedro Faria belongs to that category.">Hay un tamaño de pensamiento que se aprende cuando uno opera un país-continente. Pedro Faria pertenece a esa categoría.</p>
+  <p data-en="He was Global CEO of BRF — one of the largest food companies in the world, with 110,000 employees and operations in dozens of countries. Before that, he founded Tarpon's Private Equity division. After BRF, he became Partner and Head of Private Equity Growth at Patria Investimentos, one of the most sophisticated PE managers in Latin America. Today he's also Founding Partner and CIO of Kamaroopin, his own growth-equity fund, where he chairs Petlove&amp;Co.">Fue CEO Global de BRF — una de las compañías de alimentos más grandes del mundo, con 110.000 empleados y operaciones en decenas de países. Antes de eso, fundó la división de Private Equity de Tarpon. Después de BRF, se volvió Partner y Head of Private Equity Growth en Patria Investimentos, una de las gestoras de PE más sofisticadas de Latinoamérica. Hoy también es Founding Partner y CIO de Kamaroopin, su propio fondo de growth equity, donde preside Petlove&Co.</p>
+  <p data-en="Operator. Founder. Private equity. Chairman. The full chain, done at Brazilian scale.">Operador. Founder. Private equity. Chairman. La cadena completa, hecha a escala brasileña.</p>
+  <p data-en="What makes his lens unique isn't the résumé. It's that <em>he thinks about everything big, the way Brazil is.</em> The decisions, the markets, the bets, the timelines. While much of Latam still debates whether problems are small or very small, Brazil produces people who think about US$10B structures and global supply chains as if it were the natural thing.">Lo que hace única a su lente no es el currículum. Es que <em>todo lo piensa en grande, como es Brasil.</em> Las decisiones, los mercados, las apuestas, los plazos. Mientras gran parte de Latam todavía discute si los problemas son pequeños o muy pequeños, Brasil produce gente que piensa estructuras de US$10B y cadenas globales de suministro como si fuera lo natural.</p>
+  <p data-en="The question for him isn't what's happening in Brazil. It's <em>what kind of ambition Medellín is missing to start thinking at another scale.</em>">La pregunta para él no es qué está pasando en Brasil. Es <em>qué tipo de ambición le falta a Medellín para empezar a pensar en otra escala.</em></p>
+  <p><strong data-en="The size of the country you build starts with the size of the thinking you tolerate.">El tamaño del país que construyes empieza por el tamaño del pensamiento que toleras.</strong></p>
   <div class="pod">
-    <div class="label">Conversación previa</div>
+    <div class="label" data-en="Earlier conversation">Conversación previa</div>
     <div class="frame" data-id="JWgIL5Cl47o" role="button" tabindex="0" aria-label="Reproducir podcast con Pedro Faria">
       <img src="https://i.ytimg.com/vi/JWgIL5Cl47o/maxresdefault.jpg" alt="Podcast Pedro Faria · 10ampro" loading="lazy" />
       <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      <div class="meta"><span class="src">10ampro · Episodio anterior</span>Pedro Faria · Pensar a escala de Brasil</div>
+      <div class="meta" data-en="<span class=&quot;src&quot;>10ampro · Previous episode</span>Pedro Faria · Thinking at Brazil's scale"><span class="src">10ampro · Episodio anterior</span>Pedro Faria · Pensar a escala de Brasil</div>
     </div>
   </div>
 </section>
@@ -689,17 +703,17 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 <section class="speaker">
   <div class="roman">V</div>
   <div class="name">Ricardo Sierra</div>
-  <div class="role">Ahora sí — ¿Energy Valley?</div>
-  <p>Ricardo Sierra, CEO de Celsia, viene a poner sobre la mesa una de las preguntas más importantes para Antioquia: <em>¿podemos convertirnos en un verdadero Energy Valley?</em></p>
-  <p>No como slogan. Como infraestructura. Como ventaja competitiva. Como plataforma industrial.</p>
-  <p>Porque sin energía barata, confiable y abundante, no hay AI, no hay fábricas, no hay data centers, no hay movilidad eléctrica, no hay industria avanzada y no hay país serio.</p>
-  <p><strong>La energía no es un sector. Es el piso físico de todo lo demás.</strong></p>
+  <div class="role" data-en="Now for real — Energy Valley?">Ahora sí — ¿Energy Valley?</div>
+  <p data-en="Ricardo Sierra, CEO of Celsia, is here to put one of the most important questions for Antioquia on the table: <em>can we become a true Energy Valley?</em>">Ricardo Sierra, CEO de Celsia, viene a poner sobre la mesa una de las preguntas más importantes para Antioquia: <em>¿podemos convertirnos en un verdadero Energy Valley?</em></p>
+  <p data-en="Not as a slogan. As infrastructure. As competitive advantage. As an industrial platform.">No como slogan. Como infraestructura. Como ventaja competitiva. Como plataforma industrial.</p>
+  <p data-en="Because without cheap, reliable and abundant energy, there's no AI, no factories, no data centers, no electric mobility, no advanced industry and no serious country.">Porque sin energía barata, confiable y abundante, no hay AI, no hay fábricas, no hay data centers, no hay movilidad eléctrica, no hay industria avanzada y no hay país serio.</p>
+  <p><strong data-en="Energy isn't a sector. It's the physical floor of everything else.">La energía no es un sector. Es el piso físico de todo lo demás.</strong></p>
   <div class="pod">
-    <div class="label">Conversación previa</div>
+    <div class="label" data-en="Earlier conversation">Conversación previa</div>
     <div class="frame" data-id="w-JmwyOLuU8" data-t="711" role="button" tabindex="0" aria-label="Reproducir podcast con Ricardo Sierra">
       <img src="https://i.ytimg.com/vi/w-JmwyOLuU8/maxresdefault.jpg" alt="Podcast Ricardo Sierra · 10ampro" loading="lazy" />
       <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      <div class="meta"><span class="src">10ampro · Episodio anterior</span>Ricardo Sierra · Energy Valley y el piso físico del futuro</div>
+      <div class="meta" data-en="<span class=&quot;src&quot;>10ampro · Previous episode</span>Ricardo Sierra · Energy Valley and the physical floor of the future"><span class="src">10ampro · Episodio anterior</span>Ricardo Sierra · Energy Valley y el piso físico del futuro</div>
     </div>
   </div>
 </section>
@@ -709,16 +723,16 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 <section class="speaker">
   <div class="roman">VI</div>
   <div class="name">Camilo Ospina<br/>& Andrés Palacio</div>
-  <div class="role">Péptidos, longevidad y la posibilidad de fabricar salud desde Medellín</div>
-  <p>La salud también está entrando en su era industrial. Los doctores Camilo Ospina y Andrés Palacio vienen a hablar de péptidos, longevidad, medicina preventiva y una pregunta que suena pequeña, pero es enorme: <em>¿qué necesitaría Medellín para tener una fábrica de péptidos?</em></p>
-  <p>Porque la próxima frontera de salud no será solo tratar enfermedad. Será diseñar mejores protocolos, mejores moléculas, mejores datos y mejores cadenas de producción.</p>
-  <p>Medellín no puede limitarse a importar el futuro. Tiene que aprender a fabricarlo.</p>
+  <div class="role" data-en="Peptides, longevity and the possibility of manufacturing health from Medellín">Péptidos, longevidad y la posibilidad de fabricar salud desde Medellín</div>
+  <p data-en="Health is also entering its industrial era. Doctors Camilo Ospina and Andrés Palacio are here to talk about peptides, longevity, preventive medicine and a question that sounds small but is enormous: <em>what would Medellín need to have a peptide factory?</em>">La salud también está entrando en su era industrial. Los doctores Camilo Ospina y Andrés Palacio vienen a hablar de péptidos, longevidad, medicina preventiva y una pregunta que suena pequeña, pero es enorme: <em>¿qué necesitaría Medellín para tener una fábrica de péptidos?</em></p>
+  <p data-en="Because the next frontier of health won't only be treating disease. It will be designing better protocols, better molecules, better data and better production chains.">Porque la próxima frontera de salud no será solo tratar enfermedad. Será diseñar mejores protocolos, mejores moléculas, mejores datos y mejores cadenas de producción.</p>
+  <p data-en="Medellín can't limit itself to importing the future. It has to learn to manufacture it.">Medellín no puede limitarse a importar el futuro. Tiene que aprender a fabricarlo.</p>
   <div class="pod">
-    <div class="label">Conversación previa</div>
+    <div class="label" data-en="Earlier conversation">Conversación previa</div>
     <div class="frame" data-id="VU8otWdoAqI" role="button" tabindex="0" aria-label="Reproducir podcast con Andrés Palacio">
       <img src="https://i.ytimg.com/vi/VU8otWdoAqI/maxresdefault.jpg" alt="Podcast Andrés Palacio · 10ampro" loading="lazy" />
       <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      <div class="meta"><span class="src">10ampro · Episodio anterior</span>Andrés Palacio · Péptidos, longevidad y medicina preventiva</div>
+      <div class="meta" data-en="<span class=&quot;src&quot;>10ampro · Previous episode</span>Andrés Palacio · Peptides, longevity and preventive medicine"><span class="src">10ampro · Episodio anterior</span>Andrés Palacio · Péptidos, longevidad y medicina preventiva</div>
     </div>
   </div>
 </section>
@@ -728,17 +742,17 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 <section class="speaker">
   <div class="roman">VII</div>
   <div class="name">Andrés Julián Rendón</div>
-  <div class="role">El Golfo de Urabá y la posibilidad de pensar en grande otra vez</div>
-  <p>El Gobernador Andrés Julián Rendón trae una conversación que debería estar en el centro de la agenda estratégica de Antioquia: <em>el Golfo de Urabá como próximo gran puerto logístico, industrial y quizá espacial.</em></p>
-  <p>Suena grande. Ese es precisamente el punto.</p>
-  <p>Antioquia no puede seguir pensando solo en trancones, licencias y discusiones de baja resolución. El mundo está compitiendo por puertos, energía, chips, órbita, talento y cadenas de suministro.</p>
-  <p>El Golfo de Urabá no es solo una obra. Es una opción geopolítica. Y las regiones que no entienden su geografía terminan alquilando su destino.</p>
+  <div class="role" data-en="The Gulf of Urabá and the chance to think big again">El Golfo de Urabá y la posibilidad de pensar en grande otra vez</div>
+  <p data-en="Governor Andrés Julián Rendón brings a conversation that should be at the center of Antioquia's strategic agenda: <em>the Gulf of Urabá as the next great logistics, industrial and maybe space port.</em>">El Gobernador Andrés Julián Rendón trae una conversación que debería estar en el centro de la agenda estratégica de Antioquia: <em>el Golfo de Urabá como próximo gran puerto logístico, industrial y quizá espacial.</em></p>
+  <p data-en="It sounds big. That's precisely the point.">Suena grande. Ese es precisamente el punto.</p>
+  <p data-en="Antioquia can't keep thinking only about traffic jams, permits and low-resolution debates. The world is competing for ports, energy, chips, orbit, talent and supply chains.">Antioquia no puede seguir pensando solo en trancones, licencias y discusiones de baja resolución. El mundo está compitiendo por puertos, energía, chips, órbita, talento y cadenas de suministro.</p>
+  <p data-en="The Gulf of Urabá isn't just a public works project. It's a geopolitical option. And regions that don't understand their geography end up renting out their destiny.">El Golfo de Urabá no es solo una obra. Es una opción geopolítica. Y las regiones que no entienden su geografía terminan alquilando su destino.</p>
   <div class="pod">
-    <div class="label">Conversación previa</div>
+    <div class="label" data-en="Earlier conversation">Conversación previa</div>
     <div class="frame" data-id="4Q_0z20L0Gw" data-t="1" role="button" tabindex="0" aria-label="Reproducir conversación con el Gobernador Andrés Julián Rendón">
       <img src="https://i.ytimg.com/vi/4Q_0z20L0Gw/maxresdefault.jpg" alt="Conversación con el Gobernador Andrés Julián Rendón · 10ampro" loading="lazy" />
       <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      <div class="meta"><span class="src">10ampro · Conversación anterior</span>Andrés Julián Rendón · Urabá y pensar en grande</div>
+      <div class="meta" data-en="<span class=&quot;src&quot;>10ampro · Previous conversation</span>Andrés Julián Rendón · Urabá and thinking big"><span class="src">10ampro · Conversación anterior</span>Andrés Julián Rendón · Urabá y pensar en grande</div>
     </div>
   </div>
 </section>
@@ -748,9 +762,9 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 <section class="speaker">
   <div class="roman">VIII</div>
   <div class="name">Los cohosts</div>
-  <div class="role">El equipo de 10ampro en persona</div>
+  <div class="role" data-en="The 10ampro team in person">El equipo de 10ampro en persona</div>
 
-  <p class="cohost-intro">Los ocho cohosts de 10ampro estarán en el auditorio, moderando las conversaciones del día.</p>
+  <p class="cohost-intro" data-en="All eight 10ampro cohosts will be in the auditorium, moderating the day's conversations.">Los ocho cohosts de 10ampro estarán en el auditorio, moderando las conversaciones del día.</p>
 
   <div class="cohosts">
     <a class="cohost" href="https://x.com/holdmybirra" target="_blank" rel="noopener">
@@ -798,62 +812,62 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
     <a class="cohost" href="https://www.linkedin.com/in/carolinarojasgomez/" target="_blank" rel="noopener">
       <div class="avatar"><img src="/cohost-carolina.png" alt="Carolina Rojas" loading="lazy" /></div>
       <div class="cname">Carolina Rojas</div>
-      <div class="ctag">Experta en Política Energética</div>
+      <div class="ctag" data-en="Energy Policy Expert">Experta en Política Energética</div>
       <div class="chandle">linkedin</div>
     </a>
   </div>
 
-  <p style="margin-top:48px">Este evento también reúne al lineup completo de 10ampro. La idea no es hacer paneles decorativos. La idea es conectar tesis. Cruzar mapas. Discutir sin anestesia.</p>
-  <p>Y poner a Medellín frente a las preguntas que realmente importan:</p>
+  <p style="margin-top:48px" data-en="This event also brings together the full 10ampro lineup. The idea isn't to run decorative panels. The idea is to connect theses. Cross maps. Debate without anesthesia.">Este evento también reúne al lineup completo de 10ampro. La idea no es hacer paneles decorativos. La idea es conectar tesis. Cruzar mapas. Discutir sin anestesia.</p>
+  <p data-en="And put Medellín in front of the questions that really matter:">Y poner a Medellín frente a las preguntas que realmente importan:</p>
   <ul>
-    <li>¿Qué estamos construyendo?</li>
-    <li>¿Qué estamos financiando?</li>
-    <li>¿Qué estamos ignorando?</li>
-    <li>¿Qué industrias deberíamos traer?</li>
-    <li>¿Qué redes deberíamos activar?</li>
-    <li>¿Qué futuro estamos dejando pasar por falta de ambición?</li>
+    <li data-en="What are we building?">¿Qué estamos construyendo?</li>
+    <li data-en="What are we funding?">¿Qué estamos financiando?</li>
+    <li data-en="What are we ignoring?">¿Qué estamos ignorando?</li>
+    <li data-en="Which industries should we bring in?">¿Qué industrias deberíamos traer?</li>
+    <li data-en="Which networks should we activate?">¿Qué redes deberíamos activar?</li>
+    <li data-en="What future are we letting slip by for lack of ambition?">¿Qué futuro estamos dejando pasar por falta de ambición?</li>
   </ul>
 </section>
 
 <div class="divider heavy"><span>✦</span><span>❖</span><span>✦</span></div>
 
 <section class="section">
-  <div class="sigil">POR QUÉ "EL DÍA D"</div>
-  <h2>Porque hay días en los que una comunidad decide desembarcar en otra realidad</h2>
-  <p>El Día D fue una operación de coordinación, logística, riesgo, inteligencia y convicción.</p>
-  <p>Este también. Solo que acá no estamos invadiendo una playa.</p>
+  <div class="sigil" data-en="WHY &quot;EL DÍA D&quot;">POR QUÉ "EL DÍA D"</div>
+  <h2 data-en="Because there are days when a community decides to land in another reality">Porque hay días en los que una comunidad decide desembarcar en otra realidad</h2>
+  <p data-en="D-Day was an operation of coordination, logistics, risk, intelligence and conviction.">El Día D fue una operación de coordinación, logística, riesgo, inteligencia y convicción.</p>
+  <p data-en="So is this one. Except here we're not invading a beach.">Este también. Solo que acá no estamos invadiendo una playa.</p>
   <ul>
-    <li>Estamos invadiendo la mediocridad mental</li>
-    <li>Estamos atacando la dieta de información basura</li>
-    <li>Estamos rompiendo la costumbre de pensar pequeño</li>
+    <li data-en="We're invading mental mediocrity">Estamos invadiendo la mediocridad mental</li>
+    <li data-en="We're attacking the junk-information diet">Estamos atacando la dieta de información basura</li>
+    <li data-en="We're breaking the habit of thinking small">Estamos rompiendo la costumbre de pensar pequeño</li>
   </ul>
-  <p>Estamos diciendo que Medellín no tiene que pedir permiso para sentarse en la mesa donde se discuten energía, AI, cripto, salud, capital, infraestructura y espacio.</p>
+  <p data-en="We're saying that Medellín doesn't have to ask permission to sit at the table where energy, AI, crypto, health, capital, infrastructure and space are discussed.">Estamos diciendo que Medellín no tiene que pedir permiso para sentarse en la mesa donde se discuten energía, AI, cripto, salud, capital, infraestructura y espacio.</p>
 </section>
 
 <div class="divider"><span>✦</span><span>✦</span><span>✦</span></div>
 
 <section class="section">
-  <div class="sigil">EL ESTÁNDAR 10AMPRO</div>
-  <h2>Tres principios</h2>
-  <p style="text-align:center;font-style:italic;color:var(--cream-dim);margin-bottom:8px">No como slogan. Como código operativo.</p>
+  <div class="sigil" data-en="THE 10AMPRO STANDARD">EL ESTÁNDAR 10AMPRO</div>
+  <h2 data-en="Three principles">Tres principios</h2>
+  <p style="text-align:center;font-style:italic;color:var(--cream-dim);margin-bottom:8px" data-en="Not as a slogan. As operating code.">No como slogan. Como código operativo.</p>
   <div class="principles">
     <div class="principle">
       <div class="num">I</div>
       <div class="title">Open Source Capital</div>
-      <div class="body">Compartir tesis, trades, aprendizajes, errores y mapas mentales. El alpha no se vuelve más débil cuando se comparte con gente seria. Se vuelve más fuerte.</div>
+      <div class="body" data-en="Sharing theses, trades, lessons, mistakes and mental maps. Alpha doesn't get weaker when it's shared with serious people. It gets stronger.">Compartir tesis, trades, aprendizajes, errores y mapas mentales. El alpha no se vuelve más débil cuando se comparte con gente seria. Se vuelve más fuerte.</div>
     </div>
     <div class="principle">
       <div class="num">II</div>
       <div class="title">Collective Intelligence</div>
-      <div class="body">El IQ individual importa. Pero el verdadero edge aparece cuando muchas personas inteligentes empiezan a sincronizarse alrededor de mejores preguntas.</div>
+      <div class="body" data-en="Individual IQ matters. But the real edge appears when many smart people start syncing around better questions.">El IQ individual importa. Pero el verdadero edge aparece cuando muchas personas inteligentes empiezan a sincronizarse alrededor de mejores preguntas.</div>
     </div>
     <div class="principle">
       <div class="num">III</div>
       <div class="title">Network Sharing</div>
-      <div class="body">Una red no sirve si se usa solo para acumular favores. Sirve cuando se activa para cuidar la espalda, abrir puertas y acelerar a la gente correcta.</div>
+      <div class="body" data-en="A network is useless if it's only used to hoard favors. It works when it's activated to watch each other's backs, open doors and accelerate the right people.">Una red no sirve si se usa solo para acumular favores. Sirve cuando se activa para cuidar la espalda, abrir puertas y acelerar a la gente correcta.</div>
     </div>
   </div>
-  <p style="text-align:center;margin-top:32px"><strong>Este evento es esos tres principios puestos en escena.</strong></p>
+  <p style="text-align:center;margin-top:32px"><strong data-en="This event is those three principles staged.">Este evento es esos tres principios puestos en escena.</strong></p>
 </section>
 
 <div class="divider heavy"><span>✦</span><span>❖</span><span>✦</span></div>
@@ -861,71 +875,71 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 <section class="section">
   <div class="lists-pair">
     <div class="col">
-      <h3>Para quién es</h3>
+      <h3 data-en="Who it's for">Para quién es</h3>
       <ul>
-        <li>Fundadores</li>
-        <li>Inversionistas</li>
-        <li>Operadores</li>
-        <li>Médicos</li>
+        <li data-en="Founders">Fundadores</li>
+        <li data-en="Investors">Inversionistas</li>
+        <li data-en="Operators">Operadores</li>
+        <li data-en="Doctors">Médicos</li>
         <li>Builders</li>
-        <li>Gente que sabe que el mundo cambia más rápido que su feed</li>
-        <li>Personas que no quieren ser turistas del futuro</li>
-        <li>Quienes entienden que estar cerca de las mejores conversaciones es una forma de capital</li>
+        <li data-en="People who know the world changes faster than their feed">Gente que sabe que el mundo cambia más rápido que su feed</li>
+        <li data-en="People who don't want to be tourists of the future">Personas que no quieren ser turistas del futuro</li>
+        <li data-en="Those who understand that being near the best conversations is a form of capital">Quienes entienden que estar cerca de las mejores conversaciones es una forma de capital</li>
       </ul>
     </div>
     <div class="col">
-      <h3 class="warn">No vengas si…</h3>
+      <h3 class="warn" data-en="Don't come if…">No vengas si…</h3>
       <ul>
-        <li>Vienes a buscar frases lindas</li>
-        <li>Vienes a repartir tarjetas sin escuchar</li>
-        <li>Vienes a hacer networking transaccional de baja vibración</li>
-        <li>Vienes a pedir sin aportar</li>
-        <li>Vienes a confirmar lo que ya crees</li>
-        <li>Vienes a hablar de innovación como decoración de oficina</li>
+        <li data-en="You're coming to collect pretty quotes">Vienes a buscar frases lindas</li>
+        <li data-en="You're coming to hand out cards without listening">Vienes a repartir tarjetas sin escuchar</li>
+        <li data-en="You're coming for low-vibration transactional networking">Vienes a hacer networking transaccional de baja vibración</li>
+        <li data-en="You're coming to ask without contributing">Vienes a pedir sin aportar</li>
+        <li data-en="You're coming to confirm what you already believe">Vienes a confirmar lo que ya crees</li>
+        <li data-en="You're coming to talk about innovation as office decoration">Vienes a hablar de innovación como decoración de oficina</li>
       </ul>
     </div>
   </div>
-  <p class="pull">Este no es un evento para espectadores.<br/>Es para gente que quiere actualizar su mapa.</p>
+  <p class="pull" data-en="This isn't an event for spectators.<br/>It's for people who want to update their map.">Este no es un evento para espectadores.<br/>Es para gente que quiere actualizar su mapa.</p>
 </section>
 
 <div class="divider heavy"><span>✦</span><span>❖</span><span>✦</span></div>
 
 <section class="callout">
-  <h2>Orden de Operaciones</h2>
-  <div class="sub">Logística</div>
+  <h2 data-en="Order of Operations">Orden de Operaciones</h2>
+  <div class="sub" data-en="Logistics">Logística</div>
 
   <div style="margin:32px auto 0;max-width:640px">
-    <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.42em;color:var(--gold);text-transform:uppercase;text-align:center;margin-bottom:14px;opacity:0.88">Cuándo y Dónde</div>
-    <p style="text-align:center;font-family:var(--display);font-size:clamp(18px,2.6vw,22px);letter-spacing:0.16em;color:var(--gold-bright);text-transform:uppercase;font-weight:500;margin-bottom:8px">Miércoles 14 de Octubre, 2026</p>
-    <p style="text-align:center;font-family:var(--serif);color:var(--cream);font-size:17px;line-height:1.6;margin-bottom:12px">Auditorio Fundadores · Universidad EAFIT · Medellín</p>
-    <p style="text-align:center;font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:15px;line-height:1.55">La fecha y el lugar están confirmados. El line-up sigue cerrándose — el peso del evento no depende de un solo nombre.</p>
+    <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.42em;color:var(--gold);text-transform:uppercase;text-align:center;margin-bottom:14px;opacity:0.88" data-en="When and Where">Cuándo y Dónde</div>
+    <p style="text-align:center;font-family:var(--display);font-size:clamp(18px,2.6vw,22px);letter-spacing:0.16em;color:var(--gold-bright);text-transform:uppercase;font-weight:500;margin-bottom:8px" data-en="Wednesday, October 14, 2026">Miércoles 14 de Octubre, 2026</p>
+    <p style="text-align:center;font-family:var(--serif);color:var(--cream);font-size:17px;line-height:1.6;margin-bottom:12px" data-en="Fundadores Auditorium · EAFIT University · Medellín">Auditorio Fundadores · Universidad EAFIT · Medellín</p>
+    <p style="text-align:center;font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:15px;line-height:1.55" data-en="The date and venue are confirmed. The line-up is still being finalized — the weight of the event doesn't depend on a single name.">La fecha y el lugar están confirmados. El line-up sigue cerrándose — el peso del evento no depende de un solo nombre.</p>
   </div>
 
   <div style="width:60px;height:1px;background:var(--line-strong);margin:48px auto 0"></div>
 
   <div style="margin:40px auto 0;max-width:520px;text-align:center">
-    <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.42em;color:var(--gold);text-transform:uppercase;margin-bottom:18px;opacity:0.88">Precio actual</div>
+    <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.42em;color:var(--gold);text-transform:uppercase;margin-bottom:18px;opacity:0.88" data-en="Current price">Precio actual</div>
     <div style="font-family:var(--display);font-size:clamp(40px,6vw,56px);letter-spacing:0.04em;color:var(--gold-bright);font-weight:700;line-height:1">USD 200</div>
-    <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.32em;color:var(--gold-dim);text-transform:uppercase;margin-top:14px">Durante junio y julio</div>
-    <p style="font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:15px;line-height:1.55;margin-top:20px">A partir del 1 de agosto sube a USD 300. El precio nunca baja.</p>
+    <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.32em;color:var(--gold-dim);text-transform:uppercase;margin-top:14px" data-en="During June and July">Durante junio y julio</div>
+    <p style="font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:15px;line-height:1.55;margin-top:20px" data-en="From August 1 it goes up to USD 300. The price never drops.">A partir del 1 de agosto sube a USD 300. El precio nunca baja.</p>
   </div>
 
   <div class="cta">
-    <a class="primary" href="https://luma.com/eldiad" target="_blank" rel="noopener">Reservar Plaza</a>
+    <a class="primary" href="https://luma.com/eldiad" target="_blank" rel="noopener" data-en="Reserve Your Spot">Reservar Plaza</a>
   </div>
 
   <div style="margin:54px auto 0;max-width:560px;text-align:center;opacity:0.78">
-    <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold-dim);text-transform:uppercase;margin-bottom:12px">Un extra para Alphas</div>
-    <p style="font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:14px;line-height:1.6">El cocktail de cierre en el rooftop de El Zarzo está reservado para 80 suscriptores Alpha (12+ meses pagando). Reciben invitación aparte. No se vende.</p>
+    <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold-dim);text-transform:uppercase;margin-bottom:12px" data-en="A perk for Alphas">Un extra para Alphas</div>
+    <p style="font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:14px;line-height:1.6" data-en="The closing cocktail on the rooftop of El Zarzo is reserved for 80 Alpha subscribers (12+ months paying). They receive a separate invitation. It's not for sale.">El cocktail de cierre en el rooftop de El Zarzo está reservado para 80 suscriptores Alpha (12+ meses pagando). Reciben invitación aparte. No se vende.</p>
   </div>
 
   <div style="width:60px;height:1px;background:var(--line);margin:46px auto 0"></div>
 
   <div style="margin:34px auto 0;max-width:520px;text-align:center;opacity:0.72">
-    <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold-dim);text-transform:uppercase;margin-bottom:12px">Dónde quedarte</div>
-    <p style="font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:14px;line-height:1.6;margin-bottom:0">Para quienes viajan a Medellín. 15% de descuento en alojamiento con el código <span style="font-family:var(--mono);font-style:normal;letter-spacing:0.18em;color:var(--gold-dim)">10AMPRO</span>.</p>
+    <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold-dim);text-transform:uppercase;margin-bottom:12px" data-en="Where to stay">Dónde quedarte</div>
+    <p style="font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:14px;line-height:1.6;margin-bottom:0" data-en="For those traveling to Medellín. 15% off lodging with the code <span style=&quot;font-family:var(--mono);font-style:normal;letter-spacing:0.18em;color:var(--gold-dim)&quot;>10AMPRO</span>.">Para quienes viajan a Medellín. 15% de descuento en alojamiento con el código <span style="font-family:var(--mono);font-style:normal;letter-spacing:0.18em;color:var(--gold-dim)">10AMPRO</span>.</p>
     <div class="cta" style="margin-top:18px">
-      <a class="secondary" href="https://www.sitesmedellin.com/es/bookcore/availability/sitehotel/2026-10-13/2026-10-16/2/0/?cp=10ampro&amp;rrc=1&amp;adults=2&amp;occupancies=%255B%257B%2522adults%2522%253A%25202%252C%2520%2522children%2522%253A%25200%252C%2520%2522ages%2522%253A%2520%2522%2522%257D%255D&amp;occp=1" target="_blank" rel="noopener">Reservar Hotel</a>
+      <a class="secondary" href="https://www.sitesmedellin.com/es/bookcore/availability/sitehotel/2026-10-13/2026-10-16/2/0/?cp=10ampro&amp;rrc=1&amp;adults=2&amp;occupancies=%255B%257B%2522adults%2522%253A%25202%252C%2520%2522children%2522%253A%25200%252C%2520%2522ages%2522%253A%2520%2522%2522%257D%255D&amp;occp=1" target="_blank" rel="noopener" data-en="Book Hotel">Reservar Hotel</a>
     </div>
   </div>
 </section>
@@ -933,11 +947,11 @@ footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:
 <div class="divider heavy"><span>✦</span><span>❖</span><span>✦</span></div>
 
 <section class="section">
-  <p class="pull" style="margin-top:0">Medellín no necesita otro evento.<br/>Necesita un desembarco.</p>
-  <p style="text-align:center;font-family:var(--display);font-size:clamp(18px,3vw,22px);letter-spacing:0.1em;color:var(--cream);text-transform:uppercase;margin-top:48px;line-height:1.5">
+  <p class="pull" style="margin-top:0" data-en="Medellín doesn't need another event.<br/>It needs a landing.">Medellín no necesita otro evento.<br/>Necesita un desembarco.</p>
+  <p style="text-align:center;font-family:var(--display);font-size:clamp(18px,3vw,22px);letter-spacing:0.1em;color:var(--cream);text-transform:uppercase;margin-top:48px;line-height:1.5" data-en="And this time, the invasion<br/>doesn't come with tanks.">
     Y esta vez, la invasión<br/>no viene con tanques.
   </p>
-  <p style="text-align:center;font-family:var(--display);font-size:clamp(20px,3.4vw,26px);letter-spacing:0.1em;color:var(--gold-bright);margin-top:24px;text-transform:uppercase;font-weight:600">
+  <p style="text-align:center;font-family:var(--display);font-size:clamp(20px,3.4vw,26px);letter-spacing:0.1em;color:var(--gold-bright);margin-top:24px;text-transform:uppercase;font-weight:600" data-en="It comes with better<br/>mental models.">
     Viene con mejores<br/>modelos mentales.
   </p>
 </section>
@@ -984,6 +998,26 @@ document.querySelectorAll('.pod .frame').forEach(function(f){
   }
   tick();
   setInterval(tick, 1000);
+})();
+</script>
+<script>
+(function(){
+  var nodes = Array.prototype.slice.call(document.querySelectorAll('[data-en]'));
+  nodes.forEach(function(el){ el.setAttribute('data-es', el.innerHTML); });
+  var btns = Array.prototype.slice.call(document.querySelectorAll('.langswitch button'));
+  function apply(lang){
+    nodes.forEach(function(el){
+      var v = (lang === 'en') ? el.getAttribute('data-en') : el.getAttribute('data-es');
+      if (v !== null) el.innerHTML = v;
+    });
+    document.documentElement.lang = lang;
+    btns.forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-lang') === lang); });
+    try { localStorage.setItem('eldiad_lang', lang); } catch(e){}
+  }
+  btns.forEach(function(b){ b.addEventListener('click', function(){ apply(b.getAttribute('data-lang')); }); });
+  var saved = 'es';
+  try { saved = localStorage.getItem('eldiad_lang') || 'es'; } catch(e){}
+  apply(saved);
 })();
 </script>
 </body>
