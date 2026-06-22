@@ -1024,5 +1024,28 @@ document.querySelectorAll('.pod .frame').forEach(function(f){
   apply(saved);
 })();
 </script>
+<script>
+(function(){
+  function src(){return new URLSearchParams(location.search).get('utm_source')||'directo';}
+  function ev(name,extra){ if(window.va){ va('event',Object.assign({name:name,source:src()},extra||{})); } }
+  // Clic en reservar hotel (intención alta — viene de fuera de Medellín)
+  var hotel=document.querySelector('a.secondary[href*="sitesmedellin"]');
+  if(hotel) hotel.addEventListener('click',function(){ev('ver_hotel');});
+  // Toggle a inglés (audiencia no hispanohablante por canal)
+  var enBtn=document.querySelector('.langswitch button[data-lang="en"]');
+  if(enBtn) enBtn.addEventListener('click',function(){ev('idioma_en');},{once:true});
+  // Llegó a ver los ponentes (interés real, no rebote) — se dispara una sola vez
+  var firstSpeaker=document.querySelector('section.speaker');
+  if(firstSpeaker && 'IntersectionObserver' in window){
+    var fired=false;
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting && !fired){ fired=true; ev('scroll_speakers'); io.disconnect(); }
+      });
+    },{threshold:0.4});
+    io.observe(firstSpeaker);
+  }
+})();
+</script>
 </body>
 </html>
