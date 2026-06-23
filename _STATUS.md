@@ -38,3 +38,13 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 2. Verificar captura: abrir ?utm_source=x, scroll a ponentes, clic reservar → ver eventos (~30s).
 3. Dejar correr 5-7 días antes de leer.
 4. Cruce con CSV de Luma para pago real.
+
+## Lectura preliminar 23 jun 2026 (Vercel + Luma, vía Chrome)
+- Tráfico real arrancó ~21 jun (primeros días planos). 103 visitantes / 115 page views / bounce 91%.
+- Referrers: t.co (X) 23 = canal #1 · amazon-adsystem 17 + amazon 4 = display ajeno NO intencional (probable bot/mediación, infla bounce) · linkedin 8 · themediatrust 5 · doubleclick 2.
+- Eventos: scroll_speakers 16 · reservar 12 · idioma_en 2 · ver_hotel 1.
+- Luma: 126 confirmados, 123 Standard pagadas, $16.540 neto (tras $320 reembolsos). 5802 "invitados" = lista importada, no compradores.
+- CLAVE: las 123 ventas NO vienen del ads de estos 7 días — vienen de lista caliente/WhatsApp/ventas previas. Ads frío aún convierte poco.
+- IG NO aparece como referrer (oculta referrer, o campaña no activa). Usuario confirma: NO tiene Amazon ads. IG se arranca ahora.
+- UTM Parameters tab en Vercel BLOQUEADA tras upgrade extra (Web Analytics Plus) — desglose UTM nativo no disponible. Usar Referrers + eventos, o CSV Luma.
+- PENDIENTE: con IG corriendo + UTM, releer en 3-4 días y comparar X vs IG. Revisar que campañas X/LinkedIn no tengan display/audience-network activado (gasto basura).
