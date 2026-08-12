@@ -2,7 +2,7 @@
 
 **Proyecto:** Atribución de ads del evento El Día D (14 oct 2026).
 **Rol:** Acquisition/Monetization — mide de qué canal (X/IG/LinkedIn) viene el interés de compra para decidir gasto de ads.
-**Última actualización:** 22 jun 2026.
+**Última actualización:** 11 ago 2026.
 
 ## Infra
 - Repo: 10amalpha/eldiad (static single-file index.html)
@@ -48,3 +48,9 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - IG NO aparece como referrer (oculta referrer, o campaña no activa). Usuario confirma: NO tiene Amazon ads. IG se arranca ahora.
 - UTM Parameters tab en Vercel BLOQUEADA tras upgrade extra (Web Analytics Plus) — desglose UTM nativo no disponible. Usar Referrers + eventos, o CSV Luma.
 - PENDIENTE: con IG corriendo + UTM, releer en 3-4 días y comparar X vs IG. Revisar que campañas X/LinkedIn no tengan display/audience-network activado (gasto basura).
+
+## Cambio 11 ago 2026 — Antonio Linares cancelado
+- Sección speaker I (Antonio Linares: bio, video podcast, metas OG y aria-labels) ELIMINADA de index.html. Cero referencias restantes.
+- Reemplazada por card "Invitado por anunciar" (bilingüe ES/EN), misma posición I. Copy: calibre igual al roster, "el precio no espera al anuncio, 14 sep sube".
+- Estrategia: reveal del nuevo headliner sincronizado con semana Sep 8–13 (compresión de deadline pre-$400). Candidatos en gestión: Anthony Scaramucci (contactado por WhatsApp), Raoul Pal (declinó — booked hasta feb 2027; comprometido como primer invitado edición late 2027 + posible podcast).
+- PENDIENTE: Hernán regenera poster (dday.png / og.jpg / dday-roster*.png) sin Antonio — subir cuando lo pase. El poster actual TODAVÍA muestra a Antonio como figura central.
