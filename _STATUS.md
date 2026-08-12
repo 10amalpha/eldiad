@@ -54,3 +54,10 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Reemplazada por card "Invitado por anunciar" (bilingüe ES/EN), misma posición I. Copy: calibre igual al roster, "el precio no espera al anuncio, 14 sep sube".
 - Estrategia: reveal del nuevo headliner sincronizado con semana Sep 8–13 (compresión de deadline pre-$400). Candidatos en gestión: Anthony Scaramucci (contactado por WhatsApp), Raoul Pal (declinó — booked hasta feb 2027; comprometido como primer invitado edición late 2027 + posible podcast).
 - PENDIENTE: Hernán regenera poster (dday.png / og.jpg / dday-roster*.png) sin Antonio — subir cuando lo pase. El poster actual TODAVÍA muestra a Antonio como figura central.
+
+## Update 11 ago 2026 (noche) — Poster nuevo deployado
+- Hernán regeneró el arte con su cara como figura central (HERNAN JARAMILLO reemplaza a Antonio Linares en el poster).
+- dday-roster.png reemplazado (1280x853) + og.jpg regenerado (1200x630 center-crop) con cache-bust ?v=3.
+- Metas og:image:alt y aria-label del hero actualizadas con Hernán Jaramillo.
+- Verificado live: PNG 200, 1.48MB, last-modified fresco.
+- El card "Invitado por anunciar" (speaker VIII) sigue vivo en la página — el slot de misterio ahora vive solo en el copy, no en el arte.
