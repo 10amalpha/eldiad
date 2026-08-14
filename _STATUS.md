@@ -61,3 +61,8 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Metas og:image:alt y aria-label del hero actualizadas con Hernán Jaramillo.
 - Verificado live: PNG 200, 1.48MB, last-modified fresco.
 - El card "Invitado por anunciar" (speaker VIII) sigue vivo en la página — el slot de misterio ahora vive solo en el copy, no en el arte.
+
+## Update 13 ago 2026 — Gobernador fuera
+- Sección del Gobernador Andrés Julián Rendón (Urabá) eliminada de index.html, con su video. Cero referencias restantes.
+- Roster renumerado: I Santos, II Linares (virtual), III Joffroy, IV Faria, V Sierra, VI Ospina & Palacio, VII Cohosts, VIII Invitado por anunciar.
+- El poster actual no nombra a Rendón, no requiere cambio de arte.
