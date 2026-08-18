@@ -66,3 +66,9 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Sección del Gobernador Andrés Julián Rendón (Urabá) eliminada de index.html, con su video. Cero referencias restantes.
 - Roster renumerado: I Santos, II Linares (virtual), III Joffroy, IV Faria, V Sierra, VI Ospina & Palacio, VII Cohosts, VIII Invitado por anunciar.
 - El poster actual no nombra a Rendón, no requiere cambio de arte.
+
+## Update 14 ago 2026 — Pedro Faria fuera
+- Seccion speaker de Pedro Faria eliminada (bio, video). Cero referencias en HTML.
+- Roster: I Santos, II Linares (virtual), III Joffroy, IV Sierra, V Ospina & Palacio, VI Cohosts, VII Invitado por anunciar.
+- Poster dday-roster.png editado por pixeles: label PEDRO FARIA y linea conectora borrados (parche de cielo + blend de columnas). og.jpg regenerado, cache-bust v=4.
+- OG description actualizada: Santos, Linares (virtual), Joffroy, Sierra.
