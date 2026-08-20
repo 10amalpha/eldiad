@@ -78,3 +78,7 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Placeholder de video: "La conversación completa con Joe se estrena en esta página muy pronto" — Hernán graba con él miércoles próximo; agregar pod cuando pase el video.
 - OG description: fuera invitado por anunciar, entra Joe McCann.
 - Pipeline restante: Scaramucci y Alejandro Salazar siguen en gestión.
+
+## Update 20 ago 2026 (2) — Joe McCann a primera posición
+- Joe McCann movido de VII a I (primer speaker del roster, antes de Santos). Renumerado: I Joe, II Santos, III Linares, IV Joffroy, V Sierra, VI Ospina & Palacio, VII Cohosts.
+- OG description reordenada con Joe primero.
