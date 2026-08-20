@@ -72,3 +72,9 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Roster: I Santos, II Linares (virtual), III Joffroy, IV Sierra, V Ospina & Palacio, VI Cohosts, VII Invitado por anunciar.
 - Poster dday-roster.png editado por pixeles: label PEDRO FARIA y linea conectora borrados (parche de cielo + blend de columnas). og.jpg regenerado, cache-bust v=4.
 - OG description actualizada: Santos, Linares (virtual), Joffroy, Sierra.
+
+## Update 20 ago 2026 — Joe McCann reemplaza al invitado misterioso
+- Card "Invitado por anunciar" (VII) reemplazado por Joe McCann: foto circular (speaker-joemccann.jpg, 640x640), badge Presencia confirmada, rol Investor · Philanthropist.
+- Placeholder de video: "La conversación completa con Joe se estrena en esta página muy pronto" — Hernán graba con él miércoles próximo; agregar pod cuando pase el video.
+- OG description: fuera invitado por anunciar, entra Joe McCann.
+- Pipeline restante: Scaramucci y Alejandro Salazar siguen en gestión.
