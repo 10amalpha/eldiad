@@ -87,3 +87,7 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - MacroWise (macrowise.capital, Guillermo Valencia) agregado a Aliados del Dia D, entre MBS y Sites.
 - Logo procesado: negro a transparente, texto blanco, 243x44 (macrowise-logo.png). CSS max-height 26px.
 - Note bilingue: Epistemic Capital · Macro y geopolitica para LATAM.
+
+## Update 21 ago 2026 — Celsia sponsor
+- Celsia (celsia.com) agregado a Aliados del Dia D, entre MacroWise y Sites. Logo naranja sobre transparente (415x131, celsia-logo.png), max-height 42px.
+- Note bilingue: Energia · El piso fisico de todo lo demas (eco del copy de Ricardo Sierra, speaker V y CEO de Celsia).
