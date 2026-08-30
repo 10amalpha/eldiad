@@ -91,3 +91,6 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 ## Update 21 ago 2026 — Celsia sponsor
 - Celsia (celsia.com) agregado a Aliados del Dia D, entre MacroWise y Sites. Logo naranja sobre transparente (415x131, celsia-logo.png), max-height 42px.
 - Note bilingue: Energia · El piso fisico de todo lo demas (eco del copy de Ricardo Sierra, speaker V y CEO de Celsia).
+
+## Update 26 ago 2026 — Video de Joe McCann
+- Placeholder de Joe (speaker I) reemplazado por pod estandar con video qoReYHBo3zo (lazy-load youtube-nocookie, mismo formato que Santos/Linares).
