@@ -422,6 +422,17 @@ main{position:relative;z-index:3;max-width:820px;margin:0 auto;padding:48px 28px
 .callout .cta a.secondary:hover{color:var(--gold-bright);border-color:var(--gold)}
 .callout .cta .or{font-family:var(--mono);font-size:9px;letter-spacing:0.5em;color:var(--gold-dim);text-transform:uppercase;opacity:0.6;margin:-2px 0}
 
+/* Hoteles aliados — zona de alojamiento */
+.hotels{display:grid;grid-template-columns:1fr 1fr;gap:20px 34px;margin:28px auto 0}
+.hotels .hotel{display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
+.hotels .hotel .logobox{height:58px;display:flex;align-items:center;justify-content:center;filter:brightness(0.95)}
+.hotels .hotel .logobox img{width:auto;display:block}
+.hotels .hotel img.zarzo{max-height:32px}
+.hotels .hotel img.sites{max-height:54px}
+.hotels .hotel .note{font-family:var(--mono);font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream-dim);margin-top:14px;line-height:1.6;min-height:34px;max-width:240px}
+.hotels .hotel .cta{margin-top:12px}
+@media(max-width:640px){.hotels{grid-template-columns:1fr;gap:40px}.hotels .hotel .note{min-height:0}}
+
 .lists-pair{display:grid;grid-template-columns:1fr;gap:48px;margin:48px 0}
 .lists-pair .col{padding:0}
 .lists-pair .col h3{text-align:center;margin-bottom:24px}
@@ -943,11 +954,20 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
 
   <div style="width:60px;height:1px;background:var(--line);margin:46px auto 0"></div>
 
-  <div style="margin:34px auto 0;max-width:520px;text-align:center;opacity:0.72">
+  <div class="hotels-zone" style="margin:34px auto 0;max-width:620px;text-align:center;opacity:0.85">
     <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold-dim);text-transform:uppercase;margin-bottom:12px" data-en="Where to stay">Dónde quedarte</div>
-    <p style="font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:14px;line-height:1.6;margin-bottom:0" data-en="For those traveling to Medellín. 15% off lodging with the code <span style=&quot;font-family:var(--mono);font-style:normal;letter-spacing:0.18em;color:var(--gold-dim)&quot;>10AMPRO</span>.">Para quienes viajan a Medellín. 15% de descuento en alojamiento con el código <span style="font-family:var(--mono);font-style:normal;letter-spacing:0.18em;color:var(--gold-dim)">10AMPRO</span>.</p>
-    <div class="cta" style="margin-top:18px">
-      <a class="secondary" href="https://www.sitesmedellin.com/es/bookcore/availability/sitehotel/2026-10-13/2026-10-16/2/0/?cp=10ampro&amp;rrc=1&amp;adults=2&amp;occupancies=%255B%257B%2522adults%2522%253A%25202%252C%2520%2522children%2522%253A%25200%252C%2520%2522ages%2522%253A%2520%2522%2522%257D%255D&amp;occp=1" target="_blank" rel="noopener" data-en="Book Hotel">Reservar Hotel</a>
+    <p style="font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:14px;line-height:1.6;margin-bottom:0" data-en="For those traveling to Medellín. Two allied hotels with a special rate for Día D attendees.">Para quienes viajan a Medellín. Dos hoteles aliados con tarifa especial para asistentes del Día D.</p>
+    <div class="hotels">
+      <div class="hotel">
+        <span class="logobox"><img class="zarzo" src="/zarzo-logo.png" alt="El Zarzo" loading="lazy" /></span>
+        <span class="note" data-en="The rooftop of the closing cocktail · Discount applied in the link">El rooftop del cocktail de cierre · Descuento aplicado en el enlace</span>
+        <div class="cta"><a class="secondary" data-hotel="zarzo" href="https://hotels.cloudbeds.com/reservation/TinNiy#promo=eldiad" target="_blank" rel="noopener" data-en="Book at El Zarzo">Reservar en El Zarzo</a></div>
+      </div>
+      <div class="hotel">
+        <span class="logobox"><img class="sites" src="/sites-logo.png" alt="Sites Suites de Autor" loading="lazy" /></span>
+        <span class="note" data-en="15% off with code 10AMPRO">15% de descuento con el código 10AMPRO</span>
+        <div class="cta"><a class="secondary" data-hotel="sites" href="https://www.sitesmedellin.com/es/bookcore/availability/sitehotel/2026-10-13/2026-10-16/2/0/?cp=10ampro&amp;rrc=1&amp;adults=2&amp;occupancies=%255B%257B%2522adults%2522%253A%25202%252C%2520%2522children%2522%253A%25200%252C%2520%2522ages%2522%253A%2520%2522%2522%257D%255D&amp;occp=1" target="_blank" rel="noopener" data-en="Book at Sites">Reservar en Sites</a></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1033,8 +1053,8 @@ document.querySelectorAll('.pod .frame').forEach(function(f){
   function src(){return new URLSearchParams(location.search).get('utm_source')||'directo';}
   function ev(name,extra){ if(window.va){ va('event',Object.assign({name:name,source:src()},extra||{})); } }
   // Clic en reservar hotel (intención alta — viene de fuera de Medellín)
-  var hotel=document.querySelector('a.secondary[href*="sitesmedellin"]');
-  if(hotel) hotel.addEventListener('click',function(){ev('ver_hotel');});
+  var hoteles=document.querySelectorAll('a.secondary[data-hotel]');
+  Array.prototype.forEach.call(hoteles,function(h){h.addEventListener('click',function(){ev('ver_hotel',{hotel:h.getAttribute('data-hotel')});});});
   // Toggle a inglés (audiencia no hispanohablante por canal)
   var enBtn=document.querySelector('.langswitch button[data-lang="en"]');
   if(enBtn) enBtn.addEventListener('click',function(){ev('idioma_en');},{once:true});

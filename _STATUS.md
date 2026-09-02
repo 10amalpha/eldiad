@@ -2,7 +2,7 @@
 
 **Proyecto:** Atribución de ads del evento El Día D (14 oct 2026).
 **Rol:** Acquisition/Monetization — mide de qué canal (X/IG/LinkedIn) viene el interés de compra para decidir gasto de ads.
-**Última actualización:** 11 ago 2026.
+**Última actualización:** 1 sep 2026.
 
 ## Infra
 - Repo: 10amalpha/eldiad (static single-file index.html)
@@ -16,7 +16,7 @@ Snippet estático en <head>: /_vercel/insights/script.js (NO usar @vercel/analyt
 4 eventos custom, todos con propiedad `source` (= utm_source o 'directo'):
 - reservar — clic botón Luma (2 botones: cta=countdown y cta=final) — intención de compra
 - scroll_speakers — IntersectionObserver sobre primer section.speaker (threshold 0.4, once) — interés real
-- ver_hotel — clic en a.secondary[href*=sitesmedellin] — intención alta (fuera de Medellín)
+- ver_hotel — clic en a.secondary[data-hotel] (propiedad `hotel`: zarzo|sites) — intención alta (fuera de Medellín)
 - idioma_en — clic toggle EN (once) — audiencia no hispana por canal
 
 Bloque <script> único antes de </body> (event delegation + IntersectionObserver).
@@ -94,3 +94,8 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 
 ## Update 26 ago 2026 — Video de Joe McCann
 - Placeholder de Joe (speaker I) reemplazado por pod estandar con video qoReYHBo3zo (lazy-load youtube-nocookie, mismo formato que Santos/Linares).
+
+## Cambios 1 sep 2026
+- Zona de hoteles en sección final: El Zarzo (Cloudbeds, promo `eldiad` embebido en link: hotels.cloudbeds.com/reservation/TinNiy#promo=eldiad) + Sites (15% código 10AMPRO). Grid 2 col, stack <640px.
+- Logo `zarzo-logo.png` agregado (fondo transparente, procesado del original).
+- Evento ver_hotel ahora reporta propiedad `hotel` (zarzo|sites) en Vercel Analytics.
