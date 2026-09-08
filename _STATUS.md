@@ -99,3 +99,9 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Zona de hoteles en sección final: El Zarzo (Cloudbeds, promo `eldiad` embebido en link: hotels.cloudbeds.com/reservation/TinNiy#promo=eldiad) + Sites (15% código 10AMPRO). Grid 2 col, stack <640px.
 - Logo `zarzo-logo.png` agregado (fondo transparente, procesado del original).
 - Evento ver_hotel ahora reporta propiedad `hotel` (zarzo|sites) en Vercel Analytics.
+
+## Update 8 sep 2026 — Nuevo aliado: Inplux
+- Agregado Inplux (inplux.co — fábrica de software a la medida, Medellín) a la sección "Aliados del Día D", posición 7 (después de Celsia).
+- Logo: `/inplux-logo.svg` — vector oficial del brand kit (PDF `inplux-logo-horizontal-inverse` → SVG, viewBox recortado, 6.9 KB). Kit completo (12 PDFs: mark, wordmark, stacked, appicon, variantes ink/white/teal) lo tiene Hernán. CSS `.partner .logos a.inplux .logobox img{max-height:34px}`.
+- Note bilingüe: "Software · De un problema real a producción" / "Software · From a real problem to production".
+- Grid queda 3+3+1 (el 7° centrado solo en la última fila). Si entra un 8° aliado, queda 4+4 sin tocar CSS.
