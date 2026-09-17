@@ -105,3 +105,8 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Logo: `/inplux-logo.svg` — vector oficial del brand kit (PDF `inplux-logo-horizontal-inverse` → SVG, viewBox recortado, 6.9 KB). Kit completo (12 PDFs: mark, wordmark, stacked, appicon, variantes ink/white/teal) lo tiene Hernán. CSS `.partner .logos a.inplux .logobox img{max-height:34px}`.
 - Note bilingüe: "Software · De un problema real a producción" / "Software · From a real problem to production".
 - Grid queda 3+3+1 (el 7° centrado solo en la última fila). Si entra un 8° aliado, queda 4+4 sin tocar CSS.
+
+## Update 17 sep 2026 — MBS logo + link
+- Reemplazado `mbs-logo.png` (caja blanca, se veía mal en fondo oscuro) por `mbs-logo.svg`: vector oficial "MBS & Associates" extraído de `MBS-GROUP-LOGOS.ai`, navy recoloreado a blanco, mark dorado #bc8706 intacto. 8.8 KB, width/height explícitos.
+- Bloque `.mbs` pasó de `<div>` a `<a href="https://mbs-associates.com/">`. CSS `a.mbs .logobox img{height:46px}`.
+- El .ai también trae "MBS Corporate Management" (montañas) y "GTL Legal" — no usados.
