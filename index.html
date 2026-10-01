@@ -224,6 +224,13 @@ main{position:relative;z-index:3;max-width:820px;margin:0 auto;padding:48px 28px
 .live .btns a.secondary{color:var(--cream-dim);background:transparent;border:1px solid var(--line-strong)}
 .live .btns a.secondary:hover{color:var(--gold-bright);border-color:var(--gold)}
 @media (max-width:480px){.live .btns a{padding:16px 28px;font-size:11px;letter-spacing:0.3em;min-width:240px}}
+
+/* Modo evento: sin imagen de landing — el bloque "En vivo" entra de inmediato */
+html.is-live .cinema{height:auto;min-height:0;padding:22px 0 0;background:var(--bg,#000)}
+html.is-live .cinema .stage,html.is-live .cinema .bg-blur,html.is-live .cinema .vignette{display:none}
+html.is-live .cinema .hud{position:static;margin:0 24px}
+html.is-live .cinema .logo{position:static;transform:none;margin:22px auto 0;width:77px}
+html.is-live .live{margin-top:34px}
 .only-live{display:none}
 html.is-live .only-live{display:block}
 html.is-live span.only-live{display:inline}

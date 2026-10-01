@@ -113,6 +113,7 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 
 ## 2026-10-01 — Modo día del evento programado
 - index.html ahora tiene dos estados. Desde el **14-oct-2026 08:30 COT** (`html.is-live`, chequeo cada 30s en el cliente) se oculta: countdown, "Reservar Plaza" (x2), precio USD 300, hoteles. Se muestra: bloque "En vivo ahora" con CTAs a 10am.pro y youtube.com/@10ampro, HUD "● En vivo", nota de puertas 8:00 AM.
+- En modo evento la imagen hero (.stage) se oculta; queda HUD + logo compactos y el bloque "En vivo" arriba del fold.
 - Preview: `?mode=live` fuerza el modo evento; `?mode=pre` fuerza el modo pre-evento.
 - Analytics: eventos `streaming` (cta top/final, dest 10ampro/youtube).
 - Pendiente post-evento: cambiar CTA a "ve la grabación" cuando esté el VOD.
