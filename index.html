@@ -208,6 +208,29 @@ main{position:relative;z-index:3;max-width:820px;margin:0 auto;padding:48px 28px
 .cohost-intro{text-align:center;margin:0 auto 48px;max-width:560px;color:var(--cream-dim);font-style:italic;font-size:17px;line-height:1.5}
 @media (max-width:680px){.cohosts{grid-template-columns:repeat(2,1fr);gap:32px 24px;max-width:420px}.cohost .avatar{width:96px;height:96px}}
 
+
+/* ===== Modo "día del evento": se activa solo el 14-oct-2026 08:30 COT (html.is-live) ===== */
+.live{text-align:center;margin:54px auto 0;max-width:760px}
+.live .badge{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:10px;letter-spacing:0.5em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line-strong);padding:10px 18px 10px 16px}
+.live .badge i{width:8px;height:8px;border-radius:50%;background:#e04b3c;box-shadow:0 0 0 0 rgba(224,75,60,.7);animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(224,75,60,.7)}70%{box-shadow:0 0 0 10px rgba(224,75,60,0)}100%{box-shadow:0 0 0 0 rgba(224,75,60,0)}}
+.live h2{font-family:var(--display);font-size:clamp(30px,6vw,56px);letter-spacing:0.12em;color:var(--gold-bright);text-transform:uppercase;font-weight:700;margin:26px 0 12px;line-height:1.05}
+.live .target{font-family:var(--serif);font-style:italic;font-size:clamp(15px,2.2vw,18px);color:var(--cream-dim)}
+.live .msg{font-family:var(--serif);font-size:clamp(17px,2.4vw,21px);color:var(--cream);line-height:1.55;max-width:600px;margin:30px auto 0}
+.live .btns{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:32px}
+.live .btns a{display:inline-block;font-family:var(--display);font-size:13px;letter-spacing:0.4em;padding:18px 40px;text-decoration:none;text-transform:uppercase;font-weight:600;transition:all .2s ease;min-width:260px;text-align:center}
+.live .btns a.primary{color:var(--bg);background:var(--gold);border:1px solid var(--gold)}
+.live .btns a.primary:hover{background:var(--gold-bright);color:var(--bg-deep);box-shadow:0 0 40px rgba(196,164,100,0.3)}
+.live .btns a.secondary{color:var(--cream-dim);background:transparent;border:1px solid var(--line-strong)}
+.live .btns a.secondary:hover{color:var(--gold-bright);border-color:var(--gold)}
+@media (max-width:480px){.live .btns a{padding:16px 28px;font-size:11px;letter-spacing:0.3em;min-width:240px}}
+.only-live{display:none}
+html.is-live .only-live{display:block}
+html.is-live span.only-live{display:inline}
+html.is-live .callout .cta.only-live{display:flex !important}
+html.is-live .live .btns{display:flex}
+html.is-live .only-pre{display:none !important}
+
 /* Countdown */
 .countdown{text-align:center;margin:54px auto 0;max-width:760px}
 .countdown .eyebrow{
@@ -513,6 +536,19 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel -->
+<script>
+(function(){
+  var GO=new Date('2026-10-14T08:30:00-05:00').getTime();
+  var q=new URLSearchParams(location.search).get('mode');
+  function check(){
+    var live = q==='live' || (q!=='pre' && Date.now()>=GO);
+    document.documentElement.classList.toggle('is-live',live);
+    document.title = live ? 'El Día D · En vivo' : document.title;
+    return live;
+  }
+  if(!check()){ var t=setInterval(function(){ if(check()) clearInterval(t); },30000); }
+})();
+</script>
 </head>
 <body>
 <div class="langswitch" role="group" aria-label="Idioma / Language">
@@ -528,7 +564,7 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
   <div class="hud">
     <span class="brand">10ampro</span>
     <span class="center">
-      <span>14 Octubre 2026</span><span class="sep">·</span><span>Medellín</span><span class="sep">·</span><span>Cupo limitado</span>
+      <span>14 Octubre 2026</span><span class="sep">·</span><span>Medellín</span><span class="sep">·</span><span class="only-pre">Cupo limitado</span><span class="only-live" style="color:#e8c777">● En vivo</span>
     </span>
     <span class="anno">Anno · MMXXVI</span>
   </div>
@@ -539,7 +575,18 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
 
 <main>
 
-<section class="section countdown">
+<section class="section live only-live" id="streaming">
+  <div class="badge"><i></i><span data-en="Live now">En vivo ahora</span></div>
+  <h2 data-en="Today is Día D">Hoy es El Día D</h2>
+  <div class="target" data-en="Wednesday, October 14, 2026 · Fundadores Auditorium · EAFIT · Medellín">Miércoles 14 de Octubre, 2026 · Auditorio Fundadores · EAFIT · Medellín</div>
+  <p class="msg" data-en="If you couldn't make it to Medellín, watch the stream on 10am.pro or on our YouTube channel.">Si no pudiste asistir, ve el streaming vía 10am.pro o en nuestro canal de YouTube.</p>
+  <div class="btns">
+    <a class="primary" href="https://10am.pro" target="_blank" rel="noopener" data-en="Watch on 10am.pro" onclick="window.va&&va('event',{name:'streaming',cta:'top',dest:'10ampro'})">Ver en 10am.pro</a>
+    <a class="secondary" href="https://www.youtube.com/@10ampro" target="_blank" rel="noopener" data-en="Watch on YouTube" onclick="window.va&&va('event',{name:'streaming',cta:'top',dest:'youtube'})">Ver en YouTube</a>
+  </div>
+</section>
+
+<section class="section countdown only-pre">
   <div class="eyebrow" data-en="Countdown">Cuenta Regresiva</div>
   <div class="target" data-en="Wednesday, October 14, 2026 · Medellín">Miércoles 14 de Octubre, 2026 · Medellín</div>
   <div class="clock">
@@ -931,18 +978,24 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
     <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.42em;color:var(--gold);text-transform:uppercase;text-align:center;margin-bottom:14px;opacity:0.88" data-en="When and Where">Cuándo y Dónde</div>
     <p style="text-align:center;font-family:var(--display);font-size:clamp(18px,2.6vw,22px);letter-spacing:0.16em;color:var(--gold-bright);text-transform:uppercase;font-weight:500;margin-bottom:8px" data-en="Wednesday, October 14, 2026">Miércoles 14 de Octubre, 2026</p>
     <p style="text-align:center;font-family:var(--serif);color:var(--cream);font-size:17px;line-height:1.6;margin-bottom:12px" data-en="Fundadores Auditorium · EAFIT University · Medellín">Auditorio Fundadores · Universidad EAFIT · Medellín</p>
-    <p style="text-align:center;font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:15px;line-height:1.55" data-en="The date and venue are confirmed. The line-up is still being finalized — the weight of the event doesn't depend on a single name.">La fecha y el lugar están confirmados. El line-up sigue cerrándose — el peso del evento no depende de un solo nombre.</p>
+    <p class="only-pre" style="text-align:center;font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:15px;line-height:1.55" data-en="The date and venue are confirmed. The line-up is still being finalized — the weight of the event doesn't depend on a single name.">La fecha y el lugar están confirmados. El line-up sigue cerrándose — el peso del evento no depende de un solo nombre.</p>
+    <p class="only-live" style="text-align:center;font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:15px;line-height:1.55" data-en="Doors open at 8:00 AM. If you couldn't make it, the stream is live on 10am.pro and YouTube.">Puertas abiertas desde las 8:00 AM. Si no pudiste asistir, el streaming está en vivo en 10am.pro y YouTube.</p>
   </div>
 
   <div style="width:60px;height:1px;background:var(--line-strong);margin:48px auto 0"></div>
 
-  <div style="margin:40px auto 0;max-width:520px;text-align:center">
+  <div class="only-pre" style="margin:40px auto 0;max-width:520px;text-align:center">
     <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.42em;color:var(--gold);text-transform:uppercase;margin-bottom:18px;opacity:0.88" data-en="Price">Precio</div>
     <div style="font-family:var(--display);font-size:clamp(40px,6vw,56px);letter-spacing:0.04em;color:var(--gold-bright);font-weight:700;line-height:1">USD 300</div>
   </div>
 
-  <div class="cta">
+  <div class="cta only-pre">
     <a class="primary" href="https://luma.com/eldiad?utm_source=eldiad_landing" target="_blank" rel="noopener" data-en="Reserve Your Spot" onclick="window.va&&va('event',{name:'reservar',source:new URLSearchParams(location.search).get('utm_source')||'directo',cta:'final'})">Reservar Plaza</a>
+  </div>
+  <div class="cta only-live" style="display:none">
+    <a class="primary" href="https://10am.pro" target="_blank" rel="noopener" data-en="Watch the stream on 10am.pro" onclick="window.va&&va('event',{name:'streaming',cta:'final',dest:'10ampro'})">Ver el streaming en 10am.pro</a>
+    <span class="or" data-en="or">o</span>
+    <a class="secondary" href="https://www.youtube.com/@10ampro" target="_blank" rel="noopener" data-en="Watch on YouTube" onclick="window.va&&va('event',{name:'streaming',cta:'final',dest:'youtube'})">Ver en YouTube · @10ampro</a>
   </div>
 
   <div style="margin:54px auto 0;max-width:560px;text-align:center;opacity:0.78">
@@ -950,9 +1003,9 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
     <p style="font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:14px;line-height:1.6" data-en="The closing cocktail on the rooftop of El Zarzo is reserved for 50 Alpha subscribers (12+ months paying). They receive a separate invitation. It's not for sale.">El cocktail de cierre en el rooftop de El Zarzo está reservado para 50 suscriptores Alpha (12+ meses pagando). Reciben invitación aparte. No se vende.</p>
   </div>
 
-  <div style="width:60px;height:1px;background:var(--line);margin:46px auto 0"></div>
+  <div class="only-pre" style="width:60px;height:1px;background:var(--line);margin:46px auto 0"></div>
 
-  <div class="hotels-zone" style="margin:34px auto 0;max-width:620px;text-align:center;opacity:0.85">
+  <div class="hotels-zone only-pre" style="margin:34px auto 0;max-width:620px;text-align:center;opacity:0.85">
     <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold-dim);text-transform:uppercase;margin-bottom:12px" data-en="Where to stay">Dónde quedarte</div>
     <p style="font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:14px;line-height:1.6;margin-bottom:0" data-en="For those traveling to Medellín. Two allied hotels with a special rate for Día D attendees.">Para quienes viajan a Medellín. Dos hoteles aliados con tarifa especial para asistentes del Día D.</p>
     <div class="hotels">

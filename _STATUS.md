@@ -110,3 +110,9 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Reemplazado `mbs-logo.png` (caja blanca, se veía mal en fondo oscuro) por `mbs-logo.svg`: vector oficial "MBS & Associates" extraído de `MBS-GROUP-LOGOS.ai`, navy recoloreado a blanco, mark dorado #bc8706 intacto. 8.8 KB, width/height explícitos.
 - Bloque `.mbs` pasó de `<div>` a `<a href="https://mbs-associates.com/">`. CSS `a.mbs .logobox img{height:46px}`.
 - El .ai también trae "MBS Corporate Management" (montañas) y "GTL Legal" — no usados.
+
+## 2026-10-01 — Modo día del evento programado
+- index.html ahora tiene dos estados. Desde el **14-oct-2026 08:30 COT** (`html.is-live`, chequeo cada 30s en el cliente) se oculta: countdown, "Reservar Plaza" (x2), precio USD 300, hoteles. Se muestra: bloque "En vivo ahora" con CTAs a 10am.pro y youtube.com/@10ampro, HUD "● En vivo", nota de puertas 8:00 AM.
+- Preview: `?mode=live` fuerza el modo evento; `?mode=pre` fuerza el modo pre-evento.
+- Analytics: eventos `streaming` (cta top/final, dest 10ampro/youtube).
+- Pendiente post-evento: cambiar CTA a "ve la grabación" cuando esté el VOD.
