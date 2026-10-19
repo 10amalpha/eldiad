@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>El Día D · 10ampro</title>
-<meta name="description" content="El Día D vuelve a Medellín. Fecha por anunciar · 520 cupos · Early bird USD 150. Suscríbete para recibir alertas." />
+<meta name="description" content="El Día D vuelve a Medellín. Fecha por anunciar · 580 cupos · Early bird desde USD 150. Suscríbete para recibir alertas." />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <meta name="theme-color" content="#08070a" />
 <meta property="og:title" content="El Día D · 10ampro" />
-<meta property="og:description" content="Hay un nuevo péptido del conocimiento transformando a Medellín, y su nombre es El Día D. Próxima edición: fecha por anunciar · 520 cupos." />
+<meta property="og:description" content="Hay un nuevo péptido del conocimiento transformando a Medellín, y su nombre es El Día D. Próxima edición: fecha por anunciar · 580 cupos." />
 <meta property="og:image" content="https://eldiad.10am.pro/hero-eldiad-2026.jpg" />
 <meta property="og:image:secure_url" content="https://eldiad.10am.pro/hero-eldiad-2026.jpg" />
 <meta property="og:image:type" content="image/jpeg" />
@@ -25,7 +25,7 @@
 <meta property="og:locale" content="es_CO" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="El Día D · 10ampro" />
-<meta name="twitter:description" content="El Día D vuelve a Medellín — fecha por anunciar · 520 cupos · Early bird USD 150" />
+<meta name="twitter:description" content="El Día D vuelve a Medellín — fecha por anunciar · 580 cupos · Early bird desde USD 150" />
 <meta name="twitter:image" content="https://eldiad.10am.pro/hero-eldiad-2026.jpg" />
 <meta name="twitter:image:alt" content="El Día D — 10ampro" />
 <link rel="preload" as="image" href="/dday-roster.png" />
@@ -229,12 +229,28 @@ main{position:relative;z-index:3;max-width:820px;margin:0 auto;padding:48px 28px
 
 /* Tiers */
 .tiers{display:grid;grid-template-columns:1fr 1fr;gap:18px;text-align:left}
-.tier{border:1px solid var(--line-strong);padding:26px 26px 22px;background:rgba(255,255,255,0.015)}
-.tier.hi{border-color:var(--gold);box-shadow:0 0 40px rgba(196,164,100,0.12)}
-.tier .tag{font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
-.tier .price{font-family:var(--display);font-size:clamp(26px,4vw,40px);letter-spacing:0.04em;color:var(--gold-bright);font-weight:700;line-height:1;margin-bottom:14px}
-.tier p{font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:14px;line-height:1.6;margin:0}
-@media (max-width:600px){.tiers{grid-template-columns:1fr}}
+.tier{border:1px solid var(--line-strong);padding:28px 26px 26px;background:rgba(255,255,255,0.015);display:flex;flex-direction:column}
+.tier.hi{border-color:var(--gold);box-shadow:0 0 50px rgba(196,164,100,0.14);background:linear-gradient(180deg,rgba(196,164,100,0.07),rgba(196,164,100,0.01))}
+.tier .tag{font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;margin-bottom:16px}
+.tier .tname{font-family:var(--display);font-size:clamp(18px,2.4vw,22px);letter-spacing:0.12em;color:var(--cream);text-transform:uppercase;font-weight:500;margin-bottom:10px}
+.tier .price{font-family:var(--display);font-size:clamp(34px,5vw,46px);letter-spacing:0.02em;color:var(--gold-bright);font-weight:700;line-height:1;margin-bottom:14px}
+.tier .price small{font-family:var(--mono);font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-left:8px;vertical-align:middle}
+.tier .ladder{display:flex;gap:8px;margin-bottom:18px}
+.tier .ladder span{flex:1;border:1px solid var(--line);padding:10px 6px;text-align:center;opacity:0.45}
+.tier .ladder span.on{opacity:1;border-color:var(--gold)}
+.tier .ladder b{display:block;font-family:var(--display);font-size:18px;color:var(--cream);font-weight:600}
+.tier .ladder i{display:block;font-family:var(--mono);font-style:normal;font-size:8px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold-dim);margin-top:4px}
+.tier .ladder.single{display:block;border:1px solid var(--line);padding:12px 14px;font-family:var(--serif);font-style:italic;font-size:14px;color:var(--cream)}
+.tier .inc{list-style:none;padding:0;margin:0 0 18px}
+.tier .inc li{position:relative;padding-left:24px;font-family:var(--serif);font-size:15px;color:var(--cream);line-height:1.5;margin-bottom:8px}
+.tier .inc li::before{content:'✓';position:absolute;left:0;color:var(--gold);font-size:13px}
+.tier .fine{font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:13px;line-height:1.5;margin:0 0 18px}
+.tier .tbtn{display:block;text-align:center;margin-top:auto;font-family:var(--display);font-size:12px;letter-spacing:0.36em;padding:16px 20px;text-decoration:none;text-transform:uppercase;font-weight:600;transition:all .2s}
+.tier .tbtn.primary{color:var(--bg);background:var(--gold);border:1px solid var(--gold)}
+.tier .tbtn.primary:hover{background:var(--gold-bright)}
+.tier .tbtn.secondary{color:var(--cream-dim);border:1px solid var(--line-strong)}
+.tier .tbtn.secondary:hover{color:var(--gold-bright);border-color:var(--gold)}
+@media (max-width:640px){.tiers{grid-template-columns:1fr}.tier{padding:24px 20px 22px}}
 
 /* Archivo de charlas */
 .talks{display:grid;grid-template-columns:1fr 1fr;gap:28px 24px;max-width:960px;margin:0 auto}
@@ -570,7 +586,7 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
   <div class="hud">
     <span class="brand">10ampro</span>
     <span class="center">
-      <span>Próxima edición</span><span class="sep">·</span><span>Medellín</span><span class="sep">·</span><span style="color:#e8c777">520 cupos</span>
+      <span>Próxima edición</span><span class="sep">·</span><span>Medellín</span><span class="sep">·</span><span style="color:#e8c777">580 cupos</span>
     </span>
     <span class="anno">Fecha por anunciar</span>
   </div>
@@ -589,9 +605,9 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
   <div class="eyebrow" data-en="Next edition">Próxima edición</div>
   <div class="target" data-en="Date to be announced · Last two weeks of October or first week of November · Medellín">Fecha por anunciar · Últimas dos semanas de octubre o primera de noviembre · Medellín</div>
   <div class="clock" style="gap:48px">
-    <div class="unit"><span class="num">520</span><span class="lbl" data-en="Seats">Cupos</span></div>
-    <div class="unit"><span class="num">$150</span><span class="lbl" data-en="Early bird">Early bird</span></div>
-    <div class="unit"><span class="num">100</span><span class="lbl" data-en="Network event">Network event</span></div>
+    <div class="unit"><span class="num">580</span><span class="lbl" data-en="Seats">Cupos</span></div>
+    <div class="unit"><span class="num">$150</span><span class="lbl" data-en="Early bird · from">Early bird · desde</span></div>
+    <div class="unit"><span class="num">100</span><span class="lbl" data-en="Gold · Network event">Gold · Network event</span></div>
   </div>
   <a class="cd-cta" href="https://luma.com/10ampro?utm_source=eldiad_landing" target="_blank" rel="noopener" data-en="Get the alert when sales open" onclick="window.va&&va('event',{name:'alertas',source:new URLSearchParams(location.search).get('utm_source')||'directo',cta:'countdown'})">Avísame cuando abra</a>
 </section>
@@ -608,7 +624,7 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
       <span class="cap" data-en="Attendees at the last edition">Asistentes en la última edición</span>
     </div>
     <div class="stat">
-      <span class="fig">520</span>
+      <span class="fig">580</span>
       <span class="cap" data-en="Seats in the next one">Cupos en la próxima</span>
     </div>
   </div>
@@ -868,31 +884,49 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
     <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.42em;color:var(--gold);text-transform:uppercase;text-align:center;margin-bottom:14px;opacity:0.88" data-en="When and Where">Cuándo y Dónde</div>
     <p style="text-align:center;font-family:var(--display);font-size:clamp(18px,2.6vw,22px);letter-spacing:0.16em;color:var(--gold-bright);text-transform:uppercase;font-weight:500;margin-bottom:8px" data-en="Date to be announced">Fecha por anunciar</p>
     <p style="text-align:center;font-family:var(--serif);color:var(--cream);font-size:17px;line-height:1.6;margin-bottom:12px" data-en="Last two weeks of October or first week of November · Medellín">Últimas dos semanas de octubre o primera de noviembre · Medellín</p>
-    <p style="text-align:center;font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:15px;line-height:1.55" data-en="500 people came to the last one. This one is capped at 520. Sign up and you get the alert the moment early bird opens.">A la última vinieron 500 personas. Esta se cierra en 520. Suscríbete y recibes la alerta en el momento en que abra el early bird.</p>
+    <p style="text-align:center;font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:15px;line-height:1.55" data-en="500 people came to the last one. This one is capped at 580. Sign up and you get the alert the moment early bird opens.">A la última vinieron 500 personas. Esta se cierra en 580. Suscríbete y recibes la alerta en el momento en que abra el early bird.</p>
   </div>
 
   <div style="width:60px;height:1px;background:var(--line-strong);margin:48px auto 0"></div>
 
-  <div style="margin:40px auto 0;max-width:640px;text-align:center">
-    <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.42em;color:var(--gold);text-transform:uppercase;margin-bottom:26px;opacity:0.88" data-en="Tickets">Boletas</div>
+  <div style="margin:40px auto 0;max-width:880px;text-align:center">
+    <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.42em;color:var(--gold);text-transform:uppercase;margin-bottom:26px;opacity:0.88" data-en="Tickets · 580 seats total">Boletas · 580 cupos en total</div>
     <div class="tiers">
-      <div class="tier">
-        <div class="tag" data-en="Early bird">Early bird</div>
-        <div class="price">USD 150</div>
-        <p data-en="Full access to El Día D. Limited to 520 seats.">Acceso completo al Día D. Cupo limitado a 520.</p>
-      </div>
+
       <div class="tier hi">
-        <div class="tag" data-en="Early bird + Network Event">Early bird + Network Event</div>
-        <div class="price" data-en="Price TBA">Precio por anunciar</div>
-        <p data-en="Everything above, plus the network event at El Zarzo, 6 to 9 PM. Capped at 100 people. Very exclusive.">Todo lo anterior, más el network event en El Zarzo de 6 a 9 PM. Limitado a 100 personas. Muy exclusivo.</p>
+        <div class="tag" data-en="Gold · 100 seats · single price">Gold · 100 cupos · precio único</div>
+        <div class="tname" data-en="Día D + Network Event">Día D + Network Event</div>
+        <div class="price">USD 450</div>
+        <div class="ladder single" data-en="No early bird. No discounts. It sells out first.">Sin early bird. Sin descuentos. Se agota primero.</div>
+        <ul class="inc">
+          <li data-en="Everything in General">Todo lo de General</li>
+          <li data-en="Network event at El Zarzo · 6 to 9 PM">Network event en El Zarzo · 6 a 9 PM</li>
+          <li data-en="Only 100 people in the room">Solo 100 personas en el cuarto</li>
+        </ul>
+        <a class="tbtn primary" href="https://luma.com/10ampro?utm_source=eldiad_landing" target="_blank" rel="noopener" data-en="Alert me · Gold" onclick="window.va&&va('event',{name:'alertas',source:new URLSearchParams(location.search).get('utm_source')||'directo',cta:'gold'})">Avísame · Gold</a>
       </div>
+
+      <div class="tier">
+        <div class="tag" data-en="General · 480 seats">General · 480 cupos</div>
+        <div class="tname" data-en="Día D">Día D</div>
+        <div class="price">USD 150 <small data-en="early bird">early bird</small></div>
+        <div class="ladder">
+          <span class="on"><b>150</b><i data-en="Early bird">Early bird</i></span>
+          <span><b>250</b><i data-en="Phase 2">Fase 2</i></span>
+          <span><b>350</b><i data-en="Final price">Precio final</i></span>
+        </div>
+        <ul class="inc">
+          <li data-en="Full day in the Fundadores Auditorium">Día completo en el auditorio</li>
+          <li data-en="All the talks">Todas las charlas</li>
+          <li data-en="General networking">Networking general</li>
+        </ul>
+        <p class="fine" data-en="The price goes up as each phase sells out.">El precio sube cuando se agota cada fase.</p>
+        <a class="tbtn secondary" href="https://luma.com/10ampro?utm_source=eldiad_landing" target="_blank" rel="noopener" data-en="Alert me · General" onclick="window.va&&va('event',{name:'alertas',source:new URLSearchParams(location.search).get('utm_source')||'directo',cta:'general'})">Avísame · General</a>
+      </div>
+
     </div>
   </div>
-
-  <div class="cta">
-    <a class="primary" href="https://luma.com/10ampro?utm_source=eldiad_landing" target="_blank" rel="noopener" data-en="Get the alert when sales open" onclick="window.va&&va('event',{name:'alertas',source:new URLSearchParams(location.search).get('utm_source')||'directo',cta:'final'})">Avísame cuando abra</a>
-  </div>
-  <p style="text-align:center;font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold-dim);text-transform:uppercase;margin-top:16px" data-en="Alerts via Luma · luma.com/10ampro">Alertas vía Luma · luma.com/10ampro</p>
+  <p style="text-align:center;font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold-dim);text-transform:uppercase;margin-top:26px" data-en="Alerts via Luma · luma.com/10ampro">Alertas vía Luma · luma.com/10ampro</p>
 </section>
 
 <div class="divider heavy"><span>✦</span><span>❖</span><span>✦</span></div>

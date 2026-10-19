@@ -129,3 +129,4 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - 2026-10-19 (2): speakers I–VI (bios) eliminados. Nueva sección #charlas "Archivo · Octubre 2026" con grid de charlas (facade YouTube, mismo JS que .pod). Para agregar un clip: copiar un bloque `.talk` y cambiar data-id/nombre. Cohosts se mantienen. Clips actuales: Santiago R. Santos 6jKoQeWgYhg · Antonio Linares tgaqTeDfQas.
 - 2026-10-19 (3): logos de aliados (Veronorte, EAFIT, Makeno, MBS, MacroWise, Celsia, Inplux) eliminados. Sección Aliados ahora es CTA a media.10am.pro.
 - 2026-10-19 (4): orden: proof → cohosts → bloque Speakers ('se anuncia con la fecha', CTA Luma) → aliados → … → archivo de charlas.
+- 2026-10-19 (5): boletas en tarjetas. Gold USD 450 (100 cupos, precio único, Zarzo 6–9 PM) · General 150→250→350 (480 cupos, fase activa .on). Total 580. Dos botones a Luma (cta gold/general).
