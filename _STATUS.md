@@ -130,3 +130,4 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - 2026-10-19 (3): logos de aliados (Veronorte, EAFIT, Makeno, MBS, MacroWise, Celsia, Inplux) eliminados. Sección Aliados ahora es CTA a media.10am.pro.
 - 2026-10-19 (4): orden: proof → cohosts → bloque Speakers ('se anuncia con la fecha', CTA Luma) → aliados → … → archivo de charlas.
 - 2026-10-19 (5): boletas en tarjetas. Gold USD 450 (100 cupos, precio único, Zarzo 6–9 PM) · General 150→250→350 (480 cupos, fase activa .on). Total 580. Dos botones a Luma (cta gold/general).
+- 2026-10-19 (6): tarjetas de boletas suben al bloque bajo el hero (#boletas); cifras 580/150/100 y botón único eliminados. Logística queda solo con cuándo/dónde.
