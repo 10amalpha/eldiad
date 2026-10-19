@@ -648,7 +648,7 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
   <div class="eyebrow" data-en="Not the first time">No es la primera vez</div>
   <div class="stats">
     <div class="stat">
-      <span class="fig">210</span>
+      <span class="fig" id="ep-count">229</span>
       <span class="cap" data-en="Episodes aired">Episodios al aire</span>
     </div>
     <div class="stat">
@@ -1008,6 +1008,14 @@ document.querySelectorAll('.pod .frame, .talks .frame').forEach(function(f){
     },{threshold:0.4});
     io.observe(firstSpeaker);
   }
+})();
+</script>
+<script>
+(function(){
+  var el=document.getElementById('ep-count'); if(!el) return;
+  fetch('https://growth.10am.pro/api/media-kit-stats',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
+    var n=d&&d.episodes&&d.episodes.count; if(n&&n>parseInt(el.textContent,10)) el.textContent=n;
+  }).catch(function(){});
 })();
 </script>
 </body>

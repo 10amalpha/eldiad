@@ -132,3 +132,4 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - 2026-10-19 (5): boletas en tarjetas. Gold USD 450 (100 cupos, precio único, Zarzo 6–9 PM) · General 150→250→350 (480 cupos, fase activa .on). Total 580. Dos botones a Luma (cta gold/general).
 - 2026-10-19 (6): tarjetas de boletas suben al bloque bajo el hero (#boletas); cifras 580/150/100 y botón único eliminados. Logística queda solo con cuándo/dónde.
 - 2026-10-19 (7): sección Logística/Orden de Operaciones eliminada (duplicaba boletas). Cierre: frase final + dos botones Gold/General a Luma. Estilos .cta ahora globales.
+- 2026-10-19 (8): episodios en proof = dinámico desde growth.10am.pro/api/media-kit-stats (episodes.count), fallback 229 en HTML. Misma fuente que media.10am.pro.
