@@ -127,3 +127,4 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Speakers: tags "Presencia confirmada" → "Estuvo en El Día D · Octubre 2026". Proof: 500 asistentes / 520 cupos.
 - Pendiente: fecha+sede, precio tier Zarzo, line-up nuevo, reactivar hoteles cuando haya fecha.
 - 2026-10-19 (2): speakers I–VI (bios) eliminados. Nueva sección #charlas "Archivo · Octubre 2026" con grid de charlas (facade YouTube, mismo JS que .pod). Para agregar un clip: copiar un bloque `.talk` y cambiar data-id/nombre. Cohosts se mantienen. Clips actuales: Santiago R. Santos 6jKoQeWgYhg · Antonio Linares tgaqTeDfQas.
+- 2026-10-19 (3): logos de aliados (Veronorte, EAFIT, Makeno, MBS, MacroWise, Celsia, Inplux) eliminados. Sección Aliados ahora es CTA a media.10am.pro.
