@@ -136,3 +136,4 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - 2026-10-19 (9): 'Para quién es / No vengas si' subido justo después de Speakers.
 - 2026-10-19 (9): 'Para quién es / No vengas si' subido justo después de Speakers.
 - 2026-10-19 (10): cohosts +3 placeholders (Alejandro Pérez, Camilo Ospina, Lucas Jaramillo — iniciales hasta recibir fotos; pendiente foto + handle + tag). Copy pasado a 'ustedes' como el Substack; líneas de 'Unos acumulan activos / Otros acumulan cuotas' y 'No vengan a inspirarse'.
+- 2026-10-19 (10): cohosts +3 placeholders (Alejandro Pérez, Camilo Ospina, Lucas Jaramillo — iniciales hasta recibir fotos; pendiente foto + handle + tag). Copy en 'ustedes' como el Substack; 'Unos acumulan activos / Otros acumulan cuotas', 'No vengan a inspirarse'.
