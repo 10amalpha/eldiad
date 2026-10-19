@@ -117,3 +117,12 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Preview: `?mode=live` fuerza el modo evento; `?mode=pre` fuerza el modo pre-evento.
 - Analytics: eventos `streaming` (cta top/final, dest 10ampro/youtube).
 - Pendiente post-evento: cambiar CTA a "ve la grabación" cuando esté el VOD.
+
+## 2026-10-19 — Landing reconvertida a "próxima edición"
+- Evento del 14-oct cerrado (500 asistentes). Switch is-live y secciones de streaming/countdown eliminados.
+- Hero: foto del panel de cierre (`hero-eldiad-2026.jpg`, cover) + cita de Hernán ("nuevo péptido del conocimiento…"). OG nuevo (`og.jpg?v=5`).
+- Fecha: "por anunciar · últimas dos semanas de octubre o primera de noviembre" (sin año — confirmar). Cupo 520.
+- Boletas: Early bird USD 150 · Early bird + Network Event en El Zarzo 6–9 PM (100 cupos) **precio por anunciar**.
+- CTA único: "Avísame cuando abra" → luma.com/10ampro (evento `alertas`). Hoteles y bloque Alphas eliminados.
+- Speakers: tags "Presencia confirmada" → "Estuvo en El Día D · Octubre 2026". Proof: 500 asistentes / 520 cupos.
+- Pendiente: fecha+sede, precio tier Zarzo, line-up nuevo, reactivar hoteles cuando haya fecha.

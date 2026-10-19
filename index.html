@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>El Día D · 10ampro</title>
-<meta name="description" content="El Día D — La invasión del conocimiento llega a Medellín. 14 de octubre, 2026." />
+<meta name="description" content="El Día D vuelve a Medellín. Fecha por anunciar · 520 cupos · Early bird USD 150. Suscríbete para recibir alertas." />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
@@ -12,21 +12,21 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <meta name="theme-color" content="#08070a" />
 <meta property="og:title" content="El Día D · 10ampro" />
-<meta property="og:description" content="La invasión del conocimiento llega a Medellín — 14 de octubre, 2026. Joe McCann, Santiago Santos, Antonio Linares (virtual), Andre Joffroy, Ricardo Sierra y el roster completo." />
-<meta property="og:image" content="https://eldiad.10am.pro/og.jpg?v=4" />
-<meta property="og:image:secure_url" content="https://eldiad.10am.pro/og.jpg?v=4" />
+<meta property="og:description" content="Hay un nuevo péptido del conocimiento transformando a Medellín, y su nombre es El Día D. Próxima edición: fecha por anunciar · 520 cupos." />
+<meta property="og:image" content="https://eldiad.10am.pro/og.jpg?v=5" />
+<meta property="og:image:secure_url" content="https://eldiad.10am.pro/og.jpg?v=5" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="El Día D — 10ampro · Santiago Santos · Hernán Jaramillo · Andre Joffroy y el roster completo" />
+<meta property="og:image:alt" content="El Día D — 10ampro · Auditorio Fundadores, EAFIT · 500 asistentes" />
 <meta property="og:url" content="https://eldiad.10am.pro/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="10ampro" />
 <meta property="og:locale" content="es_CO" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="El Día D · 10ampro" />
-<meta name="twitter:description" content="La invasión del conocimiento llega a Medellín — 14 de octubre, 2026" />
-<meta name="twitter:image" content="https://eldiad.10am.pro/og.jpg?v=4" />
+<meta name="twitter:description" content="El Día D vuelve a Medellín — fecha por anunciar · 520 cupos · Early bird USD 150" />
+<meta name="twitter:image" content="https://eldiad.10am.pro/og.jpg?v=5" />
 <meta name="twitter:image:alt" content="El Día D — 10ampro" />
 <link rel="preload" as="image" href="/dday-roster.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -78,7 +78,7 @@ body::after{
 /* Blurred version of same image fills letterbox area for cinematic atmosphere */
 .cinema .bg-blur{
   position:absolute;inset:-8%;z-index:0;
-  background-image:url("/dday-roster.png");
+  background-image:url("/hero-eldiad-2026.jpg");
   background-size:cover;
   background-position:center;
   filter:blur(60px) brightness(0.32) saturate(1.18);
@@ -87,8 +87,8 @@ body::after{
 /* Sharp full image — never cropped */
 .cinema .stage{
   position:absolute;inset:0;z-index:1;
-  background-image:url("/dday-roster.png");
-  background-size:contain;
+  background-image:url("/hero-eldiad-2026.jpg");
+  background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
   filter:contrast(1.03) saturate(1.03)
@@ -99,6 +99,22 @@ body::after{
     radial-gradient(ellipse at 50% 55%,transparent 45%,rgba(0,0,0,0.18) 90%,rgba(0,0,0,0.45) 100%),
     linear-gradient(180deg,rgba(0,0,0,0.45) 0%,transparent 12%,transparent 86%,rgba(0,0,0,0.4) 100%)
 }
+
+/* Hero quote */
+.cinema .quote{
+  position:absolute;left:0;right:0;bottom:0;z-index:12;padding:120px 24px 54px;text-align:center;
+  background:linear-gradient(180deg,transparent 0%,rgba(0,0,0,0.55) 40%,rgba(0,0,0,0.88) 100%)
+}
+.cinema .quote p{
+  font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.9vw,32px);line-height:1.35;color:var(--cream);
+  max-width:860px;margin:0 auto;text-shadow:0 2px 12px rgba(0,0,0,0.9)
+}
+.cinema .quote p em{font-style:normal;color:var(--gold-bright);letter-spacing:0.06em;font-family:var(--display);font-weight:700}
+.cinema .quote .who{
+  font-family:var(--mono);font-size:10px;letter-spacing:0.42em;text-transform:uppercase;color:var(--gold);margin-top:18px
+}
+.cinema .quote .who::before{content:"— "}
+@media (max-width:640px){.cinema .quote{padding:90px 18px 40px}}
 /* Floating HUD — overlays the very top sky area (above all labels) */
 .cinema .hud{
   position:absolute;top:14px;left:24px;right:24px;z-index:10;
@@ -209,35 +225,16 @@ main{position:relative;z-index:3;max-width:820px;margin:0 auto;padding:48px 28px
 @media (max-width:680px){.cohosts{grid-template-columns:repeat(2,1fr);gap:32px 24px;max-width:420px}.cohost .avatar{width:96px;height:96px}}
 
 
-/* ===== Modo "día del evento": se activa solo el 14-oct-2026 08:30 COT (html.is-live) ===== */
-.live{text-align:center;margin:54px auto 0;max-width:760px}
-.live .badge{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:10px;letter-spacing:0.5em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line-strong);padding:10px 18px 10px 16px}
-.live .badge i{width:8px;height:8px;border-radius:50%;background:#e04b3c;box-shadow:0 0 0 0 rgba(224,75,60,.7);animation:pulse 1.6s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(224,75,60,.7)}70%{box-shadow:0 0 0 10px rgba(224,75,60,0)}100%{box-shadow:0 0 0 0 rgba(224,75,60,0)}}
-.live h2{font-family:var(--display);font-size:clamp(30px,6vw,56px);letter-spacing:0.12em;color:var(--gold-bright);text-transform:uppercase;font-weight:700;margin:26px 0 12px;line-height:1.05}
-.live .target{font-family:var(--serif);font-style:italic;font-size:clamp(15px,2.2vw,18px);color:var(--cream-dim)}
-.live .msg{font-family:var(--serif);font-size:clamp(17px,2.4vw,21px);color:var(--cream);line-height:1.55;max-width:600px;margin:30px auto 0}
-.live .btns{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:32px}
-.live .btns a{display:inline-block;font-family:var(--display);font-size:13px;letter-spacing:0.4em;padding:18px 40px;text-decoration:none;text-transform:uppercase;font-weight:600;transition:all .2s ease;min-width:260px;text-align:center}
-.live .btns a.primary{color:var(--bg);background:var(--gold);border:1px solid var(--gold)}
-.live .btns a.primary:hover{background:var(--gold-bright);color:var(--bg-deep);box-shadow:0 0 40px rgba(196,164,100,0.3)}
-.live .btns a.secondary{color:var(--cream-dim);background:transparent;border:1px solid var(--line-strong)}
-.live .btns a.secondary:hover{color:var(--gold-bright);border-color:var(--gold)}
-@media (max-width:480px){.live .btns a{padding:16px 28px;font-size:11px;letter-spacing:0.3em;min-width:240px}}
 
-/* Modo evento: sin imagen de landing — el bloque "En vivo" entra de inmediato */
-html.is-live .cinema{height:auto;min-height:0;padding:22px 0 0;background:var(--bg,#000)}
-html.is-live .cinema .stage,html.is-live .cinema .bg-blur,html.is-live .cinema .vignette{display:none}
-html.is-live .cinema .hud{position:static;margin:0 24px}
-html.is-live .cinema .logo{position:static;transform:none;margin:22px auto 0;width:77px}
-html.is-live .live{margin-top:34px}
-.only-live{display:none}
-html.is-live .only-live{display:block}
-html.is-live span.only-live{display:inline}
-html.is-live .callout .cta.only-live{display:flex !important}
-html.is-live .live .btns{display:flex}
-html.is-live .only-pre{display:none !important}
 
+/* Tiers */
+.tiers{display:grid;grid-template-columns:1fr 1fr;gap:18px;text-align:left}
+.tier{border:1px solid var(--line-strong);padding:26px 26px 22px;background:rgba(255,255,255,0.015)}
+.tier.hi{border-color:var(--gold);box-shadow:0 0 40px rgba(196,164,100,0.12)}
+.tier .tag{font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
+.tier .price{font-family:var(--display);font-size:clamp(26px,4vw,40px);letter-spacing:0.04em;color:var(--gold-bright);font-weight:700;line-height:1;margin-bottom:14px}
+.tier p{font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:14px;line-height:1.6;margin:0}
+@media (max-width:600px){.tiers{grid-template-columns:1fr}}
 /* Countdown */
 .countdown{text-align:center;margin:54px auto 0;max-width:760px}
 .countdown .eyebrow{
@@ -543,19 +540,6 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel -->
-<script>
-(function(){
-  var GO=new Date('2026-10-14T08:30:00-05:00').getTime();
-  var q=new URLSearchParams(location.search).get('mode');
-  function check(){
-    var live = q==='live' || (q!=='pre' && Date.now()>=GO);
-    document.documentElement.classList.toggle('is-live',live);
-    document.title = live ? 'El Día D · En vivo' : document.title;
-    return live;
-  }
-  if(!check()){ var t=setInterval(function(){ if(check()) clearInterval(t); },30000); }
-})();
-</script>
 </head>
 <body>
 <div class="langswitch" role="group" aria-label="Idioma / Language">
@@ -566,43 +550,35 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
 <!-- ===== CINEMATIC HERO ===== -->
 <section class="cinema" aria-label="El Día D — La invasión del conocimiento">
   <div class="bg-blur" aria-hidden="true"></div>
-  <div class="stage" role="img" aria-label="El Día D · Santiago Santos · Hernán Jaramillo · Andre Joffroy y el roster completo de 10ampro"></div>
+  <div class="stage" role="img" aria-label="El Día D · Auditorio Fundadores, EAFIT · panel de cierre con el equipo de 10ampro"></div>
   <div class="vignette"></div>
   <div class="hud">
     <span class="brand">10ampro</span>
     <span class="center">
-      <span>14 Octubre 2026</span><span class="sep">·</span><span>Medellín</span><span class="sep">·</span><span class="only-pre">Cupo limitado</span><span class="only-live" style="color:#e8c777">● En vivo</span>
+      <span>Próxima edición</span><span class="sep">·</span><span>Medellín</span><span class="sep">·</span><span style="color:#e8c777">520 cupos</span>
     </span>
-    <span class="anno">Anno · MMXXVI</span>
+    <span class="anno">Fecha por anunciar</span>
   </div>
   <a class="logo" href="https://10am.pro" target="_blank" rel="noopener" aria-label="10ampro · ir a 10am.pro">
     <img src="https://manifiesto.10am.pro/logo.jpg" alt="10ampro" />
   </a>
+  <div class="quote">
+    <p data-en="There is a new peptide of knowledge transforming Medellín, and its name is <em>El Día D</em>.">Hay un nuevo péptido del conocimiento transformando a Medellín, y su nombre es <em>El Día D</em>.</p>
+    <div class="who">Hernán Jaramillo</div>
+  </div>
 </section>
 
 <main>
 
-<section class="section live only-live" id="streaming">
-  <div class="badge"><i></i><span data-en="Live now">En vivo ahora</span></div>
-  <h2 data-en="Today is Día D">Hoy es El Día D</h2>
-  <div class="target" data-en="Wednesday, October 14, 2026 · Fundadores Auditorium · EAFIT · Medellín">Miércoles 14 de Octubre, 2026 · Auditorio Fundadores · EAFIT · Medellín</div>
-  <p class="msg" data-en="If you couldn't make it to Medellín, watch the stream on 10am.pro or on our YouTube channel.">Si no pudiste asistir, ve el streaming vía 10am.pro o en nuestro canal de YouTube.</p>
-  <div class="btns">
-    <a class="primary" href="https://10am.pro" target="_blank" rel="noopener" data-en="Watch on 10am.pro" onclick="window.va&&va('event',{name:'streaming',cta:'top',dest:'10ampro'})">Ver en 10am.pro</a>
-    <a class="secondary" href="https://www.youtube.com/@10ampro" target="_blank" rel="noopener" data-en="Watch on YouTube" onclick="window.va&&va('event',{name:'streaming',cta:'top',dest:'youtube'})">Ver en YouTube</a>
+<section class="section countdown">
+  <div class="eyebrow" data-en="Next edition">Próxima edición</div>
+  <div class="target" data-en="Date to be announced · Last two weeks of October or first week of November · Medellín">Fecha por anunciar · Últimas dos semanas de octubre o primera de noviembre · Medellín</div>
+  <div class="clock" style="gap:48px">
+    <div class="unit"><span class="num">520</span><span class="lbl" data-en="Seats">Cupos</span></div>
+    <div class="unit"><span class="num">$150</span><span class="lbl" data-en="Early bird">Early bird</span></div>
+    <div class="unit"><span class="num">100</span><span class="lbl" data-en="Network event">Network event</span></div>
   </div>
-</section>
-
-<section class="section countdown only-pre">
-  <div class="eyebrow" data-en="Countdown">Cuenta Regresiva</div>
-  <div class="target" data-en="Wednesday, October 14, 2026 · Medellín">Miércoles 14 de Octubre, 2026 · Medellín</div>
-  <div class="clock">
-    <div class="unit"><span class="num" id="cd-d">000</span><span class="lbl" data-en="Days">Días</span></div>
-    <div class="unit"><span class="num" id="cd-h">00</span><span class="lbl" data-en="Hours">Horas</span></div>
-    <div class="unit"><span class="num" id="cd-m">00</span><span class="lbl" data-en="Minutes">Minutos</span></div>
-    <div class="unit"><span class="num" id="cd-s">00</span><span class="lbl" data-en="Seconds">Segundos</span></div>
-  </div>
-  <a class="cd-cta" href="https://luma.com/eldiad?utm_source=eldiad_landing" target="_blank" rel="noopener" data-en="Reserve Your Spot" onclick="window.va&&va('event',{name:'reservar',source:new URLSearchParams(location.search).get('utm_source')||'directo',cta:'countdown'})">Reservar Plaza</a>
+  <a class="cd-cta" href="https://luma.com/10ampro?utm_source=eldiad_landing" target="_blank" rel="noopener" data-en="Get the alert when sales open" onclick="window.va&&va('event',{name:'alertas',source:new URLSearchParams(location.search).get('utm_source')||'directo',cta:'countdown'})">Avísame cuando abra</a>
 </section>
 
 <section class="section proof">
@@ -613,12 +589,12 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
       <span class="cap" data-en="Episodes aired">Episodios al aire</span>
     </div>
     <div class="stat">
-      <span class="fig">200+</span>
-      <span class="cap" data-en="Attendees at the first edition">Asistentes en la primera edición</span>
+      <span class="fig">500</span>
+      <span class="cap" data-en="Attendees at the last edition">Asistentes en la última edición</span>
     </div>
     <div class="stat">
-      <span class="fig">II</span>
-      <span class="cap" data-en="Second edition">Segunda edición</span>
+      <span class="fig">520</span>
+      <span class="cap" data-en="Seats in the next one">Cupos en la próxima</span>
     </div>
   </div>
   <p class="line" data-en="Whoever comes to El Día D doesn't show up out of curiosity. They come because they've been listening to us for many episodes.">El que viene al Día D no llega por curiosidad. Llega porque nos viene escuchando hace muchos episodios.</p>
@@ -668,8 +644,8 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
   <div style="display:inline-block;padding:28px 44px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
     <div style="font-family:var(--mono);font-size:11px;letter-spacing:0.5em;color:var(--gold);text-transform:uppercase;margin-bottom:12px;opacity:0.92" data-en="Operation · Medellín">Operación · Medellín</div>
     <div style="width:60px;height:1px;background:var(--gold);margin:0 auto 16px;opacity:0.6"></div>
-    <div style="font-family:var(--display);font-size:clamp(20px,3.4vw,28px);letter-spacing:0.22em;color:var(--cream);text-transform:uppercase;font-weight:500;margin-bottom:10px" data-en="Wednesday, October 14, 2026">Miércoles 14 de Octubre, 2026</div>
-    <div style="font-family:var(--serif);font-style:italic;font-size:clamp(14px,2.1vw,17px);color:var(--cream-dim);letter-spacing:0.04em" data-en="Fundadores Auditorium · EAFIT University · Medellín">Auditorio Fundadores · Universidad EAFIT · Medellín</div>
+    <div style="font-family:var(--display);font-size:clamp(20px,3.4vw,28px);letter-spacing:0.22em;color:var(--cream);text-transform:uppercase;font-weight:500;margin-bottom:10px" data-en="Date to be announced">Fecha por anunciar</div>
+    <div style="font-family:var(--serif);font-style:italic;font-size:clamp(14px,2.1vw,17px);color:var(--cream-dim);letter-spacing:0.04em" data-en="Late October · early November · Medellín">Finales de octubre · inicios de noviembre · Medellín</div>
   </div>
 </section>
 
@@ -683,7 +659,7 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
   <p data-en="The world is reorganizing around a new equation:">El mundo se está reorganizando alrededor de una nueva ecuación:</p>
   <div class="pull" data-en="better information + better mental models + a better network = a better destiny">mejor información + mejores modelos mentales + mejor red = mejor destino</div>
   <p data-en="That is 10ampro. And this event is probably the most concentrated expression of that thesis.">Eso es 10ampro. Y este evento es probablemente la expresión más concentrada de esa tesis.</p>
-  <p data-en="From 10:00 a.m. to 5:00 p.m., Medellín will gather a density of talent, capital, operators, doctors, investors, founders and builders that rarely share the same room. Afterward, the closing will be on the rooftop of El Zarzo, because even a cognitive revolution needs a good cocktail.">De 10:00 a. m. a 5:00 p. m., Medellín va a reunir una densidad de talento, capital, operadores, médicos, inversionistas, fundadores y constructores que rara vez comparten el mismo cuarto. Después, el cierre será en el rooftop de El Zarzo, porque hasta la revolución cognitiva necesita un buen cocktail.</p>
+  <p data-en="From 10:00 a.m. to 5:00 p.m., Medellín will gather a density of talent, capital, operators, doctors, investors, founders and builders that rarely share the same room. Afterward, the network event at El Zarzo from 6 to 9 PM, capped at 100 people, because even a cognitive revolution needs a good cocktail.">De 10:00 a. m. a 5:00 p. m., Medellín va a reunir una densidad de talento, capital, operadores, médicos, inversionistas, fundadores y constructores que rara vez comparten el mismo cuarto. Después, el network event en El Zarzo de 6 a 9 PM, limitado a 100 personas, porque hasta la revolución cognitiva necesita un buen cocktail.</p>
 </section>
 
 <div class="divider"><span>✦</span><span>✦</span><span>✦</span></div>
@@ -716,7 +692,7 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
     <img src="/speaker-joemccann.jpg" alt="Joe McCann" loading="lazy" style="width:164px;height:164px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(196,164,100,0.5);box-shadow:0 0 0 1px rgba(0,0,0,0.5) inset,0 10px 30px rgba(0,0,0,0.55),0 0 44px rgba(196,164,100,0.14)" />
   </div>
   <div class="name">Joe McCann</div>
-  <div class="confirmed" data-en="Attendance confirmed">Presencia confirmada</div>
+  <div class="confirmed" data-en="Was at El Día D · October 2026">Estuvo en El Día D · Octubre 2026</div>
   <div class="role" data-en="The trader who wound down his hedge funds to build his own machine">El trader que apagó sus hedge funds para construir su propia máquina</div>
   <p data-en="Joe McCann ran volatility hedge funds. He wound them down when the market stopped paying his strategy — and instead of forcing the thesis, he reinvented himself: today he runs his own capital and a venture fund focused on AI, robotics, defense and energy, and trades with Radon, an AI-agent trading terminal he built himself. Reported result this year: 105%.">Joe McCann manejaba hedge funds de volatilidad. Los cerró cuando el mercado dejó de pagar su estrategia — y en vez de forzar la tesis, se reinventó: hoy maneja su propio capital y un venture fund enfocado en AI, robótica, defensa y energía, y opera con Radon, un terminal de trading con agentes de AI que él mismo construyó. Resultado reportado este año: 105%.</p>
   <p data-en="On October 10, 2025 he exited 90% of his crypto positions. The next day, the entire market got liquidated. That's not luck: it's reading macro liquidity while everyone else reads headlines. His thesis on Solana, on Treasuries, on why crypto price action is driven by liquidity and not regulation — it all comes from the same framework.">El 10 de octubre de 2025 salió del 90% de sus posiciones cripto. Al día siguiente, el mercado entero se liquidó. Eso no es suerte: es leer liquidez macro cuando el resto lee titulares. Su tesis sobre Solana, sobre los bonos del Tesoro, sobre por qué el precio de cripto lo mueve la liquidez y no la regulación — todo viene del mismo framework.</p>
@@ -736,7 +712,7 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
 <section class="speaker">
   <div class="roman">II</div>
   <div class="name">Santiago Santos</div>
-  <div class="confirmed" data-en="Attendance confirmed">Presencia confirmada</div>
+  <div class="confirmed" data-en="Was at El Día D · October 2026">Estuvo en El Día D · Octubre 2026</div>
   <div class="role" data-en="From early Ethereum to Solana — the question that matters: how do you bring GDP onchain?">De Ethereum temprano a Solana — la pregunta que importa: ¿cómo traer el GDP onchain?</div>
   <p data-en="Santiago Santos was one of the earliest Ethereum investors. But his thesis didn't freeze in nostalgia. Today he's one of the strongest believers in Solana's technical power and in an idea far bigger than &quot;crypto goes up or down&quot;: <em>bringing GDP onchain.</em>">Santiago Santos fue de los primeros inversionistas en Ethereum. Pero su tesis no se quedó congelada en la nostalgia. Hoy es uno de los creyentes más fuertes en el poder técnico de Solana y en una idea mucho más grande que "cripto sube o baja": <em>traer el GDP onchain.</em></p>
   <p data-en="It's not about memes. It's not about casinos. It's not about another token with a noisy crowd. It's about understanding whether crypto networks can become real infrastructure for markets, payments, assets, economic coordination and capital formation.">No se trata de memes. No se trata de casinos. No se trata de otro token con comunidad ruidosa. Se trata de entender si las redes cripto pueden convertirse en infraestructura real para mercados, pagos, activos, coordinación económica y formación de capital.</p>
@@ -756,7 +732,7 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
 <section class="speaker">
   <div class="roman">III</div>
   <div class="name">Antonio Linares</div>
-  <div class="confirmed" data-en="Confirmed — live virtual session">Confirmado — sesión virtual en vivo</div>
+  <div class="confirmed" data-en="Was at El Día D · October 2026 (virtual)">Estuvo en El Día D · Octubre 2026 (virtual)</div>
   <div class="role" data-en="How someone who has seen multiple 100x before the market thinks">Cómo piensa alguien que ha visto múltiples 100x antes que el mercado</div>
   <p data-en="Antonio Linares isn't here to talk about &quot;investing in innovation&quot; as a brochure phrase. He's here to explain how someone thinks who found opportunities like Spotify, Palantir, AMD and Hims before they were obvious to the consensus.">Antonio Linares no viene a hablar de "invertir en innovación" como frase de brochure. Viene a explicar cómo piensa alguien que encontró oportunidades como Spotify, Palantir, AMD y Hims antes de que fueran obvias para el consenso.</p>
   <p data-en="The question isn't what he bought. The important question is: <em>what did he see that others weren't seeing?</em> What framework let him identify companies that looked expensive, strange or misunderstood before the market grasped the structural shift?">La pregunta no es qué compró. La pregunta importante es: <em>¿qué vio él que otros no estaban viendo?</em> ¿Qué framework le permitió identificar empresas que parecían caras, raras o incomprendidas antes de que el mercado entendiera el cambio estructural?</p>
@@ -776,7 +752,7 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
 <section class="speaker">
   <div class="roman">IV</div>
   <div class="name">André Joffroy</div>
-  <div class="confirmed" data-en="Attendance confirmed">Presencia confirmada</div>
+  <div class="confirmed" data-en="Was at El Día D · October 2026">Estuvo en El Día D · Octubre 2026</div>
   <div class="role" data-en="If Medellín wants more Teslas, it needs somewhere to charge them">Si Medellín quiere más Teslas, necesita dónde cargarlos</div>
   <p data-en="Everyone wants to talk about the energy transition. Few want to talk about plugs. But real adoption doesn't happen in PowerPoint. It happens when someone can charge their car, use the infrastructure and stop depending on promises.">Todo el mundo quiere hablar de transición energética. Pocos quieren hablar de enchufes. Pero la adopción real no ocurre en PowerPoint. Ocurre cuando alguien puede cargar su carro, usar la infraestructura y dejar de depender de promesas.</p>
   <p data-en="André Joffroy, Founder and CIO of Zaps, is here to talk about charging stations, electric mobility and real urban infrastructure. Because if Medellín wants to be a modern city, it's not enough to have Teslas parked in El Poblado. The network that supports them has to exist.">André Joffroy, Founder y CIO de Zaps, viene a hablar de electrolineras, movilidad eléctrica e infraestructura urbana real. Porque si Medellín quiere ser una ciudad moderna, no basta con tener Teslas parqueados en El Poblado. Tiene que existir la red que los soporte.</p>
@@ -983,51 +959,33 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
 
   <div style="margin:32px auto 0;max-width:640px">
     <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.42em;color:var(--gold);text-transform:uppercase;text-align:center;margin-bottom:14px;opacity:0.88" data-en="When and Where">Cuándo y Dónde</div>
-    <p style="text-align:center;font-family:var(--display);font-size:clamp(18px,2.6vw,22px);letter-spacing:0.16em;color:var(--gold-bright);text-transform:uppercase;font-weight:500;margin-bottom:8px" data-en="Wednesday, October 14, 2026">Miércoles 14 de Octubre, 2026</p>
-    <p style="text-align:center;font-family:var(--serif);color:var(--cream);font-size:17px;line-height:1.6;margin-bottom:12px" data-en="Fundadores Auditorium · EAFIT University · Medellín">Auditorio Fundadores · Universidad EAFIT · Medellín</p>
-    <p class="only-pre" style="text-align:center;font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:15px;line-height:1.55" data-en="The date and venue are confirmed. The line-up is still being finalized — the weight of the event doesn't depend on a single name.">La fecha y el lugar están confirmados. El line-up sigue cerrándose — el peso del evento no depende de un solo nombre.</p>
-    <p class="only-live" style="text-align:center;font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:15px;line-height:1.55" data-en="Doors open at 8:00 AM. If you couldn't make it, the stream is live on 10am.pro and YouTube.">Puertas abiertas desde las 8:00 AM. Si no pudiste asistir, el streaming está en vivo en 10am.pro y YouTube.</p>
+    <p style="text-align:center;font-family:var(--display);font-size:clamp(18px,2.6vw,22px);letter-spacing:0.16em;color:var(--gold-bright);text-transform:uppercase;font-weight:500;margin-bottom:8px" data-en="Date to be announced">Fecha por anunciar</p>
+    <p style="text-align:center;font-family:var(--serif);color:var(--cream);font-size:17px;line-height:1.6;margin-bottom:12px" data-en="Last two weeks of October or first week of November · Medellín">Últimas dos semanas de octubre o primera de noviembre · Medellín</p>
+    <p style="text-align:center;font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:15px;line-height:1.55" data-en="500 people came to the last one. This one is capped at 520. Sign up and you get the alert the moment early bird opens.">A la última vinieron 500 personas. Esta se cierra en 520. Suscríbete y recibes la alerta en el momento en que abra el early bird.</p>
   </div>
 
   <div style="width:60px;height:1px;background:var(--line-strong);margin:48px auto 0"></div>
 
-  <div class="only-pre" style="margin:40px auto 0;max-width:520px;text-align:center">
-    <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.42em;color:var(--gold);text-transform:uppercase;margin-bottom:18px;opacity:0.88" data-en="Price">Precio</div>
-    <div style="font-family:var(--display);font-size:clamp(40px,6vw,56px);letter-spacing:0.04em;color:var(--gold-bright);font-weight:700;line-height:1">USD 300</div>
-  </div>
-
-  <div class="cta only-pre">
-    <a class="primary" href="https://luma.com/eldiad?utm_source=eldiad_landing" target="_blank" rel="noopener" data-en="Reserve Your Spot" onclick="window.va&&va('event',{name:'reservar',source:new URLSearchParams(location.search).get('utm_source')||'directo',cta:'final'})">Reservar Plaza</a>
-  </div>
-  <div class="cta only-live" style="display:none">
-    <a class="primary" href="https://10am.pro" target="_blank" rel="noopener" data-en="Watch the stream on 10am.pro" onclick="window.va&&va('event',{name:'streaming',cta:'final',dest:'10ampro'})">Ver el streaming en 10am.pro</a>
-    <span class="or" data-en="or">o</span>
-    <a class="secondary" href="https://www.youtube.com/@10ampro" target="_blank" rel="noopener" data-en="Watch on YouTube" onclick="window.va&&va('event',{name:'streaming',cta:'final',dest:'youtube'})">Ver en YouTube · @10ampro</a>
-  </div>
-
-  <div style="margin:54px auto 0;max-width:560px;text-align:center;opacity:0.78">
-    <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold-dim);text-transform:uppercase;margin-bottom:12px" data-en="A perk for Alphas">Un extra para Alphas</div>
-    <p style="font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:14px;line-height:1.6" data-en="The closing cocktail on the rooftop of El Zarzo is reserved for 50 Alpha subscribers (12+ months paying). They receive a separate invitation. It's not for sale.">El cocktail de cierre en el rooftop de El Zarzo está reservado para 50 suscriptores Alpha (12+ meses pagando). Reciben invitación aparte. No se vende.</p>
-  </div>
-
-  <div class="only-pre" style="width:60px;height:1px;background:var(--line);margin:46px auto 0"></div>
-
-  <div class="hotels-zone only-pre" style="margin:34px auto 0;max-width:620px;text-align:center;opacity:0.85">
-    <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold-dim);text-transform:uppercase;margin-bottom:12px" data-en="Where to stay">Dónde quedarte</div>
-    <p style="font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:14px;line-height:1.6;margin-bottom:0" data-en="For those traveling to Medellín. Two allied hotels with a special rate for Día D attendees.">Para quienes viajan a Medellín. Dos hoteles aliados con tarifa especial para asistentes del Día D.</p>
-    <div class="hotels">
-      <div class="hotel">
-        <span class="logobox"><img class="zarzo" src="/zarzo-logo.png" alt="El Zarzo" loading="lazy" /></span>
-        <span class="note" data-en="The rooftop of the closing cocktail · Discount applied in the link">El rooftop del cocktail de cierre · Descuento aplicado en el enlace</span>
-        <div class="cta"><a class="secondary" data-hotel="zarzo" href="https://hotels.cloudbeds.com/reservation/TinNiy#promo=eldiad" target="_blank" rel="noopener" data-en="Book at El Zarzo">Reservar en El Zarzo</a></div>
+  <div style="margin:40px auto 0;max-width:640px;text-align:center">
+    <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.42em;color:var(--gold);text-transform:uppercase;margin-bottom:26px;opacity:0.88" data-en="Tickets">Boletas</div>
+    <div class="tiers">
+      <div class="tier">
+        <div class="tag" data-en="Early bird">Early bird</div>
+        <div class="price">USD 150</div>
+        <p data-en="Full access to El Día D. Limited to 520 seats.">Acceso completo al Día D. Cupo limitado a 520.</p>
       </div>
-      <div class="hotel">
-        <span class="logobox"><img class="sites" src="/sites-logo.png" alt="Sites Suites de Autor" loading="lazy" /></span>
-        <span class="note" data-en="15% off with code 10AMPRO">15% de descuento con el código 10AMPRO</span>
-        <div class="cta"><a class="secondary" data-hotel="sites" href="https://www.sitesmedellin.com/es/bookcore/availability/sitehotel/2026-10-13/2026-10-16/2/0/?cp=10ampro&amp;rrc=1&amp;adults=2&amp;occupancies=%255B%257B%2522adults%2522%253A%25202%252C%2520%2522children%2522%253A%25200%252C%2520%2522ages%2522%253A%2520%2522%2522%257D%255D&amp;occp=1" target="_blank" rel="noopener" data-en="Book at Sites">Reservar en Sites</a></div>
+      <div class="tier hi">
+        <div class="tag" data-en="Early bird + Network Event">Early bird + Network Event</div>
+        <div class="price" data-en="Price TBA">Precio por anunciar</div>
+        <p data-en="Everything above, plus the network event at El Zarzo, 6 to 9 PM. Capped at 100 people. Very exclusive.">Todo lo anterior, más el network event en El Zarzo de 6 a 9 PM. Limitado a 100 personas. Muy exclusivo.</p>
       </div>
     </div>
   </div>
+
+  <div class="cta">
+    <a class="primary" href="https://luma.com/10ampro?utm_source=eldiad_landing" target="_blank" rel="noopener" data-en="Get the alert when sales open" onclick="window.va&&va('event',{name:'alertas',source:new URLSearchParams(location.search).get('utm_source')||'directo',cta:'final'})">Avísame cuando abra</a>
+  </div>
+  <p style="text-align:center;font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold-dim);text-transform:uppercase;margin-top:16px" data-en="Alerts via Luma · luma.com/10ampro">Alertas vía Luma · luma.com/10ampro</p>
 </section>
 
 <div class="divider heavy"><span>✦</span><span>❖</span><span>✦</span></div>
@@ -1044,7 +1002,7 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
 
 <footer>
   <img src="https://manifiesto.10am.pro/logo.jpg" alt="10ampro" />
-  <div class="anno">MMXXVI</div>
+  <div class="anno">MMXXVI · ∞</div>
   <div class="creed">Open Source Capital · Network Sharing · Collective Intelligence</div>
   <div class="link" style="margin-top:24px"><a href="https://10am.pro">10am.pro</a></div>
 </footer>
