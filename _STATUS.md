@@ -133,3 +133,4 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - 2026-10-19 (6): tarjetas de boletas suben al bloque bajo el hero (#boletas); cifras 580/150/100 y botón único eliminados. Logística queda solo con cuándo/dónde.
 - 2026-10-19 (7): sección Logística/Orden de Operaciones eliminada (duplicaba boletas). Cierre: frase final + dos botones Gold/General a Luma. Estilos .cta ahora globales.
 - 2026-10-19 (8): episodios en proof = dinámico desde growth.10am.pro/api/media-kit-stats (episodes.count), fallback 229 en HTML. Misma fuente que media.10am.pro.
+- 2026-10-19 (9): 'Para quién es / No vengas si' subido justo después de Speakers.
