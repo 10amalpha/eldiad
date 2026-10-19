@@ -126,3 +126,4 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - CTA único: "Avísame cuando abra" → luma.com/10ampro (evento `alertas`). Hoteles y bloque Alphas eliminados.
 - Speakers: tags "Presencia confirmada" → "Estuvo en El Día D · Octubre 2026". Proof: 500 asistentes / 520 cupos.
 - Pendiente: fecha+sede, precio tier Zarzo, line-up nuevo, reactivar hoteles cuando haya fecha.
+- 2026-10-19 (2): speakers I–VI (bios) eliminados. Nueva sección #charlas "Archivo · Octubre 2026" con grid de charlas (facade YouTube, mismo JS que .pod). Para agregar un clip: copiar un bloque `.talk` y cambiar data-id/nombre. Cohosts se mantienen. Clips actuales: Santiago R. Santos 6jKoQeWgYhg · Antonio Linares tgaqTeDfQas.
