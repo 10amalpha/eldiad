@@ -139,4 +139,4 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - 2026-10-19 (10): cohosts +3 placeholders (Alejandro Pérez, Camilo Ospina, Lucas Jaramillo — iniciales hasta recibir fotos; pendiente foto + handle + tag). Copy en 'ustedes' como el Substack; 'Unos acumulan activos / Otros acumulan cuotas', 'No vengan a inspirarse'.
 - 2026-10-19 (11): sección #network 'Lo que pasa en el rooftop' entre boletas y proof, 3 fotos del Zarzo (zarzo-1/2/3.jpg; en móvil 2).
 - 2026-10-19 (12): hero rota 13 fotos (hero-eldiad-2026 + hero-2..13) cada 6s con fundido; OG = hero-eldiad-2026.jpg (foto del panel, Hernán la prefiere a una tarjeta diseñada).
-- 2026-10-19 (13): cohost Alejandro Mesa (@AlejandroMesaG). Handles: Alejandro Pérez @perezlinaza, Camilo Ospina @DrCamiloOspina. Fotos pendientes (X bloquea scraping): Pérez, Mesa, Ospina, Lucas Jaramillo.
+- 2026-10-19 (13): cohost Alejandro Mesa (@AlejandroMesaG). Handles: Lucas Jaramillo @LucasJaramilloD, Alejandro Pérez @perezlinaza, Camilo Ospina @DrCamiloOspina. Fotos pendientes (X bloquea scraping): Pérez, Mesa, Ospina, Lucas Jaramillo.
