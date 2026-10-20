@@ -140,3 +140,4 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - 2026-10-19 (11): sección #network 'Lo que pasa en el rooftop' entre boletas y proof, 3 fotos del Zarzo (zarzo-1/2/3.jpg; en móvil 2).
 - 2026-10-19 (12): hero rota 13 fotos (hero-eldiad-2026 + hero-2..13) cada 6s con fundido; OG = hero-eldiad-2026.jpg (foto del panel, Hernán la prefiere a una tarjeta diseñada).
 - 2026-10-19 (13): cohost Alejandro Mesa (@AlejandroMesaG). Handles: Lucas Jaramillo @LucasJaramilloD, Alejandro Pérez @perezlinaza, Camilo Ospina @DrCamiloOspina. Fotos tomadas de X (cohost-perez/mesa/ospina/lucas.png).
+- 2026-10-19 (14): hoteles de vuelta al final de la sección #network (Zarzo promo=eldiad; Sites cp=10ampro sin fechas hasta tener fecha). Cuando haya fecha: poner fechas en el link de Sites (formato /bookcore/availability/sitehotel/YYYY-MM-DD/YYYY-MM-DD/2/0/?cp=10ampro).
