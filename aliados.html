@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aliados del Día D · Propuesta de patrocinio · 10ampro</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#08070a" />
+<link rel="preload" as="image" href="/dday-roster.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#08070a;
+  --bg-warm:#14100a;
+  --bg-deep:#040303;
+  --gold:#c4a464;
+  --gold-bright:#d9b97a;
+  --gold-dim:#a89060;
+  --cream:#f5f3ee;
+  --cream-dim:#d8d4ca;
+  --muted:#8a8478;
+  --smoke:#403a30;
+  --line:rgba(196,164,100,0.18);
+  --line-strong:rgba(196,164,100,0.42);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --display:'Cinzel','Trajan Pro',Georgia,serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--cream);font-family:var(--serif);font-size:clamp(20px,1.5vw,23px);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(196,164,100,0.06) 0%,transparent 55%),
+    radial-gradient(ellipse at 50% 100%,rgba(196,164,100,0.04) 0%,transparent 60%),
+    var(--bg);
+  min-height:100vh;position:relative
+}
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:1;
+  background-image:
+    radial-gradient(circle at 15% 25%,rgba(0,0,0,0.5) 0%,transparent 45%),
+    radial-gradient(circle at 85% 75%,rgba(0,0,0,0.4) 0%,transparent 45%)
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:2;opacity:0.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")
+}
+
+/* ===== CINEMATIC HERO — FULL IMAGE (CONTAIN) + BLURRED FRAME ===== */
+.cinema{
+  position:relative;width:100%;height:100vh;min-height:680px;
+  overflow:hidden;background:#000;z-index:3
+}
+/* Blurred version of same image fills letterbox area for cinematic atmosphere */
+.cinema .bg-blur{
+  position:absolute;inset:-8%;z-index:0;
+  background-image:url("/hero-eldiad-2026.jpg");
+  background-size:cover;
+  background-position:center;
+  filter:blur(60px) brightness(0.32) saturate(1.18);
+  transform:scale(1.06)
+}
+/* Sharp full image — never cropped */
+.cinema .stage{
+  position:absolute;inset:0;z-index:1;
+  background-image:url("/hero-eldiad-2026.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  filter:contrast(1.03) saturate(1.03)
+}
+.cinema .vignette{
+  position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:
+    radial-gradient(ellipse at 50% 55%,transparent 45%,rgba(0,0,0,0.18) 90%,rgba(0,0,0,0.45) 100%),
+    linear-gradient(180deg,rgba(0,0,0,0.45) 0%,transparent 12%,transparent 86%,rgba(0,0,0,0.4) 100%)
+}
+
+
+/* Hero rotation */
+.cinema .stage{opacity:0;animation:heroFade 78s infinite;will-change:opacity}
+.cinema .stage.s1{animation-delay:0s}
+.cinema .stage.s2{background-image:url("/hero-2.jpg");animation-delay:6s}
+.cinema .stage.s3{background-image:url("/hero-3.jpg");animation-delay:12s}
+.cinema .stage.s4{background-image:url("/hero-4.jpg");animation-delay:18s}
+.cinema .stage.s5{background-image:url("/hero-5.jpg");animation-delay:24s}
+.cinema .stage.s6{background-image:url("/hero-6.jpg");animation-delay:30s}
+.cinema .stage.s7{background-image:url("/hero-7.jpg");animation-delay:36s}
+.cinema .stage.s8{background-image:url("/hero-8.jpg");animation-delay:42s}
+.cinema .stage.s9{background-image:url("/hero-9.jpg");animation-delay:48s}
+.cinema .stage.s10{background-image:url("/hero-10.jpg");animation-delay:54s}
+.cinema .stage.s11{background-image:url("/hero-11.jpg");animation-delay:60s}
+.cinema .stage.s12{background-image:url("/hero-12.jpg");animation-delay:66s}
+.cinema .stage.s13{background-image:url("/hero-13.jpg");animation-delay:72s}
+@keyframes heroFade{0%{opacity:0}1.15%{opacity:1}7.69%{opacity:1}8.85%{opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cinema .stage{animation:none}.cinema .stage.s1{opacity:1}}
+/* Hero quote */
+.cinema .quote{animation:quoteFade 78s infinite}
+@keyframes quoteFade{0%{opacity:0}1.2%{opacity:1}7.7%{opacity:1}8.5%{opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cinema .quote{animation:none;opacity:1}}
+
+.cinema .quote{
+  position:absolute;left:0;right:0;bottom:0;z-index:12;padding:120px 24px 54px;text-align:center;
+  background:linear-gradient(180deg,transparent 0%,rgba(0,0,0,0.55) 40%,rgba(0,0,0,0.88) 100%)
+}
+.cinema .quote p{
+  font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.9vw,32px);line-height:1.35;color:var(--cream);
+  max-width:860px;margin:0 auto;text-shadow:0 2px 12px rgba(0,0,0,0.9)
+}
+.cinema .quote p em{font-style:normal;color:var(--gold-bright);letter-spacing:0.06em;font-family:var(--display);font-weight:700}
+.cinema .quote .who{
+  font-family:var(--mono);font-size:10px;letter-spacing:0.42em;text-transform:uppercase;color:var(--gold);margin-top:18px
+}
+.cinema .quote .who::before{content:"— "}
+@media (max-width:640px){.cinema .quote{padding:90px 18px 40px}}
+/* Floating HUD — overlays the very top sky area (above all labels) */
+.cinema .hud{
+  position:absolute;top:14px;left:24px;right:24px;z-index:10;
+  display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px;
+  font-family:var(--mono);font-size:9.5px;letter-spacing:0.32em;text-transform:uppercase;
+  pointer-events:none
+}
+.cinema .hud .brand{
+  color:rgba(232,220,196,0.94);
+  text-shadow:0 1px 3px rgba(0,0,0,0.95),0 0 14px rgba(0,0,0,0.85)
+}
+.cinema .hud .center{
+  color:var(--gold);text-align:center;letter-spacing:0.36em;
+  text-shadow:0 1px 3px rgba(0,0,0,0.95),0 0 14px rgba(0,0,0,0.85)
+}
+.cinema .hud .center .sep{margin:0 9px;color:var(--gold-dim);opacity:0.6}
+.cinema .hud .anno{
+  color:rgba(232,220,196,0.75);text-align:right;
+  text-shadow:0 1px 3px rgba(0,0,0,0.95),0 0 14px rgba(0,0,0,0.85)
+}
+/* Centered floating logo — clickable link to 10am.pro */
+.cinema .logo{
+  position:absolute;top:54px;left:50%;transform:translateX(-50%);z-index:11;
+  display:block;cursor:pointer;
+  transition:transform 0.3s ease,filter 0.3s ease
+}
+.cinema .logo img{
+  width:77px;height:77px;border-radius:50%;
+  border:1.5px solid rgba(196,164,100,0.55);
+  box-shadow:
+    0 0 30px rgba(0,0,0,0.9),
+    0 0 40px rgba(196,164,100,0.18),
+    inset 0 0 0 1px rgba(0,0,0,0.4);
+  background:var(--bg-deep);
+  display:block
+}
+.cinema .logo:hover{transform:translateX(-50%) scale(1.05)}
+.cinema .logo:hover img{
+  border-color:var(--gold-bright);
+  box-shadow:
+    0 0 40px rgba(0,0,0,0.9),
+    0 0 60px rgba(196,164,100,0.35),
+    inset 0 0 0 1px rgba(0,0,0,0.4)
+}
+main{position:relative;z-index:3;max-width:820px;margin:0 auto;padding:48px 28px 100px}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding-bottom:60px;font-family:var(--mono);font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-dim)}
+.topbar .mark{color:var(--cream-dim)}
+
+.hero{padding:40px 0 60px;text-align:center;position:relative}
+.hero .anno{font-family:var(--mono);font-size:11px;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;margin-bottom:34px}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(72px,17vw,164px);letter-spacing:0.04em;color:var(--gold-bright);line-height:0.95;margin:0;text-shadow:0 0 60px rgba(196,164,100,0.25);font-feature-settings:"liga","dlig"}
+.hero h1 .dot{display:inline-block;transform:translateY(-0.15em);font-size:0.7em;color:var(--gold);margin:0 0.05em}
+.hero .rule{width:140px;height:1px;background:var(--gold);margin:36px auto;opacity:0.6}
+.hero .date{font-family:var(--display);font-size:clamp(22px,4.5vw,32px);letter-spacing:0.22em;color:var(--cream);margin-bottom:18px;font-weight:500}
+.hero .lede{font-family:var(--display);font-size:clamp(15px,2.6vw,20px);letter-spacing:0.18em;color:var(--cream-dim);text-transform:uppercase;font-weight:400}
+.hero .meta{margin-top:42px;font-family:var(--mono);font-size:11px;letter-spacing:0.3em;color:var(--gold-dim);text-transform:uppercase}
+.hero .meta span{margin:0 14px}
+
+.divider{display:flex;justify-content:center;align-items:center;gap:18px;margin:64px 0;color:var(--gold);font-size:14px;letter-spacing:0.4em;opacity:0.7}
+.divider.heavy{margin:84px 0}
+.divider span{font-family:var(--serif)}
+
+.section{margin:60px 0}
+.section .sigil{text-align:center;font-family:var(--display);color:var(--gold);font-size:13px;letter-spacing:0.5em;margin-bottom:36px;font-weight:500}
+.section h2{font-family:var(--display);font-weight:600;font-size:clamp(28px,5.2vw,42px);letter-spacing:0.06em;color:var(--cream);text-align:center;margin-bottom:42px;line-height:1.15;text-transform:uppercase}
+.section h3{font-family:var(--display);font-weight:500;font-size:clamp(22px,3.8vw,30px);letter-spacing:0.08em;color:var(--gold-bright);margin-bottom:14px;line-height:1.2;text-transform:uppercase}
+.section .subtitle{font-family:var(--serif);font-style:italic;font-size:clamp(16px,2.4vw,19px);color:var(--cream-dim);margin-bottom:28px;line-height:1.5}
+.section p{margin-bottom:22px;color:var(--cream);font-weight:400}
+.section p em{color:var(--gold-bright);font-style:italic}
+.section p strong{color:var(--cream);font-weight:600;font-family:var(--display);letter-spacing:0.02em}
+.section .pull{font-family:var(--display);font-size:clamp(20px,3.4vw,26px);text-align:center;color:var(--gold-bright);margin:36px 0;letter-spacing:0.04em;line-height:1.4;font-weight:500;text-transform:uppercase}
+.section ul{list-style:none;padding:0;margin:24px 0}
+.section ul li{padding:6px 0 6px 28px;position:relative;color:var(--cream);font-size:18px}
+.section ul li::before{content:'—';position:absolute;left:0;color:var(--gold);font-weight:500}
+
+.speaker{margin:72px 0;padding:0}
+.speaker .roman{font-family:var(--display);font-size:14px;letter-spacing:0.6em;color:var(--gold);text-align:center;margin-bottom:22px;font-weight:500}
+.speaker .roman::before,.speaker .roman::after{content:'❦';margin:0 12px;opacity:0.7}
+.speaker .name{font-family:var(--display);font-weight:700;font-size:clamp(32px,6vw,48px);letter-spacing:0.04em;color:var(--gold-bright);text-align:center;margin-bottom:14px;line-height:1.05;text-transform:uppercase}
+.speaker .confirmed{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin:-4px auto 18px;
+  font-family:var(--mono);font-size:9.5px;letter-spacing:0.34em;text-transform:uppercase;
+  color:var(--gold)
+}
+.speaker .confirmed::before{
+  content:'';width:5px;height:5px;border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 8px rgba(196,164,100,0.8)
+}
+.speaker .role{font-family:var(--serif);font-style:italic;font-size:clamp(17px,2.6vw,21px);color:var(--cream-dim);text-align:center;margin-bottom:36px;line-height:1.4;max-width:560px;margin-left:auto;margin-right:auto}
+.speaker .role::before,.speaker .role::after{content:'·';color:var(--gold);margin:0 10px}
+.speaker p{color:var(--cream);font-size:clamp(20px,1.6vw,23px);line-height:1.7}
+
+/* Cohost grid */
+.cohosts{display:grid;grid-template-columns:repeat(4,1fr);gap:36px 28px;max-width:780px;justify-items:center;text-align:center;margin:0 auto;padding-top:8px}
+.cohost{display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;color:inherit;transition:transform 0.3s ease}
+.cohost:hover{transform:translateY(-3px)}
+.cohost .avatar{width:108px;height:108px;border-radius:50%;background:var(--bg-deep);border:1.5px solid rgba(196,164,100,0.4);box-shadow:0 0 0 1px rgba(0,0,0,0.5) inset,0 8px 24px rgba(0,0,0,0.5),0 0 32px rgba(196,164,100,0.08);overflow:hidden;display:flex;align-items:center;justify-content:center;transition:border-color 0.3s ease,box-shadow 0.3s ease;margin-bottom:18px}
+.cohost:hover .avatar{border-color:var(--gold-bright);box-shadow:0 0 0 1px rgba(0,0,0,0.5) inset,0 12px 32px rgba(0,0,0,0.5),0 0 48px rgba(196,164,100,0.22)}
+.cohost .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.cohost .avatar .initials{font-family:var(--display);font-size:32px;font-weight:700;color:var(--gold-dim);letter-spacing:0.02em}
+.cohost .cname{font-family:var(--display);font-weight:500;font-size:14px;letter-spacing:0.08em;color:var(--cream);text-transform:uppercase;line-height:1.3;margin-bottom:6px;min-height:36px;display:flex;align-items:center}
+.cohost .ctag{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--cream-dim);margin-bottom:10px;line-height:1.3;min-height:36px;display:flex;align-items:center;text-align:center}
+.cohost .chandle{font-family:var(--mono);font-size:10px;letter-spacing:0.14em;color:var(--gold-dim);text-transform:lowercase;transition:color 0.3s ease}
+.cohost:hover .chandle{color:var(--gold-bright)}
+.cohost-intro{text-align:center;margin:0 auto 48px;max-width:560px;color:var(--cream-dim);font-style:italic;font-size:17px;line-height:1.5}
+@media (max-width:680px){.cohosts{grid-template-columns:repeat(2,1fr);gap:32px 24px;max-width:420px}.cohost .avatar{width:96px;height:96px}}
+
+
+
+
+/* Tiers */
+.tiers{display:grid;grid-template-columns:1fr 1fr;gap:18px;text-align:left}
+.tier{border:1px solid var(--line-strong);padding:28px 26px 26px;background:rgba(255,255,255,0.015);display:flex;flex-direction:column}
+.tier.hi{border:2px solid var(--gold);box-shadow:0 0 60px rgba(196,164,100,0.22);background:linear-gradient(180deg,rgba(196,164,100,0.14),rgba(196,164,100,0.03))}
+.tier:not(.hi){border-color:var(--line)}
+.tier .tag{font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;margin-bottom:16px}
+.tier .tname{font-family:var(--display);font-size:clamp(18px,2.4vw,22px);letter-spacing:0.12em;color:var(--cream);text-transform:uppercase;font-weight:500;margin-bottom:10px}
+.tier .price{font-family:var(--display);font-size:clamp(34px,5vw,46px);letter-spacing:0.02em;color:var(--gold-bright);font-weight:700;line-height:1;margin-bottom:14px}
+.tier .price small{font-family:var(--mono);font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-left:8px;vertical-align:middle}
+.tier .ladder{display:flex;gap:8px;margin-bottom:18px}
+.tier .ladder span{flex:1;border:1px solid var(--line);padding:10px 6px;text-align:center;opacity:0.45}
+.tier .ladder span.on{opacity:1;border-color:var(--gold)}
+.tier .ladder b{display:block;font-family:var(--display);font-size:18px;color:var(--cream);font-weight:600}
+.tier .ladder i{display:block;font-family:var(--mono);font-style:normal;font-size:8px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold-dim);margin-top:4px}
+.tier .ladder.single{display:block;border:0;padding:0 0 4px;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--gold-bright)}
+.tier .inc{list-style:none;padding:0;margin:0 0 18px}
+.tier .inc li{position:relative;padding-left:24px;font-family:var(--serif);font-size:15px;color:var(--cream);line-height:1.5;margin-bottom:8px}
+.tier .inc li::before{content:'✓';position:absolute;left:0;color:var(--gold);font-size:13px}
+.tier .fine{font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:13px;line-height:1.5;margin:0 0 18px}
+.tier .tbtn{display:block;text-align:center;margin-top:auto;font-family:var(--display);font-size:12px;letter-spacing:0.36em;padding:16px 20px;text-decoration:none;text-transform:uppercase;font-weight:600;transition:all .2s}
+.tier .tbtn.primary{color:var(--bg);background:var(--gold);border:1px solid var(--gold)}
+.tier .tbtn.primary:hover{background:var(--gold-bright)}
+.tier .tbtn.secondary{color:var(--cream-dim);border:1px solid var(--line-strong)}
+.tier .tbtn.secondary:hover{color:var(--gold-bright);border-color:var(--gold)}
+@media (max-width:640px){.tiers{grid-template-columns:1fr}.tier{padding:24px 20px 22px}}
+
+/* Archivo de charlas */
+.talks{display:grid;grid-template-columns:1fr 1fr;gap:28px 24px;max-width:960px;margin:0 auto}
+.talks .frame{position:relative;aspect-ratio:16/9;overflow:hidden;border:1px solid var(--line-strong);background:#000;cursor:pointer;transition:border-color .2s}
+.talks .frame img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(0.85) contrast(1.05);transition:filter .3s,transform .4s}
+.talks .frame:hover{border-color:var(--gold)}
+.talks .frame:hover img{filter:saturate(1) contrast(1.05);transform:scale(1.03)}
+.talks .frame .play{position:absolute;left:50%;top:50%;width:62px;height:62px;margin:-31px 0 0 -31px;border-radius:50%;background:rgba(10,10,10,.78);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;transition:all .2s}
+.talks .frame .play svg{width:26px;height:26px;fill:var(--gold-bright);margin-left:3px}
+.talks .frame:hover .play{background:var(--gold)}
+.talks .frame:hover .play svg{fill:var(--bg)}
+.talks .frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.talks .who{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold-bright);margin-top:16px}
+.talks .what{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--cream-dim);margin-top:4px}
+.talks a.talk{text-decoration:none;color:inherit}
+.talks .frame .badge{position:absolute;left:12px;bottom:12px;font-family:var(--mono);font-size:8px;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold);background:rgba(0,0,0,.7);border:1px solid var(--line-strong);padding:6px 10px}
+.talks .soon .frame img{filter:saturate(0.5) brightness(0.7)}
+.talks .soon:hover .frame img{filter:saturate(0.8) brightness(0.85)}
+.talks{grid-template-columns:repeat(3,1fr)}
+@media (max-width:860px){.talks{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.talks{grid-template-columns:1fr;gap:34px}}
+
+/* Network Event */
+.zarzo{max-width:960px;margin:0 auto}
+.zarzo .grid{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:10px;margin-top:34px}
+.zarzo .grid img{width:100%;height:100%;object-fit:cover;display:block;border:1px solid var(--line-strong)}
+.zarzo .grid .big{grid-row:1/3;aspect-ratio:4/3}
+.zarzo .grid .sm{aspect-ratio:3/2}
+.zarzo .cap{font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold-dim);text-transform:uppercase;text-align:center;margin-top:14px}
+@media (max-width:640px){.zarzo .grid{grid-template-columns:1fr;grid-template-rows:auto}.zarzo .grid .big{grid-row:auto;aspect-ratio:3/2}}
+/* Countdown */
+.countdown{text-align:center;margin:54px auto 0;max-width:760px}
+.countdown .eyebrow{
+  font-family:var(--mono);font-size:10px;letter-spacing:0.5em;text-transform:uppercase;
+  color:var(--gold);opacity:0.9;margin-bottom:10px
+}
+.countdown .target{
+  font-family:var(--serif);font-style:italic;font-size:clamp(15px,2.2vw,18px);
+  color:var(--cream-dim);margin-bottom:34px
+}
+.countdown .clock{
+  display:flex;justify-content:center;align-items:stretch;gap:0;flex-wrap:nowrap
+}
+.countdown .unit{
+  display:flex;flex-direction:column;align-items:center;
+  padding:0 clamp(14px,3.4vw,38px);position:relative
+}
+.countdown .unit:not(:last-child)::after{
+  content:'';position:absolute;right:0;top:14%;height:72%;width:1px;
+  background:var(--line-strong)
+}
+.countdown .num{
+  font-family:var(--display);font-weight:700;
+  font-size:clamp(40px,8vw,76px);line-height:1;
+  color:var(--gold-bright);font-variant-numeric:tabular-nums;
+  text-shadow:0 0 36px rgba(196,164,100,0.18)
+}
+.countdown .lbl{
+  font-family:var(--mono);font-size:9px;letter-spacing:0.34em;text-transform:uppercase;
+  color:var(--gold-dim);margin-top:14px
+}
+@media (max-width:520px){
+  .countdown .unit{padding:0 clamp(8px,4vw,18px)}
+  .countdown .lbl{font-size:7.5px;letter-spacing:0.2em}
+}
+.countdown .cd-cta{
+  display:inline-block;margin-top:38px;
+  font-family:var(--display);font-size:13px;letter-spacing:0.4em;
+  color:var(--bg);background:var(--gold);
+  padding:18px 44px;text-decoration:none;text-transform:uppercase;font-weight:600;
+  border:1px solid var(--gold);transition:all 0.2s ease
+}
+.countdown .cd-cta:hover{
+  background:var(--gold-bright);color:var(--bg-deep);
+  box-shadow:0 0 40px rgba(196,164,100,0.3)
+}
+@media (max-width:480px){
+  .countdown .cd-cta{padding:16px 32px;font-size:11px;letter-spacing:0.3em}
+}
+
+/* Proof stats band */
+.proof{text-align:center;margin:60px auto 0;max-width:820px}
+.proof .eyebrow{
+  font-family:var(--mono);font-size:10px;letter-spacing:0.5em;text-transform:uppercase;
+  color:var(--gold);opacity:0.9;margin-bottom:38px
+}
+.proof .stats{
+  display:flex;justify-content:center;align-items:stretch;flex-wrap:nowrap
+}
+.proof .stat{
+  display:flex;flex-direction:column;align-items:center;
+  padding:0 clamp(18px,4vw,48px);position:relative
+}
+.proof .stat:not(:last-child)::after{
+  content:'';position:absolute;right:0;top:10%;height:80%;width:1px;
+  background:var(--line-strong)
+}
+.proof .stat .fig{
+  font-family:var(--display);font-weight:700;
+  font-size:clamp(34px,5.5vw,56px);line-height:1;
+  color:var(--gold-bright);
+  text-shadow:0 0 30px rgba(196,164,100,0.16)
+}
+.proof .stat .cap{
+  font-family:var(--mono);font-size:9px;letter-spacing:0.26em;text-transform:uppercase;
+  color:var(--gold-dim);margin-top:14px;line-height:1.5;max-width:150px
+}
+.proof .line{
+  font-family:var(--serif);font-style:italic;font-size:clamp(16px,2.3vw,21px);
+  color:var(--cream-dim);margin-top:36px;line-height:1.5;
+  max-width:520px;margin-left:auto;margin-right:auto
+}
+@media (max-width:520px){
+  .proof .stat{padding:0 clamp(10px,3.5vw,20px)}
+  .proof .stat .cap{font-size:7.5px;letter-spacing:0.16em}
+}
+
+/* Sponsor / Partner block */
+.partner{text-align:center;margin:20px 0}
+.partner .eyebrow{
+  font-family:var(--mono);font-size:10px;letter-spacing:0.5em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:44px;opacity:0.9
+}
+.partner .logos{
+  display:flex;justify-content:center;align-items:flex-start;
+  gap:30px 48px;flex-wrap:wrap;max-width:780px;margin:0 auto
+}
+.partner .logos a,.partner .logos .mbs{
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+  text-decoration:none;width:200px;
+  transition:transform 0.3s ease
+}
+.partner .logos a:hover,.partner .logos .mbs:hover{transform:translateY(-3px)}
+.partner .logos a .logobox,.partner .logos .mbs .logobox{
+  height:78px;display:flex;align-items:center;justify-content:center;
+  transition:filter 0.3s ease;filter:brightness(0.92)
+}
+.partner .logos a:hover .logobox,.partner .logos .mbs:hover .logobox{filter:brightness(1.12)}
+.partner .logos a .logobox img,.partner .logos .mbs .logobox img{max-height:54px;width:auto;display:block}
+.partner .logos a.veronorte .logobox img{max-height:40px}
+.partner .logos a.eafit .logobox img{max-height:56px}
+.partner .logos a.makeno .logobox img{max-height:34px}
+.partner .logos a.mbs .logobox img{height:46px;max-height:46px;width:auto}
+.partner .logos a.macrowise .logobox img{max-height:26px}
+.partner .logos a.celsia .logobox img{max-height:42px}
+.partner .logos a.inplux .logobox img{height:34px;max-height:34px;width:auto}
+.partner .logos a .note,.partner .logos .mbs .note{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--cream-dim);margin-top:16px;line-height:1.55;
+  transition:color 0.3s ease
+}
+.partner .logos a:hover .note,.partner .logos .mbs:hover .note{color:var(--gold)}
+
+.tier.early:hover{transform:translateY(-3px);box-shadow:0 18px 50px rgba(0,0,0,0.5),0 0 60px rgba(196,164,100,0.12)}
+.tier.early:hover{border-color:var(--gold-bright) !important}
+.tier.final:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(0,0,0,0.4)}
+.tier.final:hover{border-color:var(--gold) !important}
+.tier.last{cursor:default}
+.tier.last::after{display:none}
+
+/* Podcast embed — facade pattern, click to load iframe */
+.pod{margin:44px auto 0;max-width:680px}
+.pod .label{
+  display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:18px;
+  font-family:var(--mono);font-size:10px;letter-spacing:0.42em;text-transform:uppercase;
+  color:var(--gold-dim)
+}
+.pod .label::before,.pod .label::after{
+  content:'';flex:0 0 60px;height:1px;background:var(--line-strong)
+}
+.pod .frame{
+  position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;
+  background:#000;cursor:pointer;
+  border:1px solid var(--line-strong);
+  transition:border-color 0.25s ease,transform 0.3s ease
+}
+.pod .frame:hover{border-color:var(--gold)}
+.pod .frame:hover .play{background:var(--gold);box-shadow:0 0 50px rgba(196,164,100,0.45)}
+.pod .frame:hover .play svg{fill:var(--bg-deep)}
+.pod .frame::before{
+  content:'';position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(180deg,rgba(0,0,0,0.15) 0%,transparent 30%,transparent 60%,rgba(0,0,0,0.65) 100%)
+}
+.pod .frame img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:saturate(0.85) contrast(1.05) brightness(0.78)
+}
+.pod .frame .play{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:3;
+  width:72px;height:72px;border-radius:50%;
+  background:rgba(196,164,100,0.92);
+  border:1.5px solid var(--gold-bright);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 35px rgba(196,164,100,0.25),0 4px 20px rgba(0,0,0,0.5);
+  transition:all 0.3s ease
+}
+.pod .frame .play svg{width:26px;height:26px;fill:var(--bg-deep);margin-left:4px}
+.pod .frame .meta{
+  position:absolute;left:18px;right:18px;bottom:14px;z-index:3;
+  font-family:var(--display);font-size:clamp(15px,1.7vw,19px);
+  letter-spacing:0.04em;color:var(--cream);
+  text-shadow:0 2px 14px rgba(0,0,0,0.95)
+}
+.pod .frame .meta .src{
+  display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:0.32em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:6px;opacity:0.92
+}
+.pod .frame iframe{
+  position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5
+}
+
+.principles{display:grid;grid-template-columns:1fr;gap:48px;margin:48px 0}
+.principle{text-align:center;padding:0 12px}
+.principle .num{font-family:var(--display);font-size:12px;letter-spacing:0.5em;color:var(--gold);margin-bottom:14px;font-weight:500}
+.principle .title{font-family:var(--display);font-size:22px;letter-spacing:0.08em;color:var(--gold-bright);margin-bottom:14px;text-transform:uppercase;font-weight:600}
+.principle .body{font-size:17px;color:var(--cream-dim);line-height:1.6;font-style:italic}
+
+.callout{border:1px solid var(--line);padding:48px 32px;margin:72px 0;background:linear-gradient(180deg,rgba(196,164,100,0.025) 0%,rgba(196,164,100,0.008) 100%);position:relative}
+.callout::before,.callout::after{content:'';position:absolute;width:18px;height:18px;border:1px solid var(--gold);opacity:0.6}
+.callout::before{top:-1px;left:-1px;border-right:none;border-bottom:none}
+.callout::after{bottom:-1px;right:-1px;border-left:none;border-top:none}
+.callout h2{font-family:var(--display);font-size:clamp(22px,3.6vw,28px);letter-spacing:0.18em;color:var(--gold-bright);text-align:center;margin-bottom:14px;text-transform:uppercase;font-weight:600}
+.callout .sub{text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:0.4em;color:var(--gold-dim);text-transform:uppercase;margin-bottom:32px}
+.callout .grid{display:grid;grid-template-columns:1fr;gap:18px;font-family:var(--mono);font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--cream)}
+.callout .grid .k{color:var(--gold-dim);font-size:10px;letter-spacing:0.3em;margin-bottom:4px;display:block}
+.callout .grid .v{color:var(--cream);font-size:14px;letter-spacing:0.12em}
+.cta{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:36px}
+.cta a{display:inline-block;font-family:var(--display);font-size:13px;letter-spacing:0.4em;padding:18px 44px;text-decoration:none;text-transform:uppercase;font-weight:600;transition:all 0.2s ease;min-width:280px;text-align:center}
+.cta a.primary{color:var(--bg);background:var(--gold);border:1px solid var(--gold)}
+.cta a.primary:hover{background:var(--gold-bright);color:var(--bg-deep);box-shadow:0 0 40px rgba(196,164,100,0.3)}
+.cta a.secondary{color:var(--cream-dim);background:transparent;border:1px solid var(--line-strong);font-size:11px;letter-spacing:0.32em;padding:14px 36px}
+.cta a.secondary:hover{color:var(--gold-bright);border-color:var(--gold)}
+.cta .or{font-family:var(--mono);font-size:9px;letter-spacing:0.5em;color:var(--gold-dim);text-transform:uppercase;opacity:0.6;margin:-2px 0}
+
+/* Hoteles aliados — zona de alojamiento */
+.hotels{display:grid;grid-template-columns:1fr 1fr;gap:20px 34px;margin:28px auto 0}
+.hotels .hotel{display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
+.hotels .hotel .logobox{height:58px;display:flex;align-items:center;justify-content:center;filter:brightness(0.95)}
+.hotels .hotel .logobox img{width:auto;display:block}
+.hotels .hotel img.zarzo{max-height:32px}
+.hotels .hotel img.sites{max-height:54px}
+.hotels .hotel .note{font-family:var(--mono);font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream-dim);margin-top:14px;line-height:1.6;min-height:34px;max-width:240px}
+.hotels .hotel .cta{margin-top:12px}
+.hotels .hotel .cta a{min-width:0;font-size:11px;letter-spacing:0.3em;padding:13px 26px}
+@media(max-width:640px){.hotels{grid-template-columns:1fr;gap:40px}.hotels .hotel .note{min-height:0}}
+
+.lists-pair{display:grid;grid-template-columns:1fr;gap:48px;margin:48px 0}
+.lists-pair .col{padding:0}
+.lists-pair .col h3{text-align:center;margin-bottom:24px}
+.lists-pair .col h3.warn{color:var(--smoke);color:#b89060}
+
+footer{margin-top:120px;padding-top:60px;border-top:1px solid var(--line);text-align:center}
+footer img{width:64px;height:64px;border-radius:50%;border:2px solid rgba(196,164,100,0.25);margin-bottom:24px;opacity:0.95}
+footer .anno{font-family:var(--display);font-size:14px;letter-spacing:0.5em;color:var(--gold);margin-bottom:14px;font-weight:500}
+footer .link{font-family:var(--mono);font-size:11px;letter-spacing:0.3em;text-transform:uppercase}
+footer .link a{color:var(--gold-dim);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;transition:color 0.2s}
+footer .link a:hover{color:var(--gold-bright)}
+footer .creed{font-family:var(--mono);font-size:9px;letter-spacing:0.35em;color:var(--muted);text-transform:uppercase;margin-top:30px}
+
+.opening-quote{font-family:var(--display);font-size:clamp(20px,3.4vw,28px);text-align:center;color:var(--gold-bright);margin:60px 0;line-height:1.45;letter-spacing:0.04em;font-weight:500}
+.opening-quote em{font-family:var(--serif);font-style:italic;color:var(--cream);text-transform:none;letter-spacing:0;font-weight:400}
+
+@media (min-width:720px){
+  main{padding:64px 48px 120px}
+  .principles{grid-template-columns:repeat(3,1fr);gap:24px}
+  .lists-pair{grid-template-columns:1fr 1fr;gap:56px}
+  .callout{padding:64px 56px}
+  .callout .grid{grid-template-columns:repeat(3,1fr);gap:32px;text-align:center}
+}
+
+@media (max-width:719px){
+  .cinema .hud{top:12px;left:14px;right:14px;font-size:9px;letter-spacing:0.22em;
+    grid-template-columns:1fr 1fr;gap:6px}
+  .cinema .hud .center{display:none}
+  .cinema .hud .brand{text-align:left}
+  .cinema .hud .anno{text-align:right}
+}
+
+@media (max-width:480px){
+  html,body{font-size:17px}
+  main{padding:32px 22px 80px}
+  .topbar{padding-bottom:40px;font-size:9px;letter-spacing:0.22em}
+  .hero{padding:24px 0 40px}
+  .hero .anno{margin-bottom:24px;font-size:10px}
+  .hero .meta span{display:block;margin:6px 0}
+  .divider{margin:48px 0}
+  .divider.heavy{margin:64px 0}
+  .speaker{margin:56px 0}
+  .speaker .role::before,.speaker .role::after{display:block;margin:6px 0}
+  .callout{padding:36px 22px}
+  .cta a{padding:16px 28px;font-size:11px;letter-spacing:0.3em;min-width:240px}
+  .cta a.secondary{padding:13px 24px;font-size:10px;letter-spacing:0.26em}
+  .section ul li{font-size:16px}
+  .cinema{min-height:600px}
+  .cinema .hud{font-size:8px;letter-spacing:0.18em}
+  .cinema .hud .center .sep{margin:0 4px}
+}
+
+.langswitch{position:fixed;top:14px;right:14px;z-index:2000;display:flex;gap:2px;
+  background:rgba(8,7,10,0.74);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,0.12);border-radius:999px;padding:3px}
+.langswitch button{font-family:var(--mono);font-size:11px;letter-spacing:0.12em;
+  color:var(--cream-dim);background:transparent;border:0;padding:6px 12px;border-radius:999px;
+  cursor:pointer;transition:background .2s ease,color .2s ease;line-height:1}
+.langswitch button.active{background:var(--gold);color:#08070a}
+.langswitch button:not(.active):hover{color:var(--cream)}
+@media (max-width:600px){.langswitch{top:10px;right:10px}.langswitch button{padding:5px 10px;font-size:10px}}
+</style>
+<script defer src="/_vercel/insights/script.js"></script>
+<!-- Meta Pixel (dataset 10ampro-web) -->
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel -->
+<meta name="description" content="Propuesta de patrocinio — Sponsor Oficial de El Día D, el evento de inversión y tecnología de 10ampro en Medellín. 580 asistentes, una sola categoría exclusiva." />
+<meta name="robots" content="noindex" />
+<style>
+.sp .kv{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:760px;margin:0 auto}
+.sp .kv div{border:1px solid var(--line);padding:16px 18px}
+.sp .kv b{display:block;font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold-dim);text-transform:uppercase;margin-bottom:8px}
+.sp .kv span{font-family:var(--serif);font-size:16px;color:var(--cream)}
+.sp .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:860px;margin:0 auto}
+.sp .stats div{text-align:center;border:1px solid var(--line);padding:26px 16px}
+.sp .stats .n{font-family:var(--display);font-weight:700;font-size:clamp(30px,5vw,44px);color:var(--gold-bright);line-height:1}
+.sp .stats .l{font-family:var(--mono);font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold-dim);margin:12px 0 10px}
+.sp .stats p{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--cream-dim);line-height:1.5;margin:0}
+.sp table{width:100%;max-width:880px;margin:0 auto;border-collapse:collapse;font-family:var(--serif);font-size:15px;color:var(--cream)}
+.sp th{font-family:var(--mono);font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line-strong)}
+.sp td{padding:14px 12px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.5}
+.sp td.k{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-dim);white-space:nowrap}
+.sp td.b{color:var(--gold-bright);font-family:var(--display);font-size:14px;letter-spacing:0.06em}
+.sp .tiers{max-width:880px;margin:34px auto 0}
+.sp .price-note{font-family:var(--serif);font-style:italic;color:var(--cream-dim);font-size:14px;line-height:1.6;max-width:640px;margin:0 auto;text-align:center}
+.sp .why{max-width:720px;margin:0 auto}
+.sp .why .item{border-left:1px solid var(--gold);padding:4px 0 4px 22px;margin-bottom:30px}
+.sp .why .item h3{font-family:var(--display);font-size:18px;letter-spacing:0.08em;color:var(--gold-bright);text-transform:uppercase;margin:0 0 10px;font-weight:600}
+.sp .why .item p{margin:0;font-family:var(--serif);font-size:16px;color:var(--cream);line-height:1.6}
+.sp .back{font-family:var(--mono);font-size:9px;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold-dim);text-decoration:none}
+@media (max-width:640px){.sp .kv,.sp .stats{grid-template-columns:1fr}.sp table{font-size:14px}.sp th:nth-child(3),.sp td:nth-child(3){display:none}}
+</style>
+</head>
+<body class="sp">
+<main>
+<section class="section" style="margin-top:40px;text-align:center">
+  <a class="back" href="/">← eldiad.10am.pro</a>
+  <div class="sigil" style="margin-top:36px">10AMPRO · PROPUESTA DE PATROCINIO</div>
+  <h2>Sponsor Oficial<br>de El Día D</h2>
+  <p style="font-family:var(--serif);font-style:italic;color:var(--cream-dim);max-width:560px;margin:0 auto 40px">Una sola categoría. Una sola marca. El evento de inversión y tecnología con mayor densidad de tomadores de decisión en Medellín.</p>
+  <div class="kv">
+    <div><b>Próxima edición</b><span>Medellín · fecha por anunciar (finales de octubre · inicios de noviembre)</span></div>
+    <div><b>Aforo</b><span>580 asistentes · 100 en el Rooftop Network Event</span></div>
+    <div><b>Última edición</b><span>14 de octubre de 2026 · Auditorio Fundadores, EAFIT · 500 asistentes</span></div>
+    <div><b>Categoría</b><span>Sponsor Oficial — exclusiva, bloquea a competidores directos</span></div>
+  </div>
+</section>
+
+<div class="divider heavy"><span>✦</span><span>❖</span><span>✦</span></div>
+
+<section class="section">
+  <div class="sigil">01 · EL ECOSISTEMA</div>
+  <h2>A quién le llega su marca</h2>
+  <div class="stats">
+    <div><div class="n">6.700+</div><div class="l">Suscriptores en Substack</div><p>Perfil ejecutivo e inversor, doble opt-in. Es el vehículo principal del patrocinio.</p></div>
+    <div><div class="n">140K+</div><div class="l">Seguidores en plataformas</div><p>YouTube, Spotify, Apple, Instagram, TikTok, X. Alcance complementario de la campaña.</p></div>
+    <div><div class="n">35–54</div><div class="l">Rango de edad dominante · ~86 % hombres</div><p>El perfil que decide inversiones, abre cuentas y consume servicios financieros premium.</p></div>
+    <div><div class="n">75–80 %</div><div class="l">Audiencia en Colombia</div><p>Medellín, Bogotá y Cali. Secundario: Estados Unidos y España.</p></div>
+  </div>
+  <p class="price-note" style="margin-top:28px">Cifras vivas y detalle por canal en <a href="https://media.10am.pro" target="_blank" rel="noopener" style="color:var(--gold)">media.10am.pro</a>.</p>
+</section>
+
+<div class="divider"><span>✦</span></div>
+
+<section class="section">
+  <div class="sigil">02 · EL EVENTO</div>
+  <h2>500 personas que no se compran con ads</h2>
+  <p style="text-align:center;font-family:var(--serif);font-style:italic;color:var(--cream-dim);max-width:600px;margin:0 auto 24px">En la última edición pasaron por el escenario Joe McCann, Santiago Santos, Antonio Linares, André Joffroy, Ricardo Sierra, Camilo Ospina y Andrés Palacio, con los doce cohosts de 10ampro moderando. El line-up de la próxima se anuncia con la fecha.</p>
+  <p style="text-align:center;font-family:var(--serif);font-size:17px;color:var(--cream);max-width:600px;margin:0 auto">Este perfil ignora Instagram Ads, cierra LinkedIn Ads y tiene AdBlock. La única forma de llegar es con credibilidad editorial, y eso es lo que 10ampro lleva 229 episodios construyendo.</p>
+</section>
+
+<div class="divider"><span>✦</span></div>
+
+<section class="section">
+  <div class="sigil">03 · CADENCIA</div>
+  <h2>Cinco envíos, su marca en todos</h2>
+  <table>
+    <tr><th>#</th><th>Momento</th><th>Posición</th><th>Formato</th></tr>
+    <tr><td class="k">1</td><td>Anuncio de la fecha</td><td class="b">Exclusivo</td><td>Apertura del correo · CTA principal · logo en header y firma</td></tr>
+    <tr><td class="k">2</td><td>Line-up y speakers</td><td class="b">Protagonista</td><td>Bloque editorial con mensaje de la marca</td></tr>
+    <tr><td class="k">3</td><td>Apertura de venta · early bird</td><td class="b">Protagonista</td><td>Banner + párrafo editorial + enlace propio</td></tr>
+    <tr><td class="k">4</td><td>Últimos cupos</td><td class="b">Protagonista</td><td>Mención en el asunto · logo en hero · CTA del sponsor</td></tr>
+    <tr><td class="k">5</td><td>Resumen post-evento</td><td class="b">Cierre</td><td>Agradecimiento editorial + logo + llamada de acción</td></tr>
+  </table>
+</section>
+
+<div class="divider"><span>✦</span></div>
+
+<section class="section">
+  <div class="sigil">04 · BENEFICIOS</div>
+  <h2>Antes, durante y después</h2>
+  <table>
+    <tr><th>Canal</th><th>Beneficio</th><th>Dónde</th><th>Detalle</th></tr>
+    <tr><td class="k">Digital</td><td>Logo en la landing</td><td>eldiad.10am.pro</td><td>Posición #1, sección "Aliados del Día D", con enlace. Vigente hasta el día del evento.</td></tr>
+    <tr><td class="k">Digital</td><td>Posts dedicados</td><td>Instagram · LinkedIn · X</td><td>2 publicaciones presentando al sponsor al ecosistema 10ampro.</td></tr>
+    <tr><td class="k">Podcast</td><td>Menciones verbales</td><td>4 episodios previos</td><td>Por los hosts, en catálogo permanente.</td></tr>
+    <tr><td class="k">Newsletter</td><td>Integraciones editoriales</td><td>Substack</td><td>2 menciones con contexto en los envíos de la semana previa.</td></tr>
+    <tr><td class="k">On-site</td><td>Backdrop de escenario</td><td>Todo el evento</td><td>Logo en la pantalla y el backdrop: presente en todas las fotos, el streaming y las grabaciones.</td></tr>
+    <tr><td class="k">On-site</td><td>Mención en el evento</td><td>Apertura y cierre</td><td>Editorial, integrada en el discurso. No es una cuña.</td></tr>
+    <tr><td class="k">On-site</td><td>Rooftop Network Event</td><td>El Zarzo · 6 a 9 PM</td><td>4 entradas Gold (USD 450 c/u) para equipo o clientes: día completo + rooftop con las 100 personas.</td></tr>
+  </table>
+</section>
+
+<div class="divider heavy"><span>✦</span><span>❖</span><span>✦</span></div>
+
+<section class="section">
+  <div class="sigil">05 · INVERSIÓN</div>
+  <h2>Una sola categoría.<br>Un solo Sponsor Oficial.</h2>
+  <div class="tiers">
+    <div class="tier hi">
+      <div class="tag">Early bird · antes del anuncio de fecha</div>
+      <div class="tname">Sponsor Oficial</div>
+      <div class="price">USD 15.000</div>
+      <ul class="inc">
+        <li>Entra en los cinco envíos desde el primero</li>
+        <li>Máximo tiempo para creativos y activaciones</li>
+        <li>Bloquea la categoría frente a competidores directos</li>
+      </ul>
+      <a class="tbtn primary" href="mailto:info@10am.pro?subject=Sponsor%20Oficial%20%E2%80%94%20El%20D%C3%ADa%20D">Quiero ser Sponsor Oficial</a>
+    </div>
+    <div class="tier">
+      <div class="tag">Precio base · con la fecha anunciada</div>
+      <div class="tname">Sponsor Oficial</div>
+      <div class="price">USD 25.000</div>
+      <ul class="inc">
+        <li>Misma visibilidad, menos tiempo de activación</li>
+        <li>Entra en los envíos que falten</li>
+        <li>Sujeto a que la categoría siga libre</li>
+      </ul>
+      <a class="tbtn secondary" href="mailto:info@10am.pro?subject=Sponsor%20Oficial%20%E2%80%94%20El%20D%C3%ADa%20D">Hablar con 10ampro</a>
+    </div>
+  </div>
+  <p class="price-note" style="margin-top:28px">El primero que firma bloquea a todos sus competidores directos del evento. El segundo en decidir pierde esa ventaja para siempre. Otras categorías de aliado (logística, sede, hotel) se conversan aparte: <a href="https://media.10am.pro" target="_blank" rel="noopener" style="color:var(--gold)">media.10am.pro</a>.</p>
+</section>
+
+<div class="divider"><span>✦</span></div>
+
+<section class="section">
+  <div class="sigil">06 · POR QUÉ</div>
+  <h2>Tres razones</h2>
+  <div class="why">
+    <div class="item"><h3>No es pauta. Es posicionamiento.</h3><p>Su marca no aparece en un banner. Aparece en el contexto de una conversación que los mejores inversionistas y founders de Medellín van a recordar.</p></div>
+    <div class="item"><h3>Un público que se gana, no se compra.</h3><p>500 personas pagaron por estar en la última edición. La próxima se cierra en 580. Nadie llegó por un anuncio; llegaron por doscientos episodios de credibilidad.</p></div>
+    <div class="item"><h3>Categoría exclusiva.</h3><p>No hay segundo Sponsor Oficial. No hay segunda oportunidad en esta categoría.</p></div>
+  </div>
+  <div class="cta" style="margin-top:48px">
+    <a class="primary" href="mailto:info@10am.pro?subject=Sponsor%20Oficial%20%E2%80%94%20El%20D%C3%ADa%20D">Quiero ser Sponsor Oficial</a>
+  </div>
+  <p style="text-align:center;font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold-dim);text-transform:uppercase;margin-top:16px">info@10am.pro · media.10am.pro</p>
+</section>
+
+<footer>
+  <div class="anno">MMXXVI</div>
+  <div class="link" style="margin-top:24px"><a href="/">eldiad.10am.pro</a></div>
+</footer>
+</main>
+</body>
+</html>
