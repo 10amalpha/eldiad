@@ -288,6 +288,12 @@ main{position:relative;z-index:3;max-width:820px;margin:0 auto;padding:48px 28px
 .talks .frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .talks .who{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold-bright);margin-top:16px}
 .talks .what{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--cream-dim);margin-top:4px}
+.talks a.talk{text-decoration:none;color:inherit}
+.talks .frame .badge{position:absolute;left:12px;bottom:12px;font-family:var(--mono);font-size:8px;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold);background:rgba(0,0,0,.7);border:1px solid var(--line-strong);padding:6px 10px}
+.talks .soon .frame img{filter:saturate(0.5) brightness(0.7)}
+.talks .soon:hover .frame img{filter:saturate(0.8) brightness(0.85)}
+.talks{grid-template-columns:repeat(3,1fr)}
+@media (max-width:860px){.talks{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.talks{grid-template-columns:1fr;gap:34px}}
 
 /* Network Event */
@@ -891,23 +897,63 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
   <div class="talks">
     <div class="talk">
       <div class="frame" data-id="6jKoQeWgYhg" role="button" tabindex="0" aria-label="Reproducir charla de Santiago R. Santos">
-        <img src="https://i.ytimg.com/vi/6jKoQeWgYhg/maxresdefault.jpg" alt="Santiago R. Santos · El Día D 2026" loading="lazy" />
+        <img src="/talk-santos.jpg" alt="Santiago R. Santos · El Día D 2026" loading="lazy" />
         <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
       </div>
       <div class="who">Santiago R. Santos</div>
-      <div class="what" data-en="Investor · Author">Inversionista · Autor</div>
+      <div class="what" data-en="Onchain GDP · first principles">PIB onchain · primeros principios</div>
     </div>
     <div class="talk">
       <div class="frame" data-id="tgaqTeDfQas" role="button" tabindex="0" aria-label="Reproducir charla de Antonio Linares">
-        <img src="https://i.ytimg.com/vi/tgaqTeDfQas/maxresdefault.jpg" alt="Antonio Linares · El Día D 2026" loading="lazy" />
+        <img src="/talk-linares.jpg" alt="Antonio Linares · El Día D 2026" loading="lazy" />
         <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
       </div>
       <div class="who">Antonio Linares</div>
-      <div class="what" data-en="Investor · Investing Ideas">Inversionista · Investing Ideas</div>
+      <div class="what" data-en="PLTR, TSLA, HIMS and the next 100x">PLTR, TSLA, HIMS y el próximo 100x</div>
     </div>
+    <div class="talk">
+      <div class="frame" data-id="4yRAcsBa5OM" role="button" tabindex="0" aria-label="Reproducir charla de Guillermo Valencia">
+        <img src="/talk-race.jpg" alt="Guillermo Valencia · El Día D 2026" loading="lazy" />
+        <div class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="who">Guillermo Valencia</div>
+      <div class="what" data-en="Geopolitics and chips · MacroWise">Geopolítica y chips · MacroWise</div>
+    </div>
+    <a class="talk soon" href="https://www.youtube.com/playlist?list=PLI3suTaC01XM" target="_blank" rel="noopener">
+      <div class="frame">
+        <img src="/talk-mccann.jpg" alt="Joe McCann · El Día D 2026" loading="lazy" />
+        <div class="badge" data-en="Coming soon">Próximamente</div>
+      </div>
+      <div class="who">Joe McCann</div>
+      <div class="what" data-en="Macro liquidity, Solana and Radon">Liquidez macro, Solana y Radon</div>
+    </a>
+    <a class="talk soon" href="https://www.youtube.com/playlist?list=PLI3suTaC01XM" target="_blank" rel="noopener">
+      <div class="frame">
+        <img src="/talk-joffroy.jpg" alt="André Joffroy · El Día D 2026" loading="lazy" />
+        <div class="badge" data-en="Coming soon">Próximamente</div>
+      </div>
+      <div class="who">André Joffroy</div>
+      <div class="what" data-en="CIO ZAPS">CIO ZAPS</div>
+    </a>
+    <a class="talk soon" href="https://www.youtube.com/playlist?list=PLI3suTaC01XM" target="_blank" rel="noopener">
+      <div class="frame">
+        <img src="/talk-sierra.jpg" alt="Ricardo Sierra · El Día D 2026" loading="lazy" />
+        <div class="badge" data-en="Coming soon">Próximamente</div>
+      </div>
+      <div class="who">Ricardo Sierra</div>
+      <div class="what" data-en="Energy · Celsia">Energía · Celsia</div>
+    </a>
+    <a class="talk soon" href="https://www.youtube.com/playlist?list=PLI3suTaC01XM" target="_blank" rel="noopener">
+      <div class="frame">
+        <img src="/talk-ospina.jpg" alt="Camilo Ospina & Andrés Palacio · El Día D 2026" loading="lazy" />
+        <div class="badge" data-en="Coming soon">Próximamente</div>
+      </div>
+      <div class="who">Camilo Ospina & Andrés Palacio</div>
+      <div class="what" data-en="Medicine 3.0 · Endocrinology">Medicina 3.0 · Endocrinología</div>
+    </a>
   </div>
   <div class="cta" style="margin-top:40px">
-    <a class="secondary" href="https://www.youtube.com/@10ampro" target="_blank" rel="noopener" data-en="All talks on YouTube · @10ampro">Todas las charlas en YouTube · @10ampro</a>
+    <a class="secondary" href="https://www.youtube.com/playlist?list=PLI3suTaC01XM" target="_blank" rel="noopener" data-en="Watch the full Día D playlist">Ver la playlist completa del Día D</a>
   </div>
 </section>
 
