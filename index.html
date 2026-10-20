@@ -119,6 +119,10 @@ body::after{
 @keyframes heroFade{0%{opacity:0}1.15%{opacity:1}7.69%{opacity:1}8.85%{opacity:0}100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){.cinema .stage{animation:none}.cinema .stage.s1{opacity:1}}
 /* Hero quote */
+.cinema .quote{animation:quoteFade 78s infinite}
+@keyframes quoteFade{0%{opacity:0}1.2%{opacity:1}7.7%{opacity:1}8.5%{opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cinema .quote{animation:none;opacity:1}}
+
 .cinema .quote{
   position:absolute;left:0;right:0;bottom:0;z-index:12;padding:120px 24px 54px;text-align:center;
   background:linear-gradient(180deg,transparent 0%,rgba(0,0,0,0.55) 40%,rgba(0,0,0,0.88) 100%)
