@@ -133,8 +133,8 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - 2026-10-19 (6): tarjetas de boletas suben al bloque bajo el hero (#boletas); cifras 580/150/100 y botón único eliminados. Logística queda solo con cuándo/dónde.
 - 2026-10-19 (7): sección Logística/Orden de Operaciones eliminada (duplicaba boletas). Cierre: frase final + dos botones Gold/General a Luma. Estilos .cta ahora globales.
 - 2026-10-19 (8): episodios en proof = dinámico desde growth.10am.pro/api/media-kit-stats (episodes.count), fallback 229 en HTML. Misma fuente que media.10am.pro.
-- 2026-10-19 (9): 'Para quién es / No vengas si' subido justo después de Speakers.
-- 2026-10-19 (9): 'Para quién es / No vengas si' subido justo después de Speakers.
+- 2026-10-19 (9): sección 'Para quién es / No vengan si' eliminada (repetitiva).
+- 2026-10-19 (9): sección 'Para quién es / No vengan si' eliminada (repetitiva).
 - 2026-10-19 (10): cohosts +3 placeholders (Alejandro Pérez, Camilo Ospina, Lucas Jaramillo — iniciales hasta recibir fotos; pendiente foto + handle + tag). Copy pasado a 'ustedes' como el Substack; líneas de 'Unos acumulan activos / Otros acumulan cuotas' y 'No vengan a inspirarse'.
 - 2026-10-19 (10): cohosts +3 placeholders (Alejandro Pérez, Camilo Ospina, Lucas Jaramillo — iniciales hasta recibir fotos; pendiente foto + handle + tag). Copy en 'ustedes' como el Substack; 'Unos acumulan activos / Otros acumulan cuotas', 'No vengan a inspirarse'.
 - 2026-10-19 (11): sección #network 'Lo que pasa en el rooftop' entre boletas y proof, 3 fotos del Zarzo (zarzo-1/2/3.jpg; en móvil 2).
