@@ -146,3 +146,4 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - 2026-10-20: Gold pasa a USD 750 'Dos días con la gente del Día D': Día D + Rooftop Zarzo 6–9 PM + almuerzo privado al día siguiente 12:30–3 PM con cohosts y speakers, mismas 100 personas. Escalera 150·250·350·750. /aliados: 4 entradas Gold a 750.
 - 2026-10-20: Sección #network reestructurada en dos actos: 'Lo que pasa fuera del auditorio' → Acto I La noche (rooftop, fotos) · Acto II El día siguiente (bloque .lunch con marco dorado, sin fotos hasta que exista el almuerzo; cta 'lunch-gold').
 - 2026-10-21: Almuerzo Gold = OLI Restaurante Mediterráneo (IG @oli__restaurante). Fotos oli-sala/chef/pasta/paella.jpg (640px, sacadas del IG vía browser del Mac; IG no da más resolución sin login). Grid .lgrid en bloque .lunch + cita Revista Diners.
+- 2026-10-21: Gold baja a 88 cupos (Hernán reserva overflow). General sigue 480, aforo 580 en copy.
