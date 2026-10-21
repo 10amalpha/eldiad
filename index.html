@@ -309,6 +309,12 @@ main{position:relative;z-index:3;max-width:820px;margin:0 auto;padding:48px 28px
 .zarzo .lunch p{font-family:var(--serif);font-size:16px;color:var(--cream-dim);line-height:1.65;margin:0}
 .zarzo .lunch .lclose{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--gold);margin-top:20px}
 @media (max-width:640px){.zarzo .lunch{padding:28px 20px}.zarzo .lunch .lhead{font-size:18px}}
+.zarzo .lunch .lgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:30px}
+.zarzo .lunch .lgrid img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;border:1px solid var(--line-strong)}
+.zarzo .lunch .lcap{font-family:var(--mono);font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold-dim);margin-top:14px;line-height:2}
+.zarzo .lunch .lcap a{color:var(--gold);text-decoration:none}
+.zarzo .lunch .lcap span{font-family:var(--serif);font-style:italic;font-size:13px;letter-spacing:0;text-transform:none;color:var(--cream-dim)}
+@media (max-width:640px){.zarzo .lunch .lgrid{grid-template-columns:1fr 1fr}.zarzo .lunch .lgrid .wide{grid-column:1/3;aspect-ratio:4/3}}
 .zarzo .cap{font-family:var(--mono);font-size:9px;letter-spacing:0.4em;color:var(--gold-dim);text-transform:uppercase;text-align:center;margin-top:14px}
 @media (max-width:640px){.zarzo .grid{grid-template-columns:1fr;grid-template-rows:auto}.zarzo .grid .big{grid-row:auto;aspect-ratio:3/2}}
 /* Countdown */
@@ -681,7 +687,7 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
       <ul class="inc">
         <li data-en="Everything in General, morning included">Todo lo de General, madrugada incluida</li>
         <li data-en="Rooftop Network Event at El Zarzo · 6 to 9 PM, after the auditorium">Rooftop Network Event en El Zarzo · 6 a 9 PM, al salir del auditorio</li>
-        <li data-en="Private lunch the next day with the cohosts and the speakers · 12:30 to 3 PM">Almuerzo privado al día siguiente con los cohosts y los speakers · 12:30 a 3 PM</li>
+        <li data-en="Private lunch at OLI the next day with the cohosts and the speakers · 12:30 to 3 PM">Almuerzo privado en OLI al día siguiente con los cohosts y los speakers · 12:30 a 3 PM</li>
         <li data-en="Only the same 100 people, both days">Solo las mismas 100 personas, los dos días</li>
       </ul>
       <a class="tbtn secondary" href="https://luma.com/10ampro?utm_source=eldiad_landing" target="_blank" rel="noopener" data-en="Alert me · Gold" onclick="window.va&&va('event',{name:'alertas',source:new URLSearchParams(location.search).get('utm_source')||'directo',cta:'gold'})">Avísame · Gold</a>
@@ -705,10 +711,16 @@ src="https://www.facebook.com/tr?id=27858108270474533&ev=PageView&noscript=1"
   <div class="cap" data-en="Rooftop of El Zarzo · October 2026 · 100 seats">Rooftop del Zarzo · Octubre 2026 · 100 cupos</div>
   <div class="act" style="margin-top:56px" data-en="Act II · The next day">Acto II · El día siguiente</div>
   <div class="lunch">
-    <div class="lhead" data-en="12:30 PM. The table.">12:30 PM. La mesa.</div>
+    <div class="lhead" data-en="12:30 PM. The table, at OLI.">12:30 PM. La mesa, en OLI.</div>
     <div class="lline" data-en="What happens in the auditorium is heard. What happens on the rooftop is discussed. What happens at lunch gets closed.">Lo del auditorio se escucha. Lo del rooftop se conversa. Lo del almuerzo se cierra.</div>
     <p data-en="The next day, the same hundred people sit down with the twelve cohosts and the speakers, from 12:30 to 3 PM. No stage, no microphone, no line for the photo. The person who gave the talk you want to argue about is two seats away.">Al día siguiente, las mismas cien personas se sientan con los doce cohosts y con los speakers, de 12:30 a 3 PM. Sin escenario, sin micrófono, sin fila para la foto. La persona que dio la charla que ustedes quieren discutir está a dos puestos.</p>
     <div class="lclose" data-en="It is the only hour of Día D when nobody speaks to five hundred.">Es la única hora del Día D en la que nadie habla para quinientos.</div>
+    <div class="lgrid">
+      <img class="wide" src="/oli-sala.jpg" alt="Salón de OLI Restaurante Mediterráneo · Medellín" loading="lazy" />
+      <img src="/oli-chef.jpg" alt="Cocina de OLI · carpaccio" loading="lazy" />
+      <img src="/oli-pasta.jpg" alt="OLI · pasta y vino" loading="lazy" />
+    </div>
+    <div class="lcap"><a href="https://www.instagram.com/oli__restaurante" target="_blank" rel="noopener">OLI · Restaurante Mediterráneo · Medellín</a><br><span data-en="&ldquo;The new Mediterranean cuisine proposal conquering Medellín&rdquo; — Revista Diners">&laquo;La nueva propuesta de cocina mediterránea que conquista Medellín&raquo; — Revista Diners</span></div>
     <div class="cta" style="margin-top:28px"><a class="secondary" href="https://luma.com/10ampro?utm_source=eldiad_landing" target="_blank" rel="noopener" data-en="Alert me · Gold" onclick="window.va&&va('event',{name:'alertas',source:new URLSearchParams(location.search).get('utm_source')||'directo',cta:'lunch-gold'})">Avísame · Gold</a></div>
   </div>
   <div class="hotels-zone" style="margin:48px auto 0;max-width:620px;text-align:center;opacity:0.9">
