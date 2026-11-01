@@ -148,3 +148,4 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - 2026-10-21: Almuerzo Gold = OLI Restaurante Mediterráneo (IG @oli__restaurante). Fotos oli-sala/chef/pasta/paella.jpg (640px, sacadas del IG vía browser del Mac; IG no da más resolución sin login). Grid .lgrid en bloque .lunch + cita Revista Diners.
 - 2026-10-21: Gold baja a 88 cupos (Hernán reserva overflow). General sube a 492, aforo 580 (492+88).
 - 2026-10-24: clip activado (rutina diaria): Joe McCann cAzFArF_vuY. Pendientes: Joffroy, Sierra, Ospina+Palacio, Arias, N. Fernández.
+- 2026-11-01: clips activados (rutina diaria): André Joffroy i1TGK7FOXa4 · Ricardo Sierra nZDeXSpL6bg · Camilo Ospina & Andrés Palacio kXTB28nxnms. Card nueva: Camilo Botero FcAqPG-zjLg (thumbnail de YouTube). Pendientes: Arias, N. Fernández.
