@@ -150,3 +150,4 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - 2026-10-24: clip activado (rutina diaria): Joe McCann cAzFArF_vuY. Pendientes: Joffroy, Sierra, Ospina+Palacio, Arias, N. Fernández.
 - 2026-11-01: clips activados (rutina diaria): André Joffroy i1TGK7FOXa4 · Ricardo Sierra nZDeXSpL6bg · Camilo Ospina & Andrés Palacio kXTB28nxnms. Card nueva: Camilo Botero FcAqPG-zjLg (thumbnail de YouTube). Pendientes: Arias, N. Fernández.
 - 2026-11-02: charlas: activado Nicolás Fernández → G-r3TZCvwfw (clip publicado en playlist PLI3suTaC01XM). Pendiente solo Andrés Arias.
+- 2026-11-04: charlas: activado Andrés Arias → Ybja3TsU8MM (clip "¿Qué es la Ontología?" publicado en playlist PLI3suTaC01XM). Archivo completo: 0 pendientes (10 cards activas).
