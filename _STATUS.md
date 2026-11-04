@@ -151,3 +151,9 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - 2026-11-01: clips activados (rutina diaria): André Joffroy i1TGK7FOXa4 · Ricardo Sierra nZDeXSpL6bg · Camilo Ospina & Andrés Palacio kXTB28nxnms. Card nueva: Camilo Botero FcAqPG-zjLg (thumbnail de YouTube). Pendientes: Arias, N. Fernández.
 - 2026-11-02: charlas: activado Nicolás Fernández → G-r3TZCvwfw (clip publicado en playlist PLI3suTaC01XM). Pendiente solo Andrés Arias.
 - 2026-11-04: charlas: activado Andrés Arias → Ybja3TsU8MM (clip "¿Qué es la Ontología?" publicado en playlist PLI3suTaC01XM). Archivo completo: 0 pendientes (10 cards activas).
+
+## Update 4 nov 2026 — Fecha y venta abiertas (edición 3 nov 2027)
+- Fecha fijada: miércoles 3 nov 2027, Auditorio Fundadores EAFIT. Landing actualizada (HUD, boletas, Operación, metas OG).
+- Luma: General (early bird USD 150 hasta 31 dic 2026 → 250 → 350) = luma.com/10ampro-pc0p · Gold (USD 750, 88 cupos, 2 días) = luma.com/10ampro-zcoo. Botones "Reservar" apuntan a cada uno; evento analytics `reservar` (antes `alertas`). "Quiero saberlo primero" sigue al calendario luma.com/10ampro.
+- Speakers y aliados: por anunciar, "invitados sujetos a cambios". Covers Luma 1200x1200 generados (general_v2, gold_v1) en estética de la landing.
+- Countdown JS target → 2027-11-03T09:00-05:00.
