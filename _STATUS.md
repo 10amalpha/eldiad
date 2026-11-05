@@ -157,3 +157,8 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Luma: General (early bird USD 150 hasta 31 dic 2026 → 250 → 350) = luma.com/10ampro-pc0p · Gold (USD 750, 88 cupos, 2 días) = luma.com/10ampro-zcoo. Botones "Reservar" apuntan a cada uno; evento analytics `reservar` (antes `alertas`). "Quiero saberlo primero" sigue al calendario luma.com/10ampro.
 - Speakers y aliados: por anunciar, "invitados sujetos a cambios". Covers Luma 1200x1200 generados (general_v2, gold_v1) en estética de la landing.
 - Countdown JS target → 2027-11-03T09:00-05:00.
+
+## Update 5 nov 2026 — Primer invitado confirmado: Andrés Bilbao
+- Sección "Primer invitado confirmado" + card speaker I (Andrés Bilbao, Rappi / 30X) con foto speaker-bilbao.jpg (640x640, tomada de su perfil X @ahbilbaoo vía Chrome) y pod facade data-id 3Ry0nG6YT9g (LIVE Round #2 / Llorones vs Bilbao · 28 may 2026). Bloque "Los demás nombres se anuncian confirmados" + CTA Luma se mantiene debajo.
+- Boletas: Gold resaltado y primero; General secundario (5 nov).
+- Próximos invitados: añadir sección.speaker con roman II, III... debajo de Bilbao, misma plantilla.
