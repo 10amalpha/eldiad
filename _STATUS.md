@@ -165,5 +165,5 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 
 ## Update 7 nov 2026 — Gerardo Delgado (NVIDIA) como invitado I, Bilbao pasa a II
 - Delgado: interesado, confirma más cerca de la fecha → label "Invitado · confirmación más cerca de la fecha" (cambiar a "Confirmado · El Día D · 3 de noviembre de 2027" cuando confirme). Pod facade data-id QgWVt-cLwHs. X: @gerdelgado.
-- PENDIENTE foto: /speaker-delgado.jpg no existe aún (Chrome no estaba disponible, Hernán en móvil). Mientras tanto la card muestra monograma "GD" vía onerror. Tomarla del perfil X @gerdelgado con Claude in Chrome (zoom de x.com/gerdelgado/photo), 640x640 circular como speaker-bilbao.jpg, y subirla con ese nombre: la card la toma sola.
+- Foto: speaker-delgado.jpg (640x640 circular) tomada del avatar de X @gerdelgado. Truco sin Chrome: función temporal api/avatar.js en el repo (fetch a unavatar.io/x/<handle>, devuelve hex) + Vercel web_fetch → decodificar en local → borrar la función. El fallback "GD" por onerror queda en el markup por si falta la imagen.
 - Encabezado Speakers ahora "Los invitados" (dos primeros: uno confirmado y uno en camino).
