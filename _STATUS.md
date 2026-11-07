@@ -162,3 +162,8 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Sección "Primer invitado confirmado" + card speaker I (Andrés Bilbao, Rappi / 30X) con foto speaker-bilbao.jpg (640x640, tomada de su perfil X @ahbilbaoo vía Chrome) y pod facade data-id 3Ry0nG6YT9g (LIVE Round #2 / Llorones vs Bilbao · 28 may 2026). Bloque "Los demás nombres se anuncian confirmados" + CTA Luma se mantiene debajo.
 - Boletas: Gold resaltado y primero; General secundario (5 nov).
 - Próximos invitados: añadir sección.speaker con roman II, III... debajo de Bilbao, misma plantilla.
+
+## Update 7 nov 2026 — Gerardo Delgado (NVIDIA) como invitado I, Bilbao pasa a II
+- Delgado: interesado, confirma más cerca de la fecha → label "Invitado · confirmación más cerca de la fecha" (cambiar a "Confirmado · El Día D · 3 de noviembre de 2027" cuando confirme). Pod facade data-id QgWVt-cLwHs. X: @gerdelgado.
+- PENDIENTE foto: /speaker-delgado.jpg no existe aún (Chrome no estaba disponible, Hernán en móvil). Mientras tanto la card muestra monograma "GD" vía onerror. Tomarla del perfil X @gerdelgado con Claude in Chrome (zoom de x.com/gerdelgado/photo), 640x640 circular como speaker-bilbao.jpg, y subirla con ese nombre: la card la toma sola.
+- Encabezado Speakers ahora "Los invitados" (dos primeros: uno confirmado y uno en camino).
