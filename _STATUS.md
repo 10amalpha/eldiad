@@ -168,3 +168,8 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Delgado: interesado, confirma más cerca de la fecha → label "Invitado · confirmación más cerca de la fecha" (cambiar a "Confirmado · El Día D · 3 de noviembre de 2027" cuando confirme). Pod facade data-id QgWVt-cLwHs. X: @gerdelgado.
 - Foto: speaker-delgado.jpg (640x640 circular) tomada del avatar de X @gerdelgado. Truco sin Chrome: función temporal api/avatar.js en el repo (fetch a unavatar.io/x/<handle>, devuelve hex) + Vercel web_fetch → decodificar en local → borrar la función. El fallback "GD" por onerror queda en el markup por si falta la imagen.
 - Encabezado Speakers ahora "Los invitados" (dos primeros: uno confirmado y uno en camino).
+
+## Update 10 nov 2026 — Fecha movida a miércoles 27 oct 2027
+- Antes 3 nov 2027. Cambiado en index.html: metas/OG, HUD, target, hoteles (noche del 27; Gold también la del 28), labels de speakers, countdown JS → 2027-10-27T09:00-05:00.
+- Poster hero-2027.jpg y og-2027.jpg: fecha repintada sobre la imagen (inpaint + Poppins Bold), cache-bust ?v=2.
+- PENDIENTE fuera del repo: fecha en los dos eventos Luma (10ampro-pc0p General, 10ampro-zcoo Gold) y sus covers; /aliados sigue diciendo "fecha por anunciar".
