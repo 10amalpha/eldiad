@@ -173,3 +173,9 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Antes 3 nov 2027. Cambiado en index.html: metas/OG, HUD, target, hoteles (noche del 27; Gold también la del 28), labels de speakers, countdown JS → 2027-10-27T09:00-05:00.
 - Poster hero-2027.jpg y og-2027.jpg: fecha repintada sobre la imagen (inpaint + Poppins Bold), cache-bust ?v=2.
 - PENDIENTE fuera del repo: fecha en los dos eventos Luma (10ampro-pc0p General, 10ampro-zcoo Gold) y sus covers; /aliados sigue diciendo "fecha por anunciar".
+
+## Update 11 nov 2026 — Adrian Mastronardi (CTO Habi) confirmado, invitado II
+- Orden: I Delgado (NVIDIA, por confirmar) · II Mastronardi (confirmado) · III Bilbao (confirmado). Hernán lo ranquea por encima de Bilbao.
+- Copy desde su E232 (10 nov 2026, 10am.pro/p/el-problema-de-las-empresas-no-es) y su sitio personal: empleado #10 de Globant, OLX, Rappi fintech, CTO Habi, newsletter Al Sur del Río Grande.
+- Episodio es video de Substack (paywall), sin YouTube → bloque .pod con enlace al post, no facade. Si sale clip en YouTube, cambiar a frame data-id.
+- Foto speaker-mastronardi.jpg (640x640) recortada de la carátula del E232 (función temporal api/frame.js, ya borrada). Sin handle de X conocido.
