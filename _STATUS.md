@@ -179,3 +179,6 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Copy desde su E232 (10 nov 2026, 10am.pro/p/el-problema-de-las-empresas-no-es) y su sitio personal: empleado #10 de Globant, OLX, Rappi fintech, CTO Habi, newsletter Al Sur del Río Grande.
 - Pod facade data-id BHSfw6dmCCw (E232 en YouTube). X: @amastronardi (las cards de speakers no muestran handle).
 - Foto speaker-mastronardi.jpg (640x640) recortada de la carátula del E232 (función temporal api/frame.js, ya borrada). 
+
+## Update 11 nov 2026 (2) — Invitados antes que cohosts
+- Orden: proof → Los invitados (I–III) → 'Los demás nombres' + CTA → Los cohosts → Aliados. El evento scroll_speakers ahora dispara sobre la card del invitado I.
