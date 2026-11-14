@@ -187,3 +187,4 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Orden: I Delgado (por confirmar) · II Mastronardi · III Bilbao · IV Pathy. Hernán no dio ranking para Pathy → al final. Dijo "Can pencil in!" por WhatsApp; label "Confirmado" por instrucción de Hernán.
 - Copy: fundador/CEO KAST, ex VP APAC Circle, Zoom/Facebook/AWS, Serie A USD 80M (mar 2026, QED + Left Lane), "100B o fracasa". Pod facade data-id dCjLZdSq2HY (E133, 21 ene 2025, en inglés). X: @raagulanpathy.
 - FOTO PENDIENTE: speaker-pathy.jpg no existe → se ve el fallback "RP". La carátula del E133 no trae su cara. Subir speaker-pathy.jpg 640x640 cuando Hernán mande headshot.
+- 14 nov (2): Pathy sube a III, Bilbao baja a IV (Hernán: 'Raags above Bilbao').
