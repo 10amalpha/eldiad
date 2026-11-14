@@ -182,3 +182,8 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 
 ## Update 11 nov 2026 (2) — Invitados antes que cohosts
 - Orden: proof → Los invitados (I–III) → 'Los demás nombres' + CTA → Los cohosts → Aliados. El evento scroll_speakers ahora dispara sobre la card del invitado I.
+
+## Update 14 nov 2026 — Raagulan Pathy (KAST) invitado IV
+- Orden: I Delgado (por confirmar) · II Mastronardi · III Bilbao · IV Pathy. Hernán no dio ranking para Pathy → al final. Dijo "Can pencil in!" por WhatsApp; label "Confirmado" por instrucción de Hernán.
+- Copy: fundador/CEO KAST, ex VP APAC Circle, Zoom/Facebook/AWS, Serie A USD 80M (mar 2026, QED + Left Lane), "100B o fracasa". Pod facade data-id dCjLZdSq2HY (E133, 21 ene 2025, en inglés). X: @raagulanpathy.
+- FOTO PENDIENTE: speaker-pathy.jpg no existe → se ve el fallback "RP". La carátula del E133 no trae su cara. Subir speaker-pathy.jpg 640x640 cuando Hernán mande headshot.
