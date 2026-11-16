@@ -188,3 +188,8 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Copy: fundador/CEO KAST, ex VP APAC Circle, Zoom/Facebook/AWS, Serie A USD 80M (mar 2026, QED + Left Lane), "100B o fracasa". Pod facade data-id dCjLZdSq2HY (E133, 21 ene 2025, en inglés). X: @raagulanpathy.
 - Foto speaker-pathy.jpg (640x640): headshot que Hernán subió al chat el 14 nov.
 - 14 nov (2): Pathy sube a III, Bilbao baja a IV (Hernán: 'Raags above Bilbao').
+
+## Update 16 nov 2026 — KAST primer aliado del próximo Día D
+- Sección "Aliados del Día D": bloque .logos con KAST (kast-logo.png, logo oficial de kast.xyz en versión clara 560x166) + nota + CTA "Abrir cuenta en KAST". Todo enlaza al referral de Hernán: https://app.kast.xyz/referral/S5SXRX9F (rel sponsored, evento va 'aliado_kast'). Se mantienen los CTAs de propuesta de patrocinio y media kit.
+- Próximos aliados: añadir otro <a> dentro de .logos (CSS .partner .logos ya existe de la edición 2026).
+- /aliados (propuesta de patrocinio) no se tocó: no menciona a KAST ni el tier que tomó.
