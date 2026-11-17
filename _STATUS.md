@@ -198,5 +198,5 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Orden: I Delgado (por confirmar) · II Mastronardi · III Pathy · IV Bilbao · V Faria. Hernán no dio ranking para Faria → al final.
 - Estuvo en el roster de la edición oct 2026 y se retiró en ago 2026 (commit e1ab16b). Card nueva reescrita y más corta; bio actualizada: socio de Patria, co-dirige High Growth (Kamaroopin + Igah, meta USD 1B AUM, co-CEO con Pedro Melzer), fundador Kamaroopin 2018, ex CEO Global BRF, 20 años en Tarpon.
 - Pod facade data-id JWgIL5Cl47o (episodio 45).
-- FOTO PENDIENTE: speaker-faria.jpg no existe → fallback "PF". La carátula del ep. 45 trae tres caras sin rótulo; no se recortó. Subir speaker-faria.jpg 640x640 cuando Hernán mande foto.
+- Foto speaker-faria.jpg (640x640): la que Hernán subió al chat el 17 nov (recorte del círculo; las esquinas negras las tapa el border-radius).
 - 17 nov (2): Faria sube a IV, Bilbao baja a V (Hernán: 'Faria arriba de Bilbao'). Orden: Delgado, Mastronardi, Pathy, Faria, Bilbao.
