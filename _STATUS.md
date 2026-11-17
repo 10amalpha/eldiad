@@ -193,3 +193,9 @@ Mide CLIC a Luma, no PAGO (el pago vive en Luma, caja negra). Cierre pendiente: 
 - Sección "Aliados del Día D": bloque .logos con KAST (kast-logo.png, logo oficial de kast.xyz en versión clara 560x166) + nota + CTA "Abrir cuenta en KAST". Todo enlaza al referral de Hernán: https://app.kast.xyz/referral/S5SXRX9F (rel sponsored, evento va 'aliado_kast'). Se mantienen los CTAs de propuesta de patrocinio y media kit.
 - Próximos aliados: añadir otro <a> dentro de .logos (CSS .partner .logos ya existe de la edición 2026).
 - /aliados (propuesta de patrocinio) no se tocó: no menciona a KAST ni el tier que tomó.
+
+## Update 17 nov 2026 — Pedro Faria confirmado, invitado V
+- Orden: I Delgado (por confirmar) · II Mastronardi · III Pathy · IV Bilbao · V Faria. Hernán no dio ranking para Faria → al final.
+- Estuvo en el roster de la edición oct 2026 y se retiró en ago 2026 (commit e1ab16b). Card nueva reescrita y más corta; bio actualizada: socio de Patria, co-dirige High Growth (Kamaroopin + Igah, meta USD 1B AUM, co-CEO con Pedro Melzer), fundador Kamaroopin 2018, ex CEO Global BRF, 20 años en Tarpon.
+- Pod facade data-id JWgIL5Cl47o (episodio 45).
+- FOTO PENDIENTE: speaker-faria.jpg no existe → fallback "PF". La carátula del ep. 45 trae tres caras sin rótulo; no se recortó. Subir speaker-faria.jpg 640x640 cuando Hernán mande foto.
